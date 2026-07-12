@@ -18,7 +18,7 @@ test("plays an 11-point Hints Off Daily in one viewport", async ({ page }) => {
   ).toBe(true);
   await submitAllTenWithNumberOneCall(page);
   await expect(page.getByText("11 points", { exact: true })).toBeVisible();
-  await expect(page.getByText("Hints Off")).toBeVisible();
+  await expect(page.getByText("Hints Off", { exact: true })).toBeVisible();
   expect(
     (await new AxeBuilder({ page }).analyze()).violations.filter((v) =>
       ["serious", "critical"].includes(v.impact ?? ""),

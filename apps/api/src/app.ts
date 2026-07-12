@@ -89,6 +89,7 @@ export function createApp(
     authenticateAccount?: (token: string | undefined) => Promise<string | null>;
     accountRoles?: (accountId: string) => Promise<string[]>;
     csrfToken?: (session: string) => string;
+    publisherSecret?: string;
     canonicalDay?: () => string;
     remoteAddress?: (request: Request) => string;
     trustProxy?: (address: string) => boolean;
@@ -279,6 +280,15 @@ export function createApp(
       : c.json(board);
   });
   app.use("/v1/publisher/*", async (c, next) => {
+    const bearer = c.req.header("authorization") ?? "";
+    if (
+      options.publisherSecret &&
+      bearer === `Bearer ${options.publisherSecret}`
+    ) {
+      c.set("accountId" as never, "publisher-key" as never);
+      await next();
+      return;
+    }
     const cookies = Object.fromEntries(
       (c.req.header("cookie") ?? "")
         .split(";")

@@ -30,6 +30,7 @@ export function composeProductionApp(config: {
   pepper: string;
   email: EmailAdapter;
   production?: boolean;
+  publisherSecret?: string;
   remoteAddress: (request: Request) => string;
   trustProxy?: (address: string) => boolean;
 }) {
@@ -51,6 +52,7 @@ export function composeProductionApp(config: {
       authenticateAccount: auth.authenticateAccount,
       accountRoles: auth.accountRoles,
       csrfToken: auth.csrfToken,
+      publisherSecret: config.publisherSecret,
     },
   );
 }
@@ -72,6 +74,7 @@ if (
       process.env.ORIGINS ?? "http://127.0.0.1:4173,http://127.0.0.1:4174"
     ).split(","),
     pepper: process.env.AUTH_PEPPER ?? "test-pepper",
+    publisherSecret: process.env.PUBLISHER_SECRET,
     email: { sendMagicLink: async () => undefined },
     remoteAddress: () => "127.0.0.1",
   });

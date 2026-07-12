@@ -8,18 +8,21 @@ import {
 } from "./parseClipboard";
 import type { BoardsCsvRow, ItemsCsvRow } from "@daily/contracts";
 
-const csrf = () =>
-  document.cookie
-    .split(";")
-    .map((x) => x.trim())
-    .find((x) => x.startsWith("d10_csrf="))
-    ?.slice(9) ?? "";
+let publisherKey = (() => {
+  try {
+    return sessionStorage.getItem("publisher_key") ?? "";
+  } catch {
+    return "";
+  }
+})();
 
 const request = async (path: string, body?: unknown, method = "POST") => {
   const response = await fetch(path, {
     method,
-    credentials: "include",
-    headers: { "content-type": "application/json", "x-csrf-token": csrf() },
+    headers: {
+      "content-type": "application/json",
+      authorization: `Bearer ${publisherKey}`,
+    },
     body: body === undefined ? undefined : JSON.stringify(body),
   });
   const value = await response.json();
@@ -40,54 +43,31 @@ function headerError(
   return !Array.isArray(result) ? result : null;
 }
 
-function SignIn() {
-  const [email, setEmail] = useState("");
-  const [sent, setSent] = useState(false);
-  const [error, setError] = useState("");
-
-  const submit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setError("");
-    try {
-      await fetch("/v1/auth/magic-link", {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-          origin: location.origin,
-        },
-        body: JSON.stringify({ email }),
-      });
-      setSent(true);
-    } catch {
-      setError("Could not send sign-in link. Check your connection.");
-    }
-  };
-
-  if (sent)
-    return (
-      <main>
-        <h1>Check your email</h1>
-        <p>A sign-in link was sent to {email}. Click it to continue.</p>
-      </main>
-    );
-
+function SignIn({ onKey }: { onKey: (key: string) => void }) {
+  const [key, setKey] = useState("");
   return (
     <main>
-      <h1>Publisher sign in</h1>
-      <form onSubmit={(e) => void submit(e)}>
+      <h1>Publisher</h1>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          sessionStorage.setItem("publisher_key", key);
+          publisherKey = key;
+          onKey(key);
+        }}
+      >
         <label>
-          Email
+          Publisher key
           <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            type="password"
+            value={key}
+            onChange={(e) => setKey(e.target.value)}
             required
             style={{ display: "block", marginTop: "0.25rem" }}
           />
         </label>
-        {error && <p role="alert">{error}</p>}
         <button type="submit" style={{ marginTop: "0.5rem" }}>
-          Send sign-in link
+          Sign in
         </button>
       </form>
     </main>
@@ -95,7 +75,7 @@ function SignIn() {
 }
 
 export function App() {
-  const isSignedIn = !!csrf();
+  const [key, setKey] = useState(publisherKey);
 
   const [boardsText, setBoardsText] = useState("");
   const [itemsText, setItemsText] = useState("");
@@ -106,7 +86,7 @@ export function App() {
   const [status, setStatus] = useState("");
   const [loading, setLoading] = useState(false);
 
-  if (!isSignedIn) return <SignIn />;
+  if (!key) return <SignIn onKey={setKey} />;
 
   const boardsResult = boardsText ? parseBoards(boardsText) : null;
   const itemsResult = itemsText ? parseItems(itemsText) : null;

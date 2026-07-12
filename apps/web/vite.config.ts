@@ -1,5 +1,5 @@
 import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
+import { cspSafeViteEnv } from "../../csp-safe-vite-env";
 import { VitePWA } from "vite-plugin-pwa";
 import {
   isCookieOnlyFinishRequest,
@@ -11,7 +11,7 @@ export default defineConfig({
     proxy: { "/v1": "http://127.0.0.1:8787", "/test": "http://127.0.0.1:8787" },
   },
   plugins: [
-    react(),
+    cspSafeViteEnv(),
     VitePWA({
       registerType: "autoUpdate",
       includeAssets: [],

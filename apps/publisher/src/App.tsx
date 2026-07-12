@@ -40,7 +40,63 @@ function headerError(
   return !Array.isArray(result) ? result : null;
 }
 
+function SignIn() {
+  const [email, setEmail] = useState("");
+  const [sent, setSent] = useState(false);
+  const [error, setError] = useState("");
+
+  const submit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setError("");
+    try {
+      await fetch("/v1/auth/magic-link", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+          origin: location.origin,
+        },
+        body: JSON.stringify({ email }),
+      });
+      setSent(true);
+    } catch {
+      setError("Could not send sign-in link. Check your connection.");
+    }
+  };
+
+  if (sent)
+    return (
+      <main>
+        <h1>Check your email</h1>
+        <p>A sign-in link was sent to {email}. Click it to continue.</p>
+      </main>
+    );
+
+  return (
+    <main>
+      <h1>Publisher sign in</h1>
+      <form onSubmit={(e) => void submit(e)}>
+        <label>
+          Email
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            style={{ display: "block", marginTop: "0.25rem" }}
+          />
+        </label>
+        {error && <p role="alert">{error}</p>}
+        <button type="submit" style={{ marginTop: "0.5rem" }}>
+          Send sign-in link
+        </button>
+      </form>
+    </main>
+  );
+}
+
 export function App() {
+  const isSignedIn = !!csrf();
+
   const [boardsText, setBoardsText] = useState("");
   const [itemsText, setItemsText] = useState("");
   const [preview, setPreview] = useState<ParseResult>({
@@ -49,6 +105,8 @@ export function App() {
   });
   const [status, setStatus] = useState("");
   const [loading, setLoading] = useState(false);
+
+  if (!isSignedIn) return <SignIn />;
 
   const boardsResult = boardsText ? parseBoards(boardsText) : null;
   const itemsResult = itemsText ? parseItems(itemsText) : null;

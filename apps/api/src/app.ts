@@ -449,7 +449,7 @@ export function createApp(
         `d10_csrf=${options.csrfToken(consumed.sessionToken)}; Path=/; Secure; SameSite=Strict`,
         { append: true },
       );
-    return c.json({ signedIn: true });
+    return c.redirect("/publisher/");
   });
   app.post("/v1/auth/merge-guest", async (c) => {
     if (!services.mergeGuest) return c.json({ error: "Not found" }, 404);

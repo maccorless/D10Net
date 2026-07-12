@@ -245,13 +245,23 @@ export function createApp(
     return c.json({ ok: true });
   });
   app.get("/test", (c) =>
-    c.html(`<!doctype html><html><head><meta charset=UTF-8><title>Test</title></head><body>
+    c.html(
+      `<!doctype html><html><head><meta charset=UTF-8><title>Test</title></head><body>
 <h2>Test controls</h2>
-<button onclick="fetch('/v1/plays/today',{method:'DELETE',credentials:'include'}).then(r=>r.json()).then(d=>status.textContent=JSON.stringify(d)).catch(e=>status.textContent=e)">Reset today's play</button>
-<p id=status></p>
-<p><a href="/">Back to game</a></p>
-</body></html>`),
+${c.req.query("done") === "1" ? "<p>✅ Today's play reset.</p>" : ""}
+<form method=post action=/test/reset>
+  <button type=submit>Reset today's play</button>
+</form>
+<p><a href=/>Back to game</a></p>
+</body></html>`,
+    ),
   );
+  app.post("/test/reset", async (c) => {
+    const player = c.get("playerId" as never) as string | null;
+    if (player && services.resetTodayPlay)
+      await services.resetTodayPlay(player);
+    return c.redirect("/test?done=1");
+  });
   app.get("/v1/rankings/:gameDay", async (c) => {
     const params = RankingParams.safeParse(c.req.param());
     const query = RankingQuery.safeParse(c.req.query());

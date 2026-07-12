@@ -80,32 +80,50 @@ if (
   // Serve API routes
   app.route("/v1", apiApp);
 
-  // Static file middleware for web assets
+  // Static file middleware for web & publisher assets
+  const publisherDistPath = join(__dirname, "../../publisher/dist");
+  const mimeTypes: Record<string, string> = {
+    ".html": "text/html",
+    ".js": "application/javascript",
+    ".css": "text/css",
+    ".json": "application/json",
+    ".svg": "image/svg+xml",
+    ".png": "image/png",
+    ".jpg": "image/jpeg",
+    ".gif": "image/gif",
+    ".ico": "image/x-icon",
+  };
+
   app.use("*", async (c, next) => {
     const path = c.req.path;
     if (path.startsWith("/v1/")) return next();
 
-    const filePath = join(webDistPath, path === "/" ? "index.html" : path);
+    let distPath = webDistPath;
+    let filePath: string;
+
+    // Route /publisher/* to publisher app
+    if (path.startsWith("/publisher")) {
+      distPath = publisherDistPath;
+      filePath = join(
+        distPath,
+        path === "/publisher" || path === "/publisher/"
+          ? "index.html"
+          : path.slice("/publisher".length),
+      );
+    } else {
+      filePath = join(distPath, path === "/" ? "index.html" : path);
+    }
+
+    // Serve static files
     if (existsSync(filePath) && statSync(filePath).isFile()) {
       const content = readFileSync(filePath);
       const ext = extname(filePath);
-      const mimeTypes: Record<string, string> = {
-        ".html": "text/html",
-        ".js": "application/javascript",
-        ".css": "text/css",
-        ".json": "application/json",
-        ".svg": "image/svg+xml",
-        ".png": "image/png",
-        ".jpg": "image/jpeg",
-        ".gif": "image/gif",
-        ".ico": "image/x-icon",
-      };
       c.header("Content-Type", mimeTypes[ext] || "application/octet-stream");
       return c.body(content);
     }
 
-    // SPA fallback: serve index.html
-    const indexPath = join(webDistPath, "index.html");
+    // SPA fallback: serve index.html from appropriate dist
+    const indexPath = join(distPath, "index.html");
     if (existsSync(indexPath)) {
       const html = readFileSync(indexPath, "utf-8");
       return c.html(html);

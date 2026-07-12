@@ -25,8 +25,18 @@ const request = async (path: string, body?: unknown, method = "POST") => {
     },
     body: body === undefined ? undefined : JSON.stringify(body),
   });
-  const value = await response.json();
-  if (!response.ok) throw Error(value.error ?? "Publisher request failed");
+  const text = await response.text();
+  let value: unknown;
+  try {
+    value = JSON.parse(text);
+  } catch {
+    value = {};
+  }
+  if (!response.ok)
+    throw Error(
+      (value as Record<string, string>).error ??
+        `Server error ${response.status}`,
+    );
   return value;
 };
 
@@ -133,10 +143,10 @@ export function App() {
     setLoading(true);
     setStatus("");
     try {
-      const res = await request(
+      const res = (await request(
         "/v1/publisher/boards/bulk",
         result.validBoards,
-      );
+      )) as { count: number };
       setStatus(`${res.count} board${res.count !== 1 ? "s" : ""} saved.`);
     } catch (e) {
       setStatus(e instanceof Error ? e.message : "Import failed");

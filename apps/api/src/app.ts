@@ -286,7 +286,7 @@ export function createApp(
       `[publisher] path=${c.req.path} secret_set=${!!secret} bearer_prefix=${bearer.slice(0, 10)}`,
     );
     if (secret && bearer === `Bearer ${secret}`) {
-      c.set("accountId" as never, "publisher-key" as never);
+      c.set("accountId" as never, null as never);
       await next();
       return;
     }
@@ -335,7 +335,7 @@ export function createApp(
   app.post("/v1/publisher/boards/bulk", async (c) =>
     c.json(
       await services.publisher!.importBulkPublished(
-        c.get("accountId" as never) as string,
+        c.get("accountId" as never) as string | null,
         await c.req.json(),
       ),
       201,

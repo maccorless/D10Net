@@ -89,7 +89,7 @@ export class PostgresPublisherRepository implements PublisherRepository {
 }
 export function createPublisherService(repo: PublisherRepository) {
   const audit = (
-    actorId: string,
+    actorId: string | null,
     action: string,
     boardId?: string,
     detail?: unknown,
@@ -215,7 +215,7 @@ export function createPublisherService(repo: PublisherRepository) {
       await audit(actorId, "retire", id);
       return b;
     },
-    async importBulkPublished(actorId: string, inputs: unknown[]) {
+    async importBulkPublished(actorId: string | null, inputs: unknown[]) {
       let count = 0;
       for (const input of inputs) {
         const board = BoardSchema.parse(input);

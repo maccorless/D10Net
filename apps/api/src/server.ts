@@ -8,10 +8,9 @@ import postgres from "postgres";
 import { createPublisherService } from "./publisher.js";
 import { DrizzlePublisherRepository } from "./publisher-repository.js";
 import { serve } from "@hono/node-server";
-import { serveStatic } from "hono/node";
-import { readFileSync } from "fs";
+import { readFileSync, existsSync, statSync } from "fs";
 import { fileURLToPath } from "url";
-import { dirname, join } from "path";
+import { dirname, join, extname } from "path";
 
 export function composeApp(config: {
   databaseUrl: string;
@@ -81,19 +80,39 @@ if (
   // Serve API routes
   app.route("/v1", apiApp);
 
-  // Serve web frontend as static files
-  try {
-    app.use("*", serveStatic({ root: webDistPath }));
-    // SPA fallback: serve index.html for unmatched routes
-    app.all("*", async (c) => {
-      const indexPath = join(webDistPath, "index.html");
+  // Static file middleware for web assets
+  app.use("*", async (c, next) => {
+    const path = c.req.path;
+    if (path.startsWith("/v1/")) return next();
+
+    const filePath = join(webDistPath, path === "/" ? "index.html" : path);
+    if (existsSync(filePath) && statSync(filePath).isFile()) {
+      const content = readFileSync(filePath);
+      const ext = extname(filePath);
+      const mimeTypes: Record<string, string> = {
+        ".html": "text/html",
+        ".js": "application/javascript",
+        ".css": "text/css",
+        ".json": "application/json",
+        ".svg": "image/svg+xml",
+        ".png": "image/png",
+        ".jpg": "image/jpeg",
+        ".gif": "image/gif",
+        ".ico": "image/x-icon",
+      };
+      c.header("Content-Type", mimeTypes[ext] || "application/octet-stream");
+      return c.body(content);
+    }
+
+    // SPA fallback: serve index.html
+    const indexPath = join(webDistPath, "index.html");
+    if (existsSync(indexPath)) {
       const html = readFileSync(indexPath, "utf-8");
       return c.html(html);
-    });
-  } catch {
-    // Web dist not available, continue with API only
-    console.warn("Web app dist not found, serving API only");
-  }
+    }
+
+    return next();
+  });
 
   serve({ fetch: app.fetch, port });
   console.log(`API listening on http://127.0.0.1:${port}`);

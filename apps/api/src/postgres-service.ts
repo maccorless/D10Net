@@ -79,10 +79,32 @@ export function createPostgresServices(
           dateOnly(player[0]!.latest_game_day) > day
         )
           throw new Error("CLOCK_ROLLBACK");
-        const assignment =
+        if (input.mode === "daily")
+          await tx`insert into schedule_assignments(game_day,board_id,board_version,published) select ${day},bv.board_id,bv.version,true from board_versions bv where bv.state='Published' and bv.game_day is null and not exists(select 1 from schedule_assignments sa where sa.board_id=bv.board_id and sa.board_version=bv.version) order by random() limit 1 on conflict(game_day) do nothing`;
+        let assignment =
           input.mode === "daily"
             ? await tx`select sa.game_day, bv.board_id, bv.version, bv.payload from schedule_assignments sa join board_versions bv on (bv.board_id, bv.version)=(sa.board_id,sa.board_version) where sa.game_day=${day} and sa.published=true and bv.published_at<=${current} and sa.game_day<=${day} limit 1`
             : await tx`select bv.game_day, bv.board_id, bv.version, bv.payload from board_versions bv join schedule_assignments sa on (sa.board_id,sa.board_version)=(bv.board_id,bv.version) where bv.board_id=${input.boardId!} and bv.version=${input.boardVersion!} and sa.published=true and bv.published_at<=${current} and bv.game_day is not null and sa.game_day=bv.game_day and sa.game_day<${day} limit 1`;
+        if (!assignment.length && input.mode === "daily") {
+          // Pool was empty — rerun a past board as a new version
+          const [src] =
+            await tx`select board_id,payload from board_versions where state='Published' and game_day is not null order by random() limit 1 for update skip locked`;
+          if (src) {
+            const [{ v }] =
+              await tx`select max(version) v from board_versions where board_id=${src.board_id}`;
+            const nextVer = Number(v) + 1;
+            const p = {
+              ...src.payload,
+              version: nextVer,
+              gameDay: day,
+              title: src.payload.title + " (Rerun)",
+            };
+            await tx`insert into board_versions(board_id,version,game_day,payload,state,published_at) values(${src.board_id},${nextVer},${day},${tx.json(p)},'Published',${current}) on conflict do nothing`;
+            await tx`insert into schedule_assignments(game_day,board_id,board_version,published) values(${day},${src.board_id},${nextVer},true) on conflict(game_day) do nothing`;
+            assignment =
+              await tx`select sa.game_day, bv.board_id, bv.version, bv.payload from schedule_assignments sa join board_versions bv on (bv.board_id,bv.version)=(sa.board_id,sa.board_version) where sa.game_day=${day} and sa.published=true limit 1`;
+          }
+        }
         if (!assignment.length) throw new Error("Board not found");
         const a = assignment[0]!;
         const id = crypto.randomUUID();

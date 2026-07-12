@@ -11,6 +11,7 @@ import { serve } from "@hono/node-server";
 import { readFileSync, existsSync, statSync } from "fs";
 import { fileURLToPath } from "url";
 import { dirname, join, extname } from "path";
+import { runMigrations } from "./migrations.js";
 
 export function composeApp(config: {
   databaseUrl: string;
@@ -60,6 +61,11 @@ if (
 ) {
   const databaseUrl = process.env.DATABASE_URL ?? process.env.TEST_DATABASE_URL;
   if (!databaseUrl) throw new Error("DATABASE_URL is required");
+
+  // Run migrations before starting server
+  console.log("Running database migrations...");
+  await runMigrations(databaseUrl);
+
   const port = Number(process.env.PORT ?? 8787);
   const apiApp = composeProductionApp({
     databaseUrl,

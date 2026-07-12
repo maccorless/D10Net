@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "tsx src/server.ts",
     "start": "tsx src/server.ts",
+    "migrate": "tsx src/migrations.ts",
     "test": "vitest run",
     "test:postgres": "vitest run src/postgres.integration.test.ts",
     "schedule:next-day": "tsx src/jobs/schedule-next-day.ts",

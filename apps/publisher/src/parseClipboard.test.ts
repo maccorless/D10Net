@@ -2,12 +2,12 @@ import { describe, expect, it } from "vitest";
 import { parseBoards, parseItems, combine } from "./parseClipboard";
 
 const boardsHeader =
-  "board_id\ttitle\tprompt\tmetric_desc\ttheme_tags\tranking_source_name\tranking_source_url\tuniverse_source_name\tuniverse_source_url\tdata_as_of\tuniverse_as_of\tuniverse_description\tuniverse_size\tnotes";
+  "board_id\ttitle\tprompt\tmetric_desc\ttheme_tags\tranking_source_name\tranking_source_url\tuniverse_source_name\tuniverse_source_url\tdata_as_of\tuniverse_as_of\tuniverse_description\tuniverse_size\tmetric_format\tnotes";
 const itemsHeader =
   "board_id\trow_type\trank\tcanonical_value\taliases\tmetric_value\tnotes";
 
 function boardRow(id: string) {
-  return `${id}\t${id} title\tRank the top 10\tPopulation\tgeo|cities\tCensus\thttps://example.gov\tUN\thttps://un.org\t\t\t\t\t`;
+  return `${id}\t${id} title\tRank the top 10\tPopulation\tgeo|cities\tCensus\thttps://example.gov\tUN\thttps://un.org\t\t\t\t\t\t`;
 }
 
 function itemRows(id: string, universeSize = 20) {

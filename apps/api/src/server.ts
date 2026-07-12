@@ -96,6 +96,9 @@ if (
     serveStatic({ root: publisherRoot, path: "index.html" }),
   );
 
+  // Redirect root to the game
+  app.get("/", (c) => c.redirect("/today"));
+
   // API routes
   app.route("/", apiApp);
 

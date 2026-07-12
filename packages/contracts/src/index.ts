@@ -9,43 +9,58 @@ export const BoardSchema = z
     version: z.number().int().positive(),
     gameDay: z.string().date().nullable(),
     title: z.string().min(1),
-    metric: z.string().min(1),
+    prompt: z.string().min(1),
+    metricDesc: z.string().min(1),
     tags: z.array(z.string()).min(1),
-    sources: z
-      .array(z.object({ name: z.string(), url: z.string().url() }))
-      .min(1),
+    rankingSource: z.object({ name: z.string(), url: z.string().url() }),
+    universeSource: z.object({ name: z.string(), url: z.string().url() }),
+    universeDescription: z.string().optional(),
+    universeSize: z.number().int().positive().optional(),
+    dataAsOf: z.string().date().optional(),
+    universeAsOf: z.string().date().optional(),
     universe: z
-      .array(z.object({
-        id: z.string(),
-        label: z.string(),
-        aliases: z.array(z.string()),
-        metricValue: z.string().max(80).optional()
-      }))
+      .array(
+        z.object({
+          id: z.string(),
+          label: z.string(),
+          aliases: z.array(z.string()),
+          metricValue: z.string().max(80).optional(),
+          rank: z.number().int().min(1).max(10).optional(),
+        }),
+      )
       .min(10),
-    ranked: z.array(z.string()).length(10)
+    ranked: z.array(z.string()).length(10),
   })
   .superRefine((board, context) => {
     const universeIds = board.universe.map((candidate) => candidate.id);
     const ids = new Set(universeIds);
 
     if (ids.size !== universeIds.length) {
-      context.addIssue({ code: "custom", message: "Duplicate universe candidate ID" });
+      context.addIssue({
+        code: "custom",
+        message: "Duplicate universe candidate ID",
+      });
     }
     if (new Set(board.ranked).size !== board.ranked.length) {
-      context.addIssue({ code: "custom", message: "Duplicate ranked answer ID" });
+      context.addIssue({
+        code: "custom",
+        message: "Duplicate ranked answer ID",
+      });
     }
 
     for (const id of board.ranked) {
       if (!ids.has(id)) {
         context.addIssue({
           code: "custom",
-          message: `Ranked answer ${id} is absent from universe`
+          message: `Ranked answer ${id} is absent from universe`,
         });
       }
-      if (!board.universe.find((candidate) => candidate.id === id)?.metricValue) {
+      if (
+        !board.universe.find((candidate) => candidate.id === id)?.metricValue
+      ) {
         context.addIssue({
           code: "custom",
-          message: `Ranked answer ${id} requires a metric value`
+          message: `Ranked answer ${id} requires a metric value`,
         });
       }
     }
@@ -60,19 +75,25 @@ export const PlayStartSchema = z.object({
   startedAt: z.string().datetime(),
   mode: z.enum(["daily", "archive"]),
   hintMode: HintModeSchema,
-  validationEnvelope: z.string()
+  validationEnvelope: z.string(),
 });
 export type PlayStart = z.infer<typeof PlayStartSchema>;
 
-export const StartedGameSchema = z.object({ play: PlayStartSchema, board: BoardSchema }).superRefine(({ play, board }, context) => {
-  if (play.boardId !== board.id || play.boardVersion !== board.version) context.addIssue({ code: "custom", message: "Started play and board must match" });
-});
+export const StartedGameSchema = z
+  .object({ play: PlayStartSchema, board: BoardSchema })
+  .superRefine(({ play, board }, context) => {
+    if (play.boardId !== board.id || play.boardVersion !== board.version)
+      context.addIssue({
+        code: "custom",
+        message: "Started play and board must match",
+      });
+  });
 export type StartedGame = z.infer<typeof StartedGameSchema>;
 
 export const GuessEventSchema = z.object({
   candidateId: z.string(),
   calledNumberOne: z.boolean(),
-  atMs: z.number().int().nonnegative()
+  atMs: z.number().int().nonnegative(),
 });
 export type GuessEvent = z.infer<typeof GuessEventSchema>;
 
@@ -80,23 +101,35 @@ export const PlayResultSchema = z.object({
   playId: z.string().uuid(),
   guesses: z.array(GuessEventSchema),
   hintUsed: z.boolean(),
-  finishedAt: z.string().datetime()
+  finishedAt: z.string().datetime(),
 });
 export type PlayResult = z.infer<typeof PlayResultSchema>;
 
-export const BoardImportRowSchema = z.object({
+export const BoardsCsvRowSchema = z.object({
   boardId: z.string().min(1),
-  version: z.number().int().positive(),
-  gameDay: z.string().date().nullable(),
   title: z.string().min(1),
-  metric: z.string().min(1),
-  tags: z.string().min(1),
-  sourceName: z.string().min(1),
-  sourceUrl: z.string().url(),
-  candidateId: z.string().min(1),
-  candidateLabel: z.string().min(1),
+  prompt: z.string().min(1),
+  metricDesc: z.string().min(1),
+  themeTags: z.string(),
+  rankingSourceName: z.string().min(1),
+  rankingSourceUrl: z.string().url(),
+  universeSourceName: z.string().min(1),
+  universeSourceUrl: z.string().url(),
+  dataAsOf: z.string().date().optional(),
+  universeAsOf: z.string().date().optional(),
+  universeDescription: z.string().optional(),
+  universeSize: z.number().int().positive().optional(),
+  notes: z.string().optional(),
+});
+export type BoardsCsvRow = z.infer<typeof BoardsCsvRowSchema>;
+
+export const ItemsCsvRowSchema = z.object({
+  boardId: z.string().min(1),
+  rowType: z.enum(["TOP10", "UNIVERSE", "UNIVERSE_REF"]),
+  rank: z.number().int().min(1).max(10).nullable(),
+  canonicalValue: z.string().min(1),
   aliases: z.string(),
   metricValue: z.string().max(80).optional(),
-  rank: z.number().int().min(1).max(10).nullable()
+  notes: z.string().optional(),
 });
-export type BoardImportRow = z.infer<typeof BoardImportRowSchema>;
+export type ItemsCsvRow = z.infer<typeof ItemsCsvRowSchema>;

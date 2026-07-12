@@ -28,7 +28,11 @@ export type GameInitialization = {
   startedAtMs: number;
 };
 
-export function createGame(board: Board, hintMode: HintMode, initialization: GameInitialization): GameState {
+export function createGame(
+  board: Board,
+  hintMode: HintMode,
+  initialization: GameInitialization,
+): GameState {
   return {
     board,
     hintMode,
@@ -40,7 +44,7 @@ export function createGame(board: Board, hintMode: HintMode, initialization: Gam
     numberOneCallUsed: false,
     numberOneBonus: false,
     hintUsed: false,
-    startedAtMs: initialization.startedAtMs
+    startedAtMs: initialization.startedAtMs,
   };
 }
 
@@ -50,10 +54,17 @@ function assertInProgress(state: GameState): void {
   }
 }
 
-export function submitGuess(state: GameState, candidateId: string, calledNumberOne: boolean, atMs: number): GameState {
+export function submitGuess(
+  state: GameState,
+  candidateId: string,
+  calledNumberOne: boolean,
+  atMs: number,
+): GameState {
   assertInProgress(state);
-  if (!state.availableIds.includes(candidateId)) throw new Error("Candidate is unavailable");
-  if (calledNumberOne && state.numberOneCallUsed) throw new Error("Number-one call already used");
+  if (!state.availableIds.includes(candidateId))
+    throw new Error("Candidate is unavailable");
+  if (calledNumberOne && state.numberOneCallUsed)
+    throw new Error("Number-one call already used");
 
   const correct = state.board.ranked.includes(candidateId);
   return {
@@ -62,9 +73,16 @@ export function submitGuess(state: GameState, candidateId: string, calledNumberO
     foundIds: correct ? [...state.foundIds, candidateId] : state.foundIds,
     strikes: state.strikes + (correct ? 0 : 1),
     numberOneCallUsed: state.numberOneCallUsed || calledNumberOne,
-    numberOneBonus: state.numberOneBonus || (calledNumberOne && candidateId === state.board.ranked[0]),
-    guesses: [...state.guesses, { candidateId, calledNumberOne, atMs }]
+    numberOneBonus:
+      state.numberOneBonus ||
+      (calledNumberOne && candidateId === state.board.ranked[0]),
+    guesses: [...state.guesses, { candidateId, calledNumberOne, atMs }],
   };
+}
+
+// Returns the CSV rank of a candidate (same number for tied items), or null if not in the top 10.
+export function getGuessRank(candidateId: string, board: Board): number | null {
+  return board.universe.find((c) => c.id === candidateId)?.rank ?? null;
 }
 
 function hash(value: string): number {
@@ -85,8 +103,11 @@ export function useHint(state: GameState, kind: HintKind): GameState {
     .map((candidateId, index) => ({ candidateId, rank: index + 1 }))
     .filter(({ candidateId }) => state.availableIds.includes(candidateId));
   const selected = remainingRanks[hash(state.playId) % remainingRanks.length];
-  const candidate = state.board.universe.find(({ id }) => id === selected.candidateId);
-  if (!candidate) throw new Error("Hint candidate is absent from the board universe");
+  const candidate = state.board.universe.find(
+    ({ id }) => id === selected.candidateId,
+  );
+  if (!candidate)
+    throw new Error("Hint candidate is absent from the board universe");
 
   return {
     ...state,
@@ -94,7 +115,10 @@ export function useHint(state: GameState, kind: HintKind): GameState {
     hintReveal: {
       rank: selected.rank,
       kind,
-      value: kind === "first-letter" ? candidate.label.charAt(0) : candidate.metricValue!
-    }
+      value:
+        kind === "first-letter"
+          ? candidate.label.charAt(0)
+          : candidate.metricValue!,
+    },
   };
 }

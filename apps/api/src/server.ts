@@ -8,9 +8,9 @@ import postgres from "postgres";
 import { createPublisherService } from "./publisher.js";
 import { DrizzlePublisherRepository } from "./publisher-repository.js";
 import { serve } from "@hono/node-server";
-import { readFileSync, existsSync, statSync } from "fs";
+import { serveStatic } from "@hono/node-server/serve-static";
 import { fileURLToPath } from "url";
-import { dirname, join, extname } from "path";
+import { dirname, join } from "path";
 import { runMigrations } from "./migrations.js";
 
 export function composeApp(config: {
@@ -62,7 +62,6 @@ if (
   const databaseUrl = process.env.DATABASE_URL ?? process.env.TEST_DATABASE_URL;
   if (!databaseUrl) throw new Error("DATABASE_URL is required");
 
-  // Run migrations before starting server
   console.log("Running database migrations...");
   await runMigrations(databaseUrl);
 
@@ -77,74 +76,32 @@ if (
     remoteAddress: () => "127.0.0.1",
   });
 
-  // Create wrapper app to serve web frontend + API
   const { Hono } = await import("hono");
   const app = new Hono();
   const __dirname = dirname(fileURLToPath(import.meta.url));
-  const webDistPath = join(__dirname, "../../web/dist");
-  const publisherDistPath = join(__dirname, "../../publisher/dist");
+  const webRoot = join(__dirname, "../../web/dist");
+  const publisherRoot = join(__dirname, "../../publisher/dist");
 
-  console.log(`Server directory: ${__dirname}`);
-  console.log(
-    `Web dist path: ${webDistPath} - exists: ${existsSync(webDistPath)}`,
+  // Publisher app at /publisher/*
+  app.use(
+    "/publisher/*",
+    serveStatic({
+      root: publisherRoot,
+      rewriteRequestPath: (p) => p.replace(/^\/publisher/, ""),
+    }),
   );
-  console.log(
-    `Publisher dist path: ${publisherDistPath} - exists: ${existsSync(publisherDistPath)}`,
+  app.get("/publisher", (c) => c.redirect("/publisher/"));
+  app.get(
+    "/publisher/*",
+    serveStatic({ root: publisherRoot, path: "index.html" }),
   );
 
-  // Static file middleware for web & publisher assets — must come before API routing
-  const mimeTypes: Record<string, string> = {
-    ".html": "text/html",
-    ".js": "application/javascript",
-    ".css": "text/css",
-    ".json": "application/json",
-    ".svg": "image/svg+xml",
-    ".png": "image/png",
-    ".jpg": "image/jpeg",
-    ".gif": "image/gif",
-    ".ico": "image/x-icon",
-  };
-
-  app.use("*", async (c, next) => {
-    const path = c.req.path;
-    if (path.startsWith("/v1/")) return next();
-
-    let distPath = webDistPath;
-    let filePath: string;
-
-    // Route /publisher/* to publisher app
-    if (path.startsWith("/publisher")) {
-      distPath = publisherDistPath;
-      filePath = join(
-        distPath,
-        path === "/publisher" || path === "/publisher/"
-          ? "index.html"
-          : path.slice("/publisher".length),
-      );
-    } else {
-      filePath = join(distPath, path === "/" ? "index.html" : path);
-    }
-
-    // Serve static files
-    if (existsSync(filePath) && statSync(filePath).isFile()) {
-      const content = readFileSync(filePath);
-      const ext = extname(filePath);
-      c.header("Content-Type", mimeTypes[ext] || "application/octet-stream");
-      return c.body(content);
-    }
-
-    // SPA fallback: serve index.html from appropriate dist
-    const indexPath = join(distPath, "index.html");
-    if (existsSync(indexPath)) {
-      const html = readFileSync(indexPath, "utf-8");
-      return c.html(html);
-    }
-
-    return next();
-  });
-
-  // API routes after static files — requests that pass through the static middleware land here
+  // API routes
   app.route("/", apiApp);
+
+  // Web app catch-all (SPA fallback)
+  app.use("*", serveStatic({ root: webRoot }));
+  app.get("*", serveStatic({ root: webRoot, path: "index.html" }));
 
   serve({ fetch: app.fetch, port });
   console.log(`API listening on http://127.0.0.1:${port}`);

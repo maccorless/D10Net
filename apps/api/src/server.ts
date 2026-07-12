@@ -82,12 +82,20 @@ if (
   const app = new Hono();
   const __dirname = dirname(fileURLToPath(import.meta.url));
   const webDistPath = join(__dirname, "../../web/dist");
+  const publisherDistPath = join(__dirname, "../../publisher/dist");
+
+  console.log(`Server directory: ${__dirname}`);
+  console.log(
+    `Web dist path: ${webDistPath} - exists: ${existsSync(webDistPath)}`,
+  );
+  console.log(
+    `Publisher dist path: ${publisherDistPath} - exists: ${existsSync(publisherDistPath)}`,
+  );
 
   // Serve API routes
   app.route("/v1", apiApp);
 
   // Static file middleware for web & publisher assets
-  const publisherDistPath = join(__dirname, "../../publisher/dist");
   const mimeTypes: Record<string, string> = {
     ".html": "text/html",
     ".js": "application/javascript",

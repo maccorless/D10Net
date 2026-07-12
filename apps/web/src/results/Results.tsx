@@ -62,7 +62,11 @@ export function Results({
       <pre className="results-grid">{buildShareText(result)}</pre>
       <button
         className="results-share"
-        onClick={() => void shareResult(result)}
+        onClick={() =>
+          shareResult(result).catch((e: unknown) => {
+            if (e instanceof Error && e.name !== "AbortError") throw e;
+          })
+        }
       >
         Share result
       </button>

@@ -92,10 +92,7 @@ if (
     `Publisher dist path: ${publisherDistPath} - exists: ${existsSync(publisherDistPath)}`,
   );
 
-  // Serve API routes
-  app.route("/", apiApp);
-
-  // Static file middleware for web & publisher assets
+  // Static file middleware for web & publisher assets — must come before API routing
   const mimeTypes: Record<string, string> = {
     ".html": "text/html",
     ".js": "application/javascript",
@@ -145,6 +142,9 @@ if (
 
     return next();
   });
+
+  // API routes after static files — requests that pass through the static middleware land here
+  app.route("/", apiApp);
 
   serve({ fetch: app.fetch, port });
   console.log(`API listening on http://127.0.0.1:${port}`);

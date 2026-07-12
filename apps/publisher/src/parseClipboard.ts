@@ -134,23 +134,25 @@ export function combine(
     const universeItems = items.filter((r) => r.rowType !== "UNIVERSE_REF");
     const ref = items.find((r) => r.rowType === "UNIVERSE_REF");
 
-    if (top10.length !== 10) {
+    if (top10.length < 10) {
       errors.push({
         boardId: boardRow.boardId,
         row: csvRow,
         column: "row_type",
-        message: `Expected exactly 10 TOP10 rows, got ${top10.length}`,
+        message: `Expected at least 10 TOP10 rows, got ${top10.length}`,
       });
       continue;
     }
 
-    const ranked = top10.map((r) => r.canonicalValue);
+    // Ties can produce > 10 TOP10 rows — take the first 10 by rank order.
+    const ranked = top10.slice(0, 10).map((r) => r.canonicalValue);
     const universe = universeItems.map((r) => ({
       id: r.canonicalValue,
       label: r.canonicalValue,
       aliases: r.aliases ? r.aliases.split("|").filter(Boolean) : [],
       ...(r.metricValue ? { metricValue: r.metricValue } : {}),
-      ...(r.rank != null ? { rank: r.rank } : {}),
+      // Only carry rank for items actually in the top 10 range (rank > 10 are near-misses in the CSV)
+      ...(r.rank != null && r.rank <= 10 ? { rank: r.rank } : {}),
     }));
 
     const refSize = ref?.metricValue

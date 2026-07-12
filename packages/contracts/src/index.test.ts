@@ -117,10 +117,11 @@ describe("BoardsCsvRowSchema", () => {
   it("accepts a valid boards CSV row", () => {
     expect(BoardsCsvRowSchema.parse(valid).boardId).toBe("largest-cities");
   });
-  it("rejects a row with an invalid ranking source URL", () => {
-    expect(() =>
-      BoardsCsvRowSchema.parse({ ...valid, rankingSourceUrl: "not-a-url" }),
-    ).toThrow();
+  it("accepts a non-URL ranking source (URLs are not strictly validated)", () => {
+    expect(
+      BoardsCsvRowSchema.parse({ ...valid, rankingSourceUrl: "Wikipedia" })
+        .rankingSourceUrl,
+    ).toBe("Wikipedia");
   });
 });
 
@@ -140,7 +141,7 @@ describe("ItemsCsvRowSchema", () => {
       ItemsCsvRowSchema.parse({ ...valid, rowType: "INVALID" }),
     ).toThrow();
   });
-  it("rejects a rank outside 1-10", () => {
-    expect(() => ItemsCsvRowSchema.parse({ ...valid, rank: 11 })).toThrow();
+  it("accepts rank > 10 (UNIVERSE near-miss items can have rank 11+)", () => {
+    expect(ItemsCsvRowSchema.parse({ ...valid, rank: 11 }).rank).toBe(11);
   });
 });

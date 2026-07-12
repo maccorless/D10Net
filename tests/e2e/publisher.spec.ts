@@ -71,8 +71,24 @@ test("signs in, imports valid and invalid boards, and shows correct status", asy
   // bad-board has no items → will fail validation with "Expected at least 10 TOP10 rows"
   const itemsCsv = [ITEMS_HEADER, ...itemRows("browser-board")].join("\n");
 
-  await page.getByLabel("Boards CSV").fill(boardsCsv);
-  await page.getByLabel("Items CSV").fill(itemsCsv);
+  // fill() doesn't always trigger React 19 onChange on controlled textareas;
+  // use native value setter + input event to reliably update state.
+  for (const [id, value] of [
+    ["boards-csv", boardsCsv],
+    ["items-csv", itemsCsv],
+  ]) {
+    await page.evaluate(
+      ([id, value]) => {
+        const el = document.getElementById(id) as HTMLTextAreaElement;
+        Object.getOwnPropertyDescriptor(
+          HTMLTextAreaElement.prototype,
+          "value",
+        )!.set!.call(el, value);
+        el.dispatchEvent(new Event("input", { bubbles: true }));
+      },
+      [id, value] as [string, string],
+    );
+  }
 
   expect(
     (await new AxeBuilder({ page }).analyze()).violations.filter((v) =>

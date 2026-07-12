@@ -3,6 +3,40 @@ import { z } from "zod";
 export const HintModeSchema = z.enum(["on", "off"]);
 export type HintMode = z.infer<typeof HintModeSchema>;
 
+export const MetricFormatSchema = z.enum(["date_yyyymmdd"]);
+export type MetricFormat = z.infer<typeof MetricFormatSchema>;
+
+const MONTHS = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+
+export function formatMetricValue(
+  value: string,
+  format?: MetricFormat,
+): string {
+  if (format === "date_yyyymmdd") {
+    // Last 4 chars are MMDD; everything before is the year (handles years < 1000).
+    const mmdd = value.slice(-4);
+    const year = parseInt(value.slice(0, -4), 10);
+    const month = parseInt(mmdd.slice(0, 2), 10);
+    const day = parseInt(mmdd.slice(2), 10);
+    const monthName = MONTHS[month - 1] ?? "";
+    return `${monthName} ${day}, ${year}`;
+  }
+  return value;
+}
+
 export const BoardSchema = z
   .object({
     id: z.string().min(1),
@@ -16,6 +50,7 @@ export const BoardSchema = z
     universeSource: z.object({ name: z.string(), url: z.string() }),
     universeDescription: z.string().optional(),
     universeSize: z.number().int().positive().optional(),
+    metricFormat: MetricFormatSchema.optional(),
     dataAsOf: z.string().optional(),
     universeAsOf: z.string().optional(),
     universe: z
@@ -119,6 +154,7 @@ export const BoardsCsvRowSchema = z.object({
   universeAsOf: z.string().optional(),
   universeDescription: z.string().optional(),
   universeSize: z.number().int().positive().optional(),
+  metricFormat: MetricFormatSchema.optional(),
   notes: z.string().optional(),
 });
 export type BoardsCsvRow = z.infer<typeof BoardsCsvRowSchema>;

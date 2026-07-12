@@ -7,8 +7,8 @@ import { assertKeyboardAccessible } from "./accessibility";
 test("plays an 11-point Hints Off Daily in one viewport", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 700 });
   await page.goto("/today");
-  await expect(page.getByRole("button", { name: "Hints Off" })).toBeEnabled();
-  await page.getByRole("button", { name: "Hints Off" }).click();
+  await expect(page.getByRole("button", { name: "Play Today" })).toBeEnabled();
+  await page.getByRole("button", { name: "Play Today" }).click();
   await expect(page.getByText("0 / 10")).toBeVisible();
   await expect(page.getByTestId("rank-slot")).toHaveCount(10);
   expect(
@@ -37,9 +37,13 @@ test("plays an 11-point Hints Off Daily in one viewport", async ({ page }) => {
     .toBe(11);
   await sql.end();
 });
+
 test("setup and active board have no serious or critical axe violations and named controls", async ({
   page,
+  request,
 }) => {
+  // test 1 already played today's daily — reset so we can start fresh in hints-on mode
+  await request.delete("/v1/plays/today");
   await page.goto("/today");
   expect(
     (await new AxeBuilder({ page }).analyze()).violations.filter((v) =>
@@ -47,7 +51,10 @@ test("setup and active board have no serious or critical axe violations and name
     ),
   ).toEqual([]);
   await assertKeyboardAccessible(page);
-  await page.getByRole("button", { name: "Hints On" }).press("Enter");
+  // Toggle to hints-on mode, then start the game
+  await page.getByRole("button", { name: "Hints: Off" }).click();
+  await expect(page.getByRole("button", { name: "Hints: On" })).toBeVisible();
+  await page.getByRole("button", { name: "Play Today" }).click();
   await expect(
     page.getByRole("searchbox", { name: "Guess an answer" }),
   ).toBeVisible();
@@ -68,7 +75,8 @@ test("continues offline after start and retries the queued finish on reconnect",
   const sql = postgres(process.env.TEST_DATABASE_URL!);
   await page.context().clearCookies();
   await page.goto("/today");
-  await page.getByRole("button", { name: "Hints Off" }).click();
+  await expect(page.getByRole("button", { name: "Play Today" })).toBeEnabled();
+  await page.getByRole("button", { name: "Play Today" }).click();
   await page.context().setOffline(true);
   await submitAllTenWithNumberOneCall(page);
   await expect(page.getByText("11 points", { exact: true })).toBeVisible();

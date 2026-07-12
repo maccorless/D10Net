@@ -5,6 +5,7 @@ import {
   BoardSchema,
   PlayStartSchema,
   StartedGameSchema,
+  formatMetricValue,
 } from "./index";
 import { validCitiesBoard } from "@daily/test-data/boards";
 
@@ -122,6 +123,21 @@ describe("BoardsCsvRowSchema", () => {
       BoardsCsvRowSchema.parse({ ...valid, rankingSourceUrl: "Wikipedia" })
         .rankingSourceUrl,
     ).toBe("Wikipedia");
+  });
+});
+
+describe("formatMetricValue", () => {
+  it("formats a modern YYYYMMDD date", () => {
+    expect(formatMetricValue("16180523", "date_yyyymmdd")).toBe("May 23, 1618");
+  });
+  it("formats a sub-1000 year date (7 digits)", () => {
+    expect(formatMetricValue("7551216", "date_yyyymmdd")).toBe("Dec 16, 755");
+  });
+  it("formats a well-known date", () => {
+    expect(formatMetricValue("19390901", "date_yyyymmdd")).toBe("Sep 1, 1939");
+  });
+  it("returns value unchanged when no format is given", () => {
+    expect(formatMetricValue("828")).toBe("828");
   });
 });
 

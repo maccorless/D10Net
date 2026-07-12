@@ -1,5 +1,6 @@
 import {
   BoardSchema,
+  MetricFormatSchema,
   type Board,
   type BoardsCsvRow,
   type ItemsCsvRow,
@@ -27,6 +28,7 @@ const BOARDS_COLUMNS = [
   "universe_as_of",
   "universe_description",
   "universe_size",
+  "metric_format",
   "notes",
 ] as const;
 
@@ -82,7 +84,10 @@ export function parseBoards(tsv: string): BoardsCsvRow[] | ImportError {
       universeAsOf: v[10] || undefined,
       universeDescription: v[11] || undefined,
       universeSize: size && !isNaN(size) ? size : undefined,
-      notes: v[13] || undefined,
+      metricFormat: MetricFormatSchema.safeParse(v[13]).success
+        ? MetricFormatSchema.parse(v[13])
+        : undefined,
+      notes: v[14] || undefined,
     } satisfies BoardsCsvRow;
   });
 }
@@ -191,6 +196,7 @@ export function combine(
       ...(universeSize ? { universeSize } : {}),
       ...(boardRow.dataAsOf ? { dataAsOf: boardRow.dataAsOf } : {}),
       ...(boardRow.universeAsOf ? { universeAsOf: boardRow.universeAsOf } : {}),
+      ...(boardRow.metricFormat ? { metricFormat: boardRow.metricFormat } : {}),
       universe,
       ranked,
     };

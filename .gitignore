@@ -26,11 +26,11 @@ out/
 # Testing & logs
 test-results/
 playwright-report/
+tests/e2e/.auth/
 .nyc_output/
 *.log
 npm-debug.log*
 
-# Superpowers & tooling
+# Dev tooling
 .superpowers/
-.worktrees/
 .codegraph/

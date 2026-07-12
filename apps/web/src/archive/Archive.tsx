@@ -1,0 +1,2 @@
+export type ArchiveEntry={gameDay:string;status:"review"|"playable";result?:{score:number}};
+export function Archive({entries,onPlay,onReview}:{entries:ArchiveEntry[];onPlay:(d:string)=>void;onReview:(d:string)=>void}){return <section><h1>Archive</h1><ol>{entries.map(e=><li key={e.gameDay}><time>{e.gameDay}</time>{e.status==="review"?<button onClick={()=>onReview(e.gameDay)}>Review{e.result?` · ${e.result.score} points`:""}</button>:<button onClick={()=>onPlay(e.gameDay)}>Play</button>}</li>)}</ol></section>}

@@ -1,0 +1,17 @@
+{
+  "name": "@daily/game",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": "./src/index.ts",
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit --module NodeNext --moduleResolution NodeNext --target ES2022 src/index.ts src/engine.ts src/search.ts src/scoring.ts src/engine.types.test-d.ts"
+  },
+  "dependencies": {
+    "@daily/contracts": "workspace:*"
+  },
+  "devDependencies": {
+    "@daily/test-data": "workspace:*"
+  }
+}

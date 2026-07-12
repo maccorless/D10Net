@@ -1,0 +1,24 @@
+const cities = [
+  "Tokyo", "Delhi", "Shanghai", "Dhaka", "Sao Paulo", "Mexico City", "Cairo", "Beijing", "Mumbai", "Osaka",
+  "Chongqing", "Karachi", "Kinshasa", "Lagos", "Istanbul", "Buenos Aires", "Kolkata", "Manila", "Guangzhou", "Tianjin",
+  "Lahore", "Bangalore", "Rio de Janeiro", "Shenzhen", "Moscow", "Chennai", "Bogota", "Paris", "Jakarta", "Lima",
+  "Bangkok", "Hyderabad", "Seoul", "Nagoya", "London", "Chengdu", "Nanjing", "Tehran", "Ho Chi Minh City", "Luanda",
+  "Wuhan", "Xi'an", "Ahmedabad", "Kuala Lumpur", "New York City", "Hangzhou", "Surat", "Suzhou", "Hong Kong", "Riyadh"
+];
+
+export const validCitiesBoard = {
+  id: "largest-cities",
+  version: 1,
+  gameDay: null,
+  title: "Largest Cities",
+  metric: "Population of the urban agglomeration",
+  tags: ["geography"],
+  sources: [{ name: "United Nations", url: "https://www.un.org/" }],
+  universe: cities.map((label, index) => ({
+    id: `city-${index + 1}`,
+    label,
+    aliases: [],
+    ...(index < 10 ? { metricValue: `${37 - index} million` } : {})
+  })),
+  ranked: cities.slice(0, 10).map((_, index) => `city-${index + 1}`)
+};

@@ -1,0 +1,2 @@
+import {useState} from "react";
+export function SignIn({requestMagicLink}:{requestMagicLink:(email:string)=>Promise<unknown>}){const [email,setEmail]=useState(""),[sent,setSent]=useState(false);return <form onSubmit={e=>{e.preventDefault();void requestMagicLink(email).then(()=>setSent(true))}}><label>Email <input type="email" required autoComplete="email" value={email} onChange={e=>setEmail(e.target.value)}/></label><button>Send magic link</button>{sent&&<p>Check your email for a sign-in link.</p>}</form>}

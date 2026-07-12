@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: trust
+      POSTGRES_USER: d10net
+      POSTGRES_DB: d10net
+    ports: ["55432:5432"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U d10net"]
+      interval: 2s
+      timeout: 2s
+      retries: 15
+    volumes: ["d10net-postgres:/var/lib/postgresql/data"]
+volumes:
+  d10net-postgres:

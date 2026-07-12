@@ -1,0 +1,4 @@
+export type ArchiveBoard={gameDay:string|null;published:boolean};export type ArchivePlay={gameDay:string;result?:unknown};
+export function archiveListing(boards:ArchiveBoard[],plays:ArchivePlay[],today:string){const byDay=new Map(plays.map(p=>[p.gameDay,p]));return boards.filter((b):b is ArchiveBoard&{gameDay:string}=>b.published&&b.gameDay!==null&&b.gameDay<today).sort((a,b)=>b.gameDay.localeCompare(a.gameDay)).map(b=>{const p=byDay.get(b.gameDay);return p?.result?{gameDay:b.gameDay,status:"review" as const,result:p.result}:{gameDay:b.gameDay,status:"playable" as const}})}
+export function archiveDetail(boards:ArchiveBoard[],plays:ArchivePlay[],gameDay:string,today:string){if(gameDay>=today)return undefined;return archiveListing(boards,plays,today).find(x=>x.gameDay===gameDay)}
+export function finishArchive<T>(result:T){return {result,rankingEntered:false,streaksChanged:false}}

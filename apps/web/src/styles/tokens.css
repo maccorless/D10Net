@@ -1,0 +1,5 @@
+:root { color-scheme:light dark; --bg:#eef1f6; --surface:#fff; --ink:#191a1d; --muted:#5b616c; --accent:#635bff; --danger:#d94b57; --radius:14px; }
+@media (prefers-color-scheme:dark) { :root { --bg:#15171b; --surface:#24272e; --ink:#f5f6f8; --muted:#a4aab5; --accent:#9c96ff; } }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); }
+button,input { font:inherit; }

@@ -1,0 +1,10 @@
+{
+  "name": "@daily/test-data",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./boards": "./src/boards.ts",
+    "./future-marker": "./src/future-marker.ts"
+  }
+}

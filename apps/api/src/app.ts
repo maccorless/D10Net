@@ -242,9 +242,16 @@ export function createApp(
     return c.json({ ok: true });
   });
   app.get("/test", async (c) => {
-    const player = c.get("playerId" as never) as string | null;
-    if (player && services.resetTodayPlay)
-      await services.resetTodayPlay(player);
+    if (services.resetTodayPlay && options.authenticate) {
+      const cookieToken = c.req
+        .header("cookie")
+        ?.split(";")
+        .map((v) => v.trim())
+        .find((v) => v.startsWith("d10_session="))
+        ?.slice("d10_session=".length);
+      const player = await options.authenticate(cookieToken);
+      if (player) await services.resetTodayPlay(player);
+    }
     return c.redirect("/today");
   });
   app.get("/v1/rankings/:gameDay", async (c) => {

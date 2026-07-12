@@ -143,6 +143,13 @@ export function createApp(
     }),
   );
   app.use(
+    "/v1/publisher/boards/bulk",
+    bodyLimit({
+      maxSize: 10 * 1024 * 1024, // ponytail: 10 MB for bulk board imports
+      onError: (c) => c.json({ error: "Request body too large" }, 413),
+    }),
+  );
+  app.use(
     "/v1/*",
     bodyLimit({
       maxSize: options.bodyLimit ?? 65_536,

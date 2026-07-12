@@ -25,6 +25,7 @@ export default defineConfig({
         icons: [],
       },
       workbox: {
+        navigateFallbackDenylist: [/^\/test$/],
         // Cache only today's published board and immutable archive versions. Any endpoint
         // capable of exposing unpublished/future boards is deliberately excluded.
         runtimeCaching: [

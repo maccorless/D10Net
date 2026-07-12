@@ -93,7 +93,7 @@ if (
   );
 
   // Serve API routes
-  app.route("/v1", apiApp);
+  app.route("/", apiApp);
 
   // Static file middleware for web & publisher assets
   const mimeTypes: Record<string, string> = {

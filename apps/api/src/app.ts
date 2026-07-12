@@ -280,11 +280,12 @@ export function createApp(
       : c.json(board);
   });
   app.use("/v1/publisher/*", async (c, next) => {
-    const bearer = c.req.header("authorization") ?? "";
-    if (
-      options.publisherSecret &&
-      bearer === `Bearer ${options.publisherSecret}`
-    ) {
+    const bearer = (c.req.header("authorization") ?? "").trim();
+    const secret = options.publisherSecret?.trim();
+    console.log(
+      `[publisher] path=${c.req.path} secret_set=${!!secret} bearer_prefix=${bearer.slice(0, 10)}`,
+    );
+    if (secret && bearer === `Bearer ${secret}`) {
       c.set("accountId" as never, "publisher-key" as never);
       await next();
       return;

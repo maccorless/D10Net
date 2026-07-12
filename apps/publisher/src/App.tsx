@@ -150,10 +150,10 @@ export function App() {
       <h1>Board publisher</h1>
 
       <div style={{ display: "flex", gap: "1rem", flexDirection: "column" }}>
-        <label>
+        <label htmlFor="boards-csv">
           Boards CSV
           <textarea
-            aria-label="Paste from d10net_boards.csv"
+            id="boards-csv"
             value={boardsText}
             onChange={(e) => setBoardsText(e.target.value)}
             rows={6}
@@ -164,10 +164,10 @@ export function App() {
           <p role="alert">Boards: {boardsHeaderError.message}</p>
         )}
 
-        <label>
+        <label htmlFor="items-csv">
           Items CSV
           <textarea
-            aria-label="Paste from d10net_items.csv"
+            id="items-csv"
             value={itemsText}
             onChange={(e) => setItemsText(e.target.value)}
             rows={6}

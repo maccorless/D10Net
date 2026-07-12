@@ -1,0 +1,1473 @@
+board_id,row_type,rank,canonical_value,aliases,metric_value,notes
+B001,TOP10,1,Brazil,Brasil,79,
+B001,TOP10,2,Germany,West Germany|Deutschland|BRD,70,Totals include West Germany era (1954-1990)
+B001,TOP10,3,Argentina,Argentine Republic,52,
+B001,TOP10,4,France,Les Bleus|France national football team,45,Tied for 4th with Italy
+B001,TOP10,4,Italy,Italia,45,Tied for 4th with France
+B001,TOP10,6,England,Three Lions|English national team,36,Tied for 6th with Spain
+B001,TOP10,6,Spain,España|Espana|La Roja,36,Tied for 6th with England
+B001,TOP10,8,Netherlands,Holland|The Netherlands|Nederland|Oranje,32,
+B001,TOP10,9,Uruguay,La Celeste,25,
+B001,TOP10,10,Belgium,Belgique|Belgie|Les Diables Rouges,24,
+B001,UNIVERSE,1,Mexico,México|El Tri,21,
+B001,UNIVERSE,2,Sweden,Sverige,20,
+B001,UNIVERSE,3,Portugal,,19,Tied for 13th with Russia/Soviet Union
+B001,UNIVERSE,3,Russia,Soviet Union|USSR|CIS,19,Totals include Soviet Union era. Tied for 13th with Portugal.
+B001,UNIVERSE,5,Serbia,Yugoslavia|Federal Republic of Yugoslavia|SFR Yugoslavia,18,Listed historically as Yugoslavia
+B001,UNIVERSE_REF,,ALL_WC_NATIONS_84,,84,All 84 nations to have appeared in at least one FIFA Men's World Cup finals tournament through Qatar 2022
+B002,TOP10,1,Real Madrid,Real Madrid CF,15,
+B002,TOP10,2,AC Milan,Milan|Associazione Calcio Milan|Rossoneri,7,
+B002,TOP10,3,Bayern Munich,FC Bayern München|Bayern München|Bayern|FCB,6,Tied for 3rd with Liverpool
+B002,TOP10,3,Liverpool,Liverpool FC|LFC|The Reds,6,Tied for 3rd with Bayern Munich
+B002,TOP10,5,Barcelona,FC Barcelona|Barça|Barca|FCB,5,
+B002,TOP10,6,Ajax,AFC Ajax|Ajax Amsterdam,4,
+B002,TOP10,7,Inter Milan,FC Internazionale Milano|Internazionale|Inter|Nerazzurri|FC Inter,3,Tied for 7th with Manchester United
+B002,TOP10,7,Manchester United,Manchester United FC|Man United|Man Utd|MUFC|Red Devils,3,Tied for 7th with Inter Milan
+B002,TOP10,9,Benfica,SL Benfica|Sport Lisboa e Benfica|Águias,2,Five-way tie at rank 9 (2 titles each)
+B002,TOP10,9,Chelsea,Chelsea FC|CFC|The Blues,2,Five-way tie at rank 9 (2 titles each)
+B002,TOP10,9,Juventus,Juventus FC|Juve|La Vecchia Signora,2,Five-way tie at rank 9 (2 titles each)
+B002,TOP10,9,Nottingham Forest,Nottm Forest|Forest|NFFC,2,Five-way tie at rank 9 (2 titles each)
+B002,TOP10,9,Porto,FC Porto|FCP,2,Five-way tie at rank 9 (2 titles each)
+B002,UNIVERSE,1,Aston Villa,Aston Villa FC|Villa|AVFC,1,1981-82
+B002,UNIVERSE,1,Borussia Dortmund,BVB|BVB 09|Die Borussen,1,1996-97
+B002,UNIVERSE,1,Celtic,Celtic FC|The Hoops,1,1966-67 (Lisbon Lions; first British club to win European Cup)
+B002,UNIVERSE,1,Feyenoord,Feyenoord Rotterdam,1,1969-70
+B002,UNIVERSE,1,Hamburger SV,Hamburg SV|HSV,1,1982-83
+B002,UNIVERSE,1,Manchester City,Manchester City FC|Man City|MCFC|The Citizens,1,2022-23 title (first UCL title for the club)
+B002,UNIVERSE,1,Marseille,Olympique de Marseille|OM|L'OM,1,1992-93; club stripped by UEFA at the time but widely counted in historical records
+B002,UNIVERSE,1,PSV Eindhoven,PSV|Philips Sport Vereniging,1,1987-88
+B002,UNIVERSE,1,Red Star Belgrade,FK Crvena zvezda|Crvena zvezda|Red Star,1,1990-91
+B002,UNIVERSE,1,Steaua Bucharest,FC Steaua Bucharest|FCSB|Steaua,1,1985-86
+B003,TOP10,1,Miroslav Klose,Klose,16,Held all-time record as of 2022-12-18
+B003,TOP10,2,Ronaldo,R9|Ronaldo Nazário|Ronaldo (Brazil)|O Fenômeno|Ronaldo Luís Nazário de Lima,15,Brazilian Ronaldo (R9); not Cristiano Ronaldo
+B003,TOP10,3,Gerd Müller,Gerd Muller|Der Bomber|Müller,14,
+B003,TOP10,4,Just Fontaine,Fontaine,13,All 13 goals scored in a single tournament (1958). Tied for 4th with Messi.
+B003,TOP10,4,Lionel Messi,Messi|Leo Messi|La Pulga,13,Tied for 4th with Fontaine (goals: 2006×1 + 2014×4 + 2018×1 + 2022×7)
+B003,TOP10,6,Kylian Mbappé,Mbappe|Kylian Mbappe,12,Tied for 6th with Pelé (goals: 2018×4 + 2022×8). Has since surpassed this total in 2026 WC.
+B003,TOP10,6,Pelé,Pele|Edson Arantes do Nascimento|O Rei,12,Tied for 6th with Mbappé
+B003,TOP10,8,Jürgen Klinsmann,Jurgen Klinsmann|Klinsmann,11,Tied for 8th with Kocsis
+B003,TOP10,8,Sándor Kocsis,Sandor Kocsis|Kocsis|The Golden Head,11,Tied for 8th with Klinsmann
+B003,TOP10,10,Gabriel Batistuta,Batigol|Batistuta,10,Five-way tie at rank 10 with 10 goals each
+B003,TOP10,10,Gary Lineker,Lineker,10,Five-way tie at rank 10 with 10 goals each
+B003,TOP10,10,Grzegorz Lato,Lato,10,Five-way tie at rank 10 with 10 goals each
+B003,TOP10,10,Teófilo Cubillas,Cubillas|Teofilo Cubillas,10,Five-way tie at rank 10 with 10 goals each
+B003,TOP10,10,Thomas Müller,Thomas Muller|Müller|Müller (Thomas),10,Five-way tie at rank 10 with 10 goals each
+B003,UNIVERSE_REF,,ALL_WC_10PLUS_SCORERS,,14,All 14 players to have scored 10 or more goals in FIFA Men's World Cup finals as of 2022-12-18
+B004,TOP10,1,Manchester United,Manchester United FC|Man Utd|Man United|MUFC|Red Devils,13,
+B004,TOP10,2,Manchester City,Manchester City FC|Man City|MCFC|The Citizens,8,
+B004,TOP10,3,Chelsea,Chelsea FC|CFC|The Blues,5,
+B004,TOP10,4,Arsenal,Arsenal FC|The Gunners|AFC,4,4th title won in 2025-26 ending a 22-year wait
+B004,TOP10,5,Liverpool,Liverpool FC|LFC|The Reds,2,2nd PL title won in 2024-25
+B004,TOP10,6,Blackburn Rovers,Blackburn Rovers FC|Blackburn|BRFC|Rovers,1,Tied for 6th with Leicester City (1994-95 title)
+B004,TOP10,6,Leicester City,Leicester City FC|Leicester|LCFC|The Foxes|Leicester City FC,1,Tied for 6th with Blackburn Rovers (2015-16 title)
+B005,TOP10,1,Real Madrid,Real Madrid CF|Real,36,
+B005,TOP10,2,Barcelona,FC Barcelona|Barça|Barca|FCB,29,Won back-to-back in 2024-25 and 2025-26
+B005,TOP10,3,Atlético Madrid,Atletico Madrid|Atlético de Madrid|Atléti|Club Atletico de Madrid,11,
+B005,TOP10,4,Athletic Bilbao,Athletic Club|Athletic Club de Bilbao|Athletic|Los Leones,8,
+B005,TOP10,5,Valencia,Valencia CF,6,
+B005,TOP10,6,Real Sociedad,Real Sociedad de Fútbol|Real Sociedad de Futbol,2,
+B005,TOP10,7,Deportivo La Coruña,RC Deportivo de La Coruña|Deportivo|Dépor|RC Deportivo,1,Three-way tie at rank 7. Title won in 1999-2000.
+B005,TOP10,7,Real Betis,Real Betis Balompié|Betis|Real Betis,1,Three-way tie at rank 7. Title won in 1934-35.
+B005,TOP10,7,Sevilla,Sevilla FC,1,Three-way tie at rank 7. Title won in 1945-46.
+B005,UNIVERSE_REF,,ALL_LA_LIGA_WINNERS,,9,All 9 clubs to have won the Spanish La Liga championship at least once
+B006,TOP10,1,Juventus,Juventus FC|Juve|La Vecchia Signora|La Signora,36,Official FIGC count; includes 2005-06 title restored in 2017. Excludes 2004-05 (stripped post-Calciopoli).
+B006,TOP10,2,Inter Milan,FC Internazionale Milano|Internazionale|Inter|Nerazzurri,21,21st Scudetto won in 2025-26
+B006,TOP10,3,AC Milan,Milan|AC Milan|Rossoneri,19,
+B006,TOP10,4,Genoa,Genoa CFC|Genoa Cricket and Football Club,9,All 9 titles won in early championship era (1898-1924); none since
+B006,TOP10,5,Bologna,Bologna FC|Bologna FC 1909|Rossoblu,7,Three-way tie at rank 5 with Torino and Pro Vercelli
+B006,TOP10,5,Pro Vercelli,Unione Sportiva Pro Vercelli|US Pro Vercelli,7,Three-way tie at rank 5. All 7 titles won in early championship era (1908-1922).
+B006,TOP10,5,Torino,Torino FC|Toro|Il Toro|Granata,7,Three-way tie at rank 5. Includes posthumous 1948-49 title awarded after Superga air disaster.
+B006,TOP10,8,Napoli,SSC Napoli|Società Sportiva Calcio Napoli,4,4th Scudetto won in 2024-25 under Antonio Conte
+B006,TOP10,9,Roma,AS Roma|Associazione Sportiva Roma|Giallorossi,3,
+B006,TOP10,10,Fiorentina,ACF Fiorentina|Viola,2,Two-way tie at rank 10 with Lazio
+B006,TOP10,10,Lazio,SS Lazio|Lazio Roma|Biancocelesti,2,Two-way tie at rank 10 with Fiorentina
+B006,UNIVERSE,1,Cagliari,Cagliari Calcio,1,1969-70 title (only ever Serie A title)
+B006,UNIVERSE,1,Casale FBC,Casale,1,1913-14 Italian championship (historical; club no longer in top-flight)
+B006,UNIVERSE,1,Hellas Verona,Hellas Verona FC|Verona|Hellas,1,1984-85 title (only ever Serie A title)
+B006,UNIVERSE,1,Sampdoria,UC Sampdoria|Samp,1,1990-91 title (only ever Serie A title)
+B007,TOP10,1,Bayern Munich,FC Bayern München|Bayern München|Bayern|FCB|Die Bayern,34,34th Bundesliga title won in 2025-26
+B007,TOP10,2,Borussia Dortmund,BVB|BVB 09|Die Borussen,5,"Bundesliga titles: 1994-95, 1995-96, 2001-02, 2010-11, 2011-12"
+B007,TOP10,2,Borussia Mönchengladbach,BMG|Gladbach|Borussia Gladbach|Die Fohlen,5,"Titles: 1969-70, 1970-71, 1974-75, 1975-76, 1976-77. Tied with Dortmund."
+B007,TOP10,4,Werder Bremen,SV Werder Bremen|Werder|SVW,4,
+B007,TOP10,5,Hamburger SV,Hamburg SV|HSV,3,"Bundesliga titles: 1978-79, 1981-82, 1982-83. Tied with Stuttgart."
+B007,TOP10,5,VfB Stuttgart,Stuttgart,3,"Bundesliga titles: 1983-84, 1991-92, 2006-07. Tied with Hamburg."
+B007,TOP10,7,1. FC Kaiserslautern,FCK|Kaiserslautern,2,Titles: 1990-91 and 1997-98 (1997-98 title famously won the season after promotion)
+B007,TOP10,7,1. FC Köln,FC Köln|Cologne|Effzeh,2,Titles: 1963-64 (inaugural Bundesliga) and 1977-78
+B007,TOP10,9,1. FC Nürnberg,Nürnberg|Nuremberg|FCN,1,1967-68 title (only ever Bundesliga title). Five-way tie at rank 9.
+B007,TOP10,9,Bayer 04 Leverkusen,Leverkusen|Bayer Leverkusen|Die Werkself,1,2023-24 title (broke Bayern's 11-year Bundesliga streak). Five-way tie at rank 9.
+B007,TOP10,9,Eintracht Braunschweig,Braunschweig,1,1966-67 title (only ever Bundesliga title). Five-way tie at rank 9.
+B007,TOP10,9,TSV 1860 München,1860 München|1860 Munich|Die Löwen,1,1965-66 title (only ever Bundesliga title). Five-way tie at rank 9.
+B007,TOP10,9,VfL Wolfsburg,Wolfsburg|VfL Wolfsburg,1,2008-09 title. Five-way tie at rank 9.
+B008,TOP10,1,Cristiano Ronaldo,CR7|Ronaldo (Portugal)|C. Ronaldo,146,Portugal. UEFA-sourced total; includes all FIFA-recognized senior international appearances. May include some 2026 WC goals.
+B008,TOP10,2,Lionel Messi,Messi|Leo Messi|La Pulga,123,Argentina. Estimate (sources range 118-125+); total is approximate as 2026 World Cup is in progress.
+B008,TOP10,3,Ali Daei,Daei|Ali Daei Ahmadabad,108,Iran. Retired. Held all-time men's record until Ronaldo surpassed him in September 2021.
+B008,TOP10,4,Sunil Chhetri,Chhetri,94,India. Retired June 2023. Held record as highest-scoring Asian outfield international scorer at retirement.
+B008,TOP10,5,Romelu Lukaku,Lukaku|Big Rom,91,Belgium. Active player; total as of approximately mid-2026.
+B008,TOP10,6,Mokhtar Dahari,Dahari|Mokhtar,89,Malaysia. Retired (played 1972-85). Held world record briefly in the 1980s.
+B008,TOP10,7,Ali Mabkhout,Mabkhout,85,UAE. Active player; total as of approximately mid-2026.
+B008,TOP10,8,Ferenc Puskás,Puskas|Puskás Ferenc|The Galloping Major,84,"Hungary (later Spain). Historical. 84 goals in 89 Hungary appearances; played 1945-56 for Hungary, 4 for Spain."
+B008,TOP10,8,Harry Kane,Kane,84,England. Active; total as of approximately mid-2026 (may include 2026 WC goals). Tied with Puskás.
+B008,TOP10,10,Godfrey Chitalu,Chitalu,79,Zambia. Historical. FIFA-recognized conservative total used here. Some CAF/COSAFA records credit 107+ goals but many matches are disputed or unverified.
+B008,UNIVERSE_REF,,ALL_INT_GOALS_50PLUS,,87,All approximately 87 male international footballers recorded with 50 or more goals in FIFA-recognized senior national team matches (per Wikipedia/IFFHS as of mid-2026)
+B009,TOP10,1,Cristiano Ronaldo,CR7|Ronaldo (Portugal)|C. Ronaldo,141,Breakdown: Manchester United 21 + Real Madrid 105 + Juventus 14 = 140 club breakdown; total cited at 141 per UEFA as of June 2026.
+B009,TOP10,2,Lionel Messi,Messi|Leo Messi|La Pulga,129,Breakdown: Barcelona 120 + PSG ~9. All-time record of most goals for one club in UCL history (120 for Barcelona).
+B009,TOP10,3,Robert Lewandowski,Lewandowski|Lewy,109,"Active. Goals scored across Borussia Dortmund, Bayern Munich, and Barcelona."
+B009,TOP10,4,Karim Benzema,Benzema|KB9,90,Retired from international football 2023. Goals mainly with Real Madrid.
+B009,TOP10,5,Raúl,Raúl González Blanco|Raul,71,Historical. Real Madrid and Schalke 04.
+B009,TOP10,6,Kylian Mbappé,Mbappe|Kylian Mbappe,70,"Active. Goals across Monaco, PSG, and Real Madrid."
+B009,TOP10,7,Erling Haaland,Haaland,57,"Active. Goals with RB Salzburg, Borussia Dortmund, and Manchester City. Two-way tie at rank 7 with Müller."
+B009,TOP10,7,Thomas Müller,Thomas Muller|Müller (Thomas)|Raumdeuter,57,Active. All goals with Bayern Munich. Two-way tie at rank 7 with Haaland.
+B009,TOP10,9,Ruud van Nistelrooy,Van Nistelrooy|RVN,56,"Retired. Goals with PSV Eindhoven, Manchester United, and Real Madrid."
+B009,TOP10,10,Harry Kane,Kane,54,Active. Goals with Tottenham Hotspur and Bayern Munich.
+B009,UNIVERSE_REF,,ALL_UCL_20PLUS_SCORERS,,55,Approximately 55 players who have scored 20 or more goals in the UEFA Champions League / European Cup across all editions. Exact count varies by source.
+B010,TOP10,1,Spain,España|Espana|La Roja,4,"Won in 1964, 2008, 2012, and 2024. Only nation to win three consecutive titles (2008, 2012) and back-to-back spanning two eras."
+B010,TOP10,2,Germany,West Germany|Deutschland|BRD,3,"Won in 1972, 1980 (as West Germany), and 1996 (as unified Germany)."
+B010,TOP10,3,France,Les Bleus,2,Won in 1984 and 2000. Two-way tie at rank 3 with Italy.
+B010,TOP10,3,Italy,Italia,2,Won in 1968 and 2020 (played 2021 due to COVID-19). Two-way tie at rank 3 with France.
+B010,TOP10,5,Czechoslovakia,Czech Republic|ČSSR,1,Won in 1976. Country dissolved 1993; title claimed by Czech football heritage. Six-way tie at rank 5.
+B010,TOP10,5,Denmark,Danmark,1,Won in 1992. Six-way tie at rank 5.
+B010,TOP10,5,Greece,Hellas|Ellada,1,Won in 2004 (biggest upset in tournament history). Six-way tie at rank 5.
+B010,TOP10,5,Netherlands,Holland|The Netherlands|Nederland|Oranje,1,Won in 1988. Six-way tie at rank 5.
+B010,TOP10,5,Portugal,Seleção|Seleção das Quinas,1,Won in 2016 (beat France 1-0 in final). Six-way tie at rank 5.
+B010,TOP10,5,Soviet Union,USSR|CCCP,1,Won inaugural Euro in 1960. Six-way tie at rank 5.
+B011,TOP10,1,Lewis Hamilton,Hamilton|LH44|Sir Lewis,106,
+B011,TOP10,2,Michael Schumacher,Schumacher|Schumi|MSC,91,
+B011,TOP10,3,Max Verstappen,Verstappen|Mad Max|MV1,63,9 wins in 2024 season; 54 career wins entering 2024
+B011,TOP10,4,Sebastian Vettel,Vettel|Seb Vettel|SV5,53,
+B011,TOP10,5,Alain Prost,Prost|The Professor,51,
+B011,TOP10,6,Ayrton Senna,Senna|The Magic,41,
+B011,TOP10,7,Fernando Alonso,Alonso|Nando|FA14,32,
+B011,TOP10,8,Nigel Mansell,Mansell|Il Leone,31,
+B011,TOP10,9,Jackie Stewart,Stewart|Flying Scot|JYS,27,
+B011,TOP10,10,Jim Clark,Clark|Jimmy Clark,25,Tied at 25 with Niki Lauda
+B011,TOP10,10,Niki Lauda,Lauda|The Rat,25,Tied at 25 with Jim Clark
+B011,UNIVERSE,1,Nelson Piquet,Piquet|Nelson Piquet,23,
+B011,UNIVERSE,2,Damon Hill,Hill|Damon Hill,22,
+B011,UNIVERSE,3,Kimi Raikkonen,Raikkonen|Kimi|Iceman|Räikkönen,21,
+B011,UNIVERSE,4,Mika Hakkinen,Hakkinen|Hakkinen Mika|Häkkinen|Flying Finn,20,
+B011,UNIVERSE,5,Jenson Button,Button|Jenson,15,
+B011,UNIVERSE_REF,,ALL_F1_RACE_WINNERS,,107,All Formula 1 drivers with at least 1 official World Championship race win
+B012,TOP10,1,Novak Djokovic,Djokovic|Nole|Djoker,24,
+B012,TOP10,2,Rafael Nadal,Nadal|Rafa|King of Clay,22,
+B012,TOP10,3,Roger Federer,Federer|Fed|RF|The Maestro,20,
+B012,TOP10,4,Pete Sampras,Sampras|Pistol Pete,14,
+B012,TOP10,5,Roy Emerson,Emerson|Emmo,12,All 12 titles won in pre-Open Era (before 1968)
+B012,TOP10,6,Bjorn Borg,Borg|Björn Borg|Ice Borg,11,"6 French Opens (1974, 1975, 1978, 1979, 1980, 1981) + 5 Wimbledons (1976-1980)"
+B012,TOP10,6,Rod Laver,Laver|Rocket,11,Includes pre-Open Era titles; won Grand Slam twice (1962 and 1969)
+B012,TOP10,8,Bill Tilden,Tilden|Big Bill,10,Pre-Open Era titles 1920-1930
+B012,TOP10,9,Andre Agassi,Agassi,8,
+B012,TOP10,9,Ivan Lendl,Lendl,8,
+B012,TOP10,9,Jimmy Connors,Connors|Jimbo,8,
+B012,UNIVERSE,1,John McEnroe,McEnroe|Mac|SuperBrat,7,
+B012,UNIVERSE,1,John Newcombe,Newcombe|Newk,7,
+B012,UNIVERSE,1,Mats Wilander,Wilander,7,
+B012,UNIVERSE,4,Boris Becker,Becker|Boom Boom,6,
+B012,UNIVERSE,4,Stefan Edberg,Edberg,6,
+B012,UNIVERSE_REF,,ALL_MEN_GS_SINGLES_WINNERS,,55,All male players who have won at least one Grand Slam singles title (Open and pre-Open eras)
+B013,TOP10,1,Margaret Court,Court|Margaret Smith|Smith-Court,24,Includes pre-Open Era titles; 11 Australian titles alone
+B013,TOP10,2,Serena Williams,Serena Williams|Serena|Serena W,23,Most Grand Slam titles in the Open Era
+B013,TOP10,3,Steffi Graf,Graf|Steffi|Fraulein Forehand,22,Won Golden Slam in 1988 (all 4 slams + Olympic gold)
+B013,TOP10,4,Helen Wills Moody,Wills Moody|Helen Wills|Wills,19,Pre-Open Era titles 1923-1938
+B013,TOP10,5,Chris Evert,Evert|Chrissie|Evert Lloyd,18,
+B013,TOP10,5,Martina Navratilova,Navratilova|Martina,18,
+B013,TOP10,7,Billie Jean King,King|BJK|Billie Jean,12,
+B013,TOP10,8,Maureen Connolly,Connolly|Little Mo,9,Won Grand Slam in 1953; career cut short by riding accident in 1954
+B013,TOP10,8,Monica Seles,Seles|Monica,9,Stabbing in 1993 interrupted career peak; may have won more
+B013,TOP10,10,Justine Henin,Henin|Henin-Hardenne,7,
+B013,UNIVERSE,1,Evonne Goolagong,Goolagong|Goolagong Cawley,7,
+B013,UNIVERSE,1,Venus Williams,Venus Williams|Venus,7,
+B013,UNIVERSE,3,Doris Hart,Hart|Doris Hart,6,Pre-Open Era titles
+B013,UNIVERSE,3,Louise Brough,Brough|Louise Brough Clapp,6,Pre-Open Era titles
+B013,UNIVERSE,5,Naomi Osaka,Osaka|Naomi,4,
+B013,UNIVERSE_REF,,ALL_WOMEN_GS_SINGLES_WINNERS,,60,All female players who have won at least one Grand Slam singles title (Open and pre-Open eras)
+B014,TOP10,1,Jack Nicklaus,Nicklaus|Golden Bear|Jack,18,
+B014,TOP10,2,Tiger Woods,Tiger Woods|Tiger|TW,15,Last major: 2019 Masters
+B014,TOP10,3,Walter Hagen,Hagen|The Haig,11,"Includes 5 PGA Championships, 4 Open Championships, 2 US Opens (1914-1929)"
+B014,TOP10,4,Ben Hogan,Hogan|Bantam Ben|The Hawk,9,
+B014,TOP10,4,Gary Player,Player|Black Knight,9,
+B014,TOP10,6,Tom Watson,Watson|Tom Watson,8,
+B014,TOP10,7,Arnold Palmer,Palmer|The King|Arnie,7,Never won PGA Championship
+B014,TOP10,7,Bobby Jones,Jones|Bob Jones|Bobby,7,Pre-Masters era; won 4 US Opens and 3 Open Championships
+B014,TOP10,7,Gene Sarazen,Sarazen|The Squire,7,Won career Grand Slam
+B014,TOP10,7,Harry Vardon,Vardon,7,"6 Open Championships, 1 US Open (1896-1914)"
+B014,TOP10,7,Sam Snead,Snead|Slammin Sam|Slammin Sammy,7,
+B014,UNIVERSE,1,Lee Trevino,Trevino|Super Mex,6,
+B014,UNIVERSE,1,Nick Faldo,Faldo|Sir Nick,6,
+B014,UNIVERSE,1,Phil Mickelson,Mickelson|Lefty,6,
+B014,UNIVERSE,4,Seve Ballesteros,Ballesteros|Seve,5,
+B014,UNIVERSE,5,Ernie Els,Els|Big Easy,4,
+B014,UNIVERSE_REF,,ALL_MEN_MAJOR_CHAMPIONS,,225,All players who have won at least one of the four men's major championships (Masters/US Open/Open Championship/PGA Championship)
+B015,TOP10,1,United States,USA|US|America|United States of America,1110,
+B015,TOP10,2,Soviet Union,USSR|Soviet Union|URS,395,Competed 1952-1988; listed separately from post-1991 Russia
+B015,TOP10,3,Great Britain,GB|GBR|United Kingdom|UK|Team GB,306,
+B015,TOP10,4,China,CHN|PRC|People's Republic of China,303,
+B015,TOP10,5,Germany,GER|Deutschland|West Germany|East Germany,251,Combined total: East Germany (GDR ~153) + West Germany (FRG ~56) + unified Germany (~42)
+B015,TOP10,6,France,FRA|France,247,
+B015,TOP10,7,Italy,ITA|Italia,234,
+B015,TOP10,8,Japan,JPN|Japan,189,
+B015,TOP10,9,Hungary,HUN|Hungary,188,
+B015,TOP10,10,Australia,AUS|Aussies,180,
+B015,UNIVERSE_REF,,ALL_OLYMPIC_GOLD_NATIONS,,100,All countries/NOCs that have won at least one Summer Olympics gold medal through Paris 2024
+B018,TOP10,1,Bernard Hinault,Hinault|The Badger|Le Blaireau,5,"1978, 1979, 1981, 1982, 1985"
+B018,TOP10,1,Eddy Merckx,Merckx|The Cannibal|Cannibale,5,"1969, 1970, 1971, 1972, 1974"
+B018,TOP10,1,Jacques Anquetil,Anquetil|Maitre Jacques,5,"1957, 1961, 1962, 1963, 1964"
+B018,TOP10,1,Miguel Indurain,Indurain|Induráin|Big Mig,5,"1991, 1992, 1993, 1994, 1995; only rider with 5 consecutive wins"
+B018,TOP10,5,Chris Froome,Froome|Froomey,4,"2013, 2015, 2016, 2017"
+B018,TOP10,6,Alberto Contador,Contador|El Pistolero,3,"2007, 2009, 2010; 2010 title later upheld"
+B018,TOP10,6,Greg LeMond,LeMond|Greg LeMond,3,"1986, 1989, 1990; only American with official TdF wins"
+B018,TOP10,6,Louison Bobet,Bobet,3,"1953, 1954, 1955; first rider with 3 consecutive wins"
+B018,TOP10,6,Tadej Pogacar,Pogacar|Pogačar|Tadej,3,"2020, 2021, 2024"
+B018,TOP10,10,Jonas Vingegaard,Vingegaard|Jonas,2,"2022, 2023"
+B018,UNIVERSE,1,Bernard Thevenet,Thevenet|Thévenet,2,"1975, 1977"
+B018,UNIVERSE,1,Laurent Fignon,Fignon,2,"1983, 1984"
+B018,UNIVERSE_REF,,ALL_TDF_WINNERS,,65,All riders who have won at least one official Tour de France general classification title
+B019,TOP10,1,Michael Phelps,Phelps|Flying Fish,13,23 total Olympic golds; 10 in relay events
+B019,TOP10,2,Ray Ewry,Ewry|Ray C. Ewry|Human Frog,8,All in standing jump events (1900-1908); also won 2 at 1906 Intercalated Games (not IOC-recognized)
+B019,TOP10,3,Carl Lewis,Carl Lewis|Lewis,7,9 total Olympic golds (athletics 1984-1996); 2 relay golds
+B019,TOP10,3,Katie Ledecky,Ledecky|Katie,7,9 total Olympic golds through Paris 2024; 2 relay golds
+B019,TOP10,3,Larisa Latynina,Latynina|Larissa Latynina,7,12 total Olympic golds (gymnastics 1956-1964); ~2 team golds
+B019,TOP10,6,Paavo Nurmi,Nurmi|Flying Finn,6,9 total golds (athletics 1920-1928); 3 in team/cross-country events
+B019,TOP10,6,Simone Biles,Biles|GOAT|Simone,6,"3 individual golds Rio 2016 (AA, floor, vault) + 3 individual golds Paris 2024 (AA, floor, vault)"
+B019,TOP10,6,Usain Bolt,Bolt|Lightning Bolt|Usain,6,"8 total golds; 100m+200m each at 2008, 2012, 2016 = 6 individual"
+B019,TOP10,9,Mark Spitz,Spitz|Mark Spitz,5,9 total golds (swimming 1968-1972); 4 relay golds in 1972
+B019,TOP10,9,Nadia Comaneci,Comaneci|Nadia,5,"5 individual golds (gymnastics 1976-1980); 3 in 1976, 2 in 1980"
+B019,UNIVERSE,1,Sawao Kato,Kato|Sawao,5,"Japanese gymnast; 6 individual golds across 1968, 1972, 1976 Olympics"
+B019,UNIVERSE,1,Vitaly Scherbo,Scherbo|Vitaly,5,5 individual golds at 1992 Barcelona (AA + 4 apparatus); 1 team gold
+B019,UNIVERSE_REF,,ALL_5PLUS_IND_OLY_GOLDS,,35,All athletes with 5 or more individual (non-relay/non-team) Summer Olympics gold medals
+B020,TOP10,1,Dale Earnhardt,Earnhardt|The Intimidator|Dale Sr,7,"1980, 1986, 1987, 1990, 1991, 1993, 1994"
+B020,TOP10,1,Jimmie Johnson,Johnson|Jimmie Johnson|JJ|48,7,"2006, 2007, 2008, 2009, 2010, 2013, 2016; only driver with 5 consecutive titles"
+B020,TOP10,1,Richard Petty,Petty|The King|Richard Petty,7,"1964, 1967, 1971, 1972, 1974, 1975, 1979"
+B020,TOP10,4,Jeff Gordon,Gordon|Wonder Boy|24,4,"1995, 1997, 1998, 2001"
+B020,TOP10,5,Cale Yarborough,Yarborough|Cale,3,"1976, 1977, 1978; three consecutive titles"
+B020,TOP10,5,Darrell Waltrip,Waltrip|DW,3,"1981, 1982, 1985"
+B020,TOP10,5,David Pearson,Pearson|Silver Fox,3,"1966, 1968, 1969"
+B020,TOP10,5,Joey Logano,Logano|Sliced Bread|22,3,"2018, 2022, 2024"
+B020,TOP10,5,Lee Petty,Lee Petty,3,"1954, 1958, 1959; Richard Petty's father"
+B020,TOP10,5,Tony Stewart,Stewart|Smoke,3,"2002, 2005, 2011"
+B020,UNIVERSE,1,Buck Baker,Baker|Buck Baker,2,"1956, 1957"
+B020,UNIVERSE,1,Herb Thomas,Thomas|Herb Thomas,2,"1951, 1953"
+B020,UNIVERSE,3,Kyle Larson,Larson|Rowdy|5,1,2021 title; through 2024
+B020,UNIVERSE_REF,,ALL_NASCAR_CHAMPIONS,,36,All NASCAR Cup Series champions 1949-2024
+B021,TOP10,1,Barry Bonds,Barry Lamar Bonds,762,Career: San Francisco Giants; 7x NL MVP; all-time HR record since Aug 7 2007; PED-era player
+B021,TOP10,2,Hank Aaron,Henry Louis Aaron|Hammerin' Hank|The Hammer,755,Career: Milwaukee/Atlanta Braves; held record 1974-2007
+B021,TOP10,3,Babe Ruth,George Herman Ruth|The Babe|The Sultan of Swat|The Bambino,714,Career: Red Sox/Yankees/Braves; all career HRs as a position player (does not count 3 as pitcher)
+B021,TOP10,4,Albert Pujols,The Machine|Prince Albert|El Hombre,703,Career: Cardinals/Angels/Dodgers/Cardinals; retired after 2022 season
+B021,TOP10,5,Alex Rodriguez,A-Rod|Alexander Emmanuel Rodriguez,696,Career: Mariners/Rangers/Yankees; suspended all of 2014 for PED violations
+B021,TOP10,6,Willie Mays,Willie Howard Mays Jr.|The Say Hey Kid,660,Career: NY/SF Giants (with 1951-52 military service); consensus greatest all-around player
+B021,TOP10,7,Ken Griffey Jr.,Junior|The Kid|Ken Griffey,630,Career: Mariners/Reds/White Sox/Mariners; 10x Gold Glove CF
+B021,TOP10,8,Jim Thome,James Howard Thome,612,Career: Indians/Phillies/White Sox/Twins/Indians/Phillies/Twins; widely considered clean record
+B021,TOP10,9,Sammy Sosa,Samuel Kelvin Sosa Peralta,609,Career: Rangers/White Sox/Cubs/Orioles; PED suspicion; 60+ HR in three separate seasons
+B021,TOP10,10,Frank Robinson,Frank Robinson Jr.,586,Career: Reds/Orioles/Dodgers/Angels/Indians; only player to win MVP in both leagues
+B021,UNIVERSE,1,Mark McGwire,Big Mac,583,Career: Athletics/Cardinals; admitted to PED use in 2010; broke single-season HR record in 1998
+B021,UNIVERSE,2,Harmon Killebrew,Killer|The Killer,573,Career: Senators/Twins/Royals; 11x All-Star; elected to HOF 1984
+B021,UNIVERSE,3,Rafael Palmeiro,,569,Career: Cubs/Rangers/Orioles; tested positive for PEDs in 2005; HOF eligibility affected
+B021,UNIVERSE,4,Reggie Jackson,Mr. October,563,Career: Athletics/Orioles/Yankees/Angels/Athletics; 5 World Series wins
+B021,UNIVERSE,5,Manny Ramirez,Manny|ManRam,555,Career: Indians/Red Sox/Dodgers/White Sox/Rays/A's; twice suspended for PED violations
+B021,UNIVERSE_REF,,ALL_MLB_400HR_CLUB,,57,All MLB players with 400 or more career regular-season home runs
+B022,TOP10,1,Tom Brady,Thomas Edward Brady Jr.|TB12|The GOAT,649,Career: Patriots/Buccaneers; 7 Super Bowl wins; retired Feb 2023; all stats regular season only
+B022,TOP10,2,Drew Brees,Drew Christopher Brees,571,Career: Chargers/Saints; retired 2021; 13 Pro Bowls; set record Feb 3 2019 surpassing Manning
+B022,TOP10,3,Peyton Manning,The Sheriff|PFM|Peyton Eli Manning,539,Career: Colts/Broncos; 2x Super Bowl champion; retired March 2016
+B022,TOP10,4,Aaron Rodgers,A-Rod|Aaron Charles Rodgers,527,"Career: Packers/Jets; active as of end of 2024 NFL season; returned from Achilles injury in 2024; total as of end of 2024 regular season, approximate"
+B022,TOP10,5,Brett Favre,The Gunslinger|Brett Lorenzo Favre,508,Career: Packers/Jets/Vikings/Falcons; 297 consecutive starts; HOF 2016
+B022,TOP10,6,Philip Rivers,Philip Michael Rivers,425,Career: Chargers (2004-2019)/Colts (2020); retired 2021; 4x AFC Passing Yards leader
+B022,TOP10,7,Matthew Stafford,Matt Stafford,423,"Career: Lions/Rams; active as of end of 2024; Super Bowl LVI champion with Rams; total as of end of 2024 regular season, approximate"
+B022,TOP10,8,Dan Marino,Daniel Constantine Marino,420,Career: Miami Dolphins (1983-1999); retired holding most career records at the time
+B022,TOP10,9,Ben Roethlisberger,Big Ben,418,Career: Pittsburgh Steelers; 2x Super Bowl champion; retired 2022
+B022,TOP10,10,Matt Ryan,Matty Ice,381,Career: Falcons/Colts/Bears; 2016 NFL MVP; retired 2023
+B022,UNIVERSE,1,Eli Manning,Eli|Elisha Nelson Manning,366,Career: NY Giants; 2x Super Bowl MVP; retired 2020
+B022,UNIVERSE,2,Russell Wilson,Russ|Dangeruss,353,Career: Seahawks/Broncos/Steelers; active as of end of 2024 season (Pittsburgh Steelers); total approximate through end of 2024 regular season
+B022,UNIVERSE,3,Fran Tarkenton,Francis Asbury Tarkenton|The Scrambler,342,Career: Vikings/Giants; HOF 1986; 3x Super Bowl appearances (no wins)
+B022,UNIVERSE,4,John Elway,John Albert Elway Jr.,300,Career: Denver Broncos; 2x Super Bowl champion; HOF 2004
+B022,UNIVERSE,5,Kirk Cousins,Kirk Daniel Cousins,298,Career: Redskins/Vikings/Falcons; active as of end of 2024 season (Atlanta Falcons); total approximate through end of 2024 regular season
+B022,UNIVERSE_REF,,ALL_NFL_150TD_QB,,85,All NFL quarterbacks with 150 or more career regular-season passing touchdowns
+B023,TOP10,1,LeBron James,LeBron|King James|The King|The Chosen One|Bron Bron,40474,"Career: Cavaliers/Heat/Lakers; active; total as of end of 2023-24 season (June 17 2024); surpassed Kareem Feb 7 2023; surpassed 40,000 points March 2 2024"
+B023,TOP10,2,Kareem Abdul-Jabbar,Kareem|The Captain|Lew Alcindor|Cap,38387,Career: Bucks/Lakers; retired 1989; held all-time scoring record 1984-2023
+B023,TOP10,3,Karl Malone,The Mailman,36928,Career: Utah Jazz/Lakers; 2x MVP; 14x All-Star; retired 2004
+B023,TOP10,4,Kobe Bryant,Kobe|The Black Mamba|KB24|Bean,33643,Career: Los Angeles Lakers (1996-2016); 5x NBA champion; 18x All-Star; deceased Jan 26 2020
+B023,TOP10,5,Michael Jordan,MJ|Air Jordan|His Airness|The GOAT,32292,"Career: Bulls/Wizards; 6x NBA champion; 6x Finals MVP; includes 2001-03 Wizards seasons, not counted toward Bulls titles"
+B023,TOP10,6,Dirk Nowitzki,Dirk|The German Wunderkind|Dunking Deutschman,31560,Career: Dallas Mavericks (1998-2019); 2011 NBA champion and Finals MVP; retired 2019
+B023,TOP10,7,Wilt Chamberlain,Wilt|The Big Dipper|Wilt the Stilt,31419,Career: Warriors/76ers/Lakers; only player to score 100 points in a single game (March 2 1962)
+B023,TOP10,8,Kevin Durant,KD|The Slim Reaper|KD35,28924,"Career: SuperSonics/Thunder/Warriors/Nets/Suns; active; total as of end of 2023-24 season; surpassed Shaq's 28,596 during 2023-24"
+B023,TOP10,9,Shaquille O'Neal,Shaq|Diesel|The Big Aristotle|Superman,28596,Career: Magic/Lakers/Heat/Suns/Cavaliers/Celtics; 4x NBA champion; retired 2011
+B023,TOP10,10,Carmelo Anthony,Melo,28289,Career: Nuggets/Knicks/Thunder/Rockets/Trail Blazers/Lakers; 10x All-Star; last played 2022
+B023,UNIVERSE,1,Moses Malone,,27409,"Career: Rockets/76ers/Bullets/Hawks/Bucks/Spurs/Cavaliers; NBA stats only; ABA career (1974-76, 795 games) not included in this total"
+B023,UNIVERSE,2,Elvin Hayes,The Big E,27313,Career: Rockets/Bullets; NBA only (no ABA); 12x All-Star; HOF 1990
+B023,UNIVERSE,3,James Harden,The Beard,27159,Career: Thunder/Rockets/Nets/76ers/Clippers; active; total approximate as of end of 2023-24 season with LA Clippers; 2018 MVP
+B023,UNIVERSE,4,Hakeem Olajuwon,The Dream|Hakeem,26946,Career: Houston Rockets/Toronto Raptors; 2x NBA champion and Finals MVP; retired 2002
+B023,UNIVERSE,5,Russell Westbrook,Russ|Triple Double King|The Brodie,26798,Career: Thunder/Rockets/Wizards/Lakers/Clippers/Jazz/Nuggets; active; total approximate as of end of 2023-24 season; holds all-time triple-double record (198)
+B023,UNIVERSE_REF,,ALL_NBA_15000_PTS,,103,"All NBA players with 15,000 or more career regular-season points; ABA-only stats excluded"
+B024,TOP10,1,Montreal Canadiens,Habs|Les Canadiens|The Habs|Bleu Blanc Rouge,24,Founded 1909; most championships of any professional sports franchise in North America; last won 1993
+B024,TOP10,2,Toronto Maple Leafs,Leafs|The Leafs|Maple Leafs,13,Last won in 1967; longest current Cup drought among franchises with 10+ titles
+B024,TOP10,3,Detroit Red Wings,Wings|The Wings|The Red Wings|Hockeytown,11,Won 4 Cups from 1997-2002; last won 2008
+B024,TOP10,4,Boston Bruins,Bruins|B's|The Bruins,6,Cup wins: 1929 1939 1941 1970 1972 2011; last won 2011
+B024,TOP10,4,Chicago Blackhawks,Hawks|Blackhawks|Chi-Hawks,6,Cup wins: 1934 1938 1961 2010 2013 2015; last won 2015
+B024,TOP10,6,Edmonton Oilers,Oilers|The Oilers,5,Cup wins: 1984 1985 1987 1988 1990; all five won during Gretzky era or one year after
+B024,TOP10,6,Pittsburgh Penguins,Pens|The Penguins,5,Cup wins: 1991 1992 2009 2016 2017; two separate dynasties (Lemieux and Crosby)
+B024,TOP10,8,New York Islanders,Islanders|NYI|The Islanders,4,Cup wins: 1980 1981 1982 1983; won 4 consecutive Cups in a dynasty run
+B024,TOP10,8,New York Rangers,Rangers|Broadway Blueshirts|The Rangers,4,Cup wins: 1928 1933 1940 1994; last won 1994 ending a 54-year drought
+B024,TOP10,10,Colorado Avalanche,Avs|Avalanche|The Avs,3,Cup wins: 1996 2001 2022; franchise relocated from Quebec City in 1995
+B024,UNIVERSE,1,New Jersey Devils,Devils|The Devils|NJD,3,Cup wins: 1995 2000 2003
+B024,UNIVERSE,2,Los Angeles Kings,Kings|LAK|The Kings,2,Cup wins: 2012 2014
+B024,UNIVERSE,2,Philadelphia Flyers,Flyers|Broad Street Bullies|The Flyers,2,Cup wins: 1974 1975
+B024,UNIVERSE,2,Tampa Bay Lightning,Lightning|Bolts|Tampa|The Lightning,2,Cup wins: 2020 2021 (back-to-back)
+B024,UNIVERSE,5,Florida Panthers,Panthers|The Panthers|FLA,1,Won first Stanley Cup in 2024 defeating Edmonton Oilers in Game 7
+B024,UNIVERSE_REF,,ALL_NHL_CUP_WINNERS,,27,All NHL franchises (current or historical) that have won at least one Stanley Cup; 22 of 27 are still active in the NHL
+B025,TOP10,1,New England Patriots,Patriots|Pats|New England,6,Super Bowl wins: XXXVI XXXVIII XXXIX XLIX LI LIII (all under Bill Belichick / Tom Brady)
+B025,TOP10,1,Pittsburgh Steelers,Steelers|Black and Gold|The Steelers,6,Super Bowl wins: IX X XIII XIV XL XLIII; tied with Patriots for most all-time
+B025,TOP10,3,Dallas Cowboys,Cowboys|America's Team|The Cowboys,5,Super Bowl wins: VI XII XXVII XXVIII XXX; last won 1996
+B025,TOP10,3,San Francisco 49ers,49ers|Niners|The 49ers,5,Super Bowl wins: XVI XIX XXIII XXIV XXIX; lost Super Bowl LVIII to Chiefs
+B025,TOP10,5,Green Bay Packers,Packers|Cheeseheads|The Pack,4,Super Bowl wins: I II XXXI XLV; first two were pre-numbered AFL-NFL Championship Games counted as Super Bowls
+B025,TOP10,5,Kansas City Chiefs,Chiefs|KC|The Chiefs,4,Super Bowl wins: IV LIV LVII LVIII; won back-to-back in LVII (Feb 2023) and LVIII (Feb 2024)
+B025,TOP10,5,New York Giants,Giants|Big Blue|G-Men,4,Super Bowl wins: XXI XXV XLII XLVI; XLII and XLVI both over New England Patriots
+B025,TOP10,8,Denver Broncos,Broncos|The Broncos|The Horses,3,Super Bowl wins: XXXII XXXIII 50 (Super Bowl 50); last won 2016
+B025,TOP10,8,Las Vegas Raiders,Raiders|Silver and Black|The Raiders,3,"Super Bowl wins: XI XV XVIII; franchise was Oakland Raiders for XI and XV, LA Raiders for XVIII"
+B025,TOP10,8,Washington Commanders,Commanders|Washington|Redskins|Washington Football Team,3,Super Bowl wins: XVII XXII XXVI; known as Redskins for all three titles; renamed Commanders 2022
+B025,UNIVERSE,1,Baltimore Ravens,Ravens|The Ravens|Baltimore,2,Super Bowl wins: XXXV XLVII
+B025,UNIVERSE,1,Indianapolis Colts,Colts|The Colts|Horseshoes,2,Super Bowl wins: V (as Baltimore Colts 1971) XLI (as Indianapolis Colts 2007)
+B025,UNIVERSE,1,Los Angeles Rams,Rams|The Rams|LA Rams,2,Super Bowl wins: XXXIV (as St. Louis Rams 2000) LVI (as LA Rams 2022)
+B025,UNIVERSE,1,Miami Dolphins,Dolphins|Fins|The Dolphins,2,Super Bowl wins: VII VIII; VII (1973) featured the only perfect undefeated season in NFL history (17-0)
+B025,UNIVERSE,1,Tampa Bay Buccaneers,Buccaneers|Bucs|The Bucs,2,Super Bowl wins: XXXVII (2003) LV (2021 with Tom Brady)
+B025,UNIVERSE_REF,,ALL_NFL_SB_WINNERS,,20,All NFL franchises that have won at least one Super Bowl through Super Bowl LVIII (Feb 11 2024)
+B026,TOP10,1,New York Yankees,Yankees|The Yankees|The Bronx Bombers|Pinstripes,27,27 championships between 1923-2000; last won 2009; franchise total includes pre-1903 era wins not applicable
+B026,TOP10,2,St. Louis Cardinals,Cardinals|Redbirds|The Cards,11,Won in 1926 1931 1934 1942 1944 1946 1964 1967 1982 2006 2011; last won 2011
+B026,TOP10,3,Boston Red Sox,Red Sox|The Sox|Fenway Faithful,9,Won in 1903 1912 1915 1916 1918 2004 2007 2013 2018; 86-year drought ended in 2004
+B026,TOP10,3,Oakland Athletics,Athletics|A's|Oakland A's|Philadelphia Athletics,9,Won in 1910 1911 1913 1929 1930 1972 1973 1974 1989; franchise includes Philadelphia and Kansas City eras
+B026,TOP10,5,Los Angeles Dodgers,Dodgers|The Dodgers|LA Dodgers|Brooklyn Dodgers,8,Won in 1955 1959 1963 1965 1981 1988 2020 2024; 1955 title won as Brooklyn Dodgers
+B026,TOP10,5,San Francisco Giants,Giants|The Giants|San Francisco|NY Giants,8,Won in 1905 1921 1922 1933 1954 2010 2012 2014; includes NY Giants franchise history
+B026,TOP10,7,Cincinnati Reds,Reds|Big Red Machine|The Reds,5,Won in 1919 1940 1975 1976 1990; 1919 World Series tainted by Black Sox scandal (opponent fixed)
+B026,TOP10,7,Pittsburgh Pirates,Pirates|The Bucs|Pittsburgh,5,Won in 1909 1925 1960 1971 1979; last won 1979
+B026,TOP10,9,Atlanta Braves,Braves|The Braves|Tomahawk Chop,4,Won in 1914 (Boston Braves) 1957 (Milwaukee Braves) 1995 (Atlanta Braves) 2021 (Atlanta Braves)
+B026,TOP10,9,Detroit Tigers,Tigers|The Tigers|Detroit,4,Won in 1935 1945 1968 1984; last won 1984
+B026,UNIVERSE,1,Baltimore Orioles,Orioles|O's|The Orioles,3,Won in 1966 1970 1983
+B026,UNIVERSE,1,Chicago Cubs,Cubs|The Cubs|North Siders|The Lovable Losers,3,Won in 1907 1908 2016; 108-year drought ended in 2016
+B026,UNIVERSE,1,Chicago White Sox,White Sox|The Sox|South Siders,3,Won in 1906 1917 2005
+B026,UNIVERSE,1,Minnesota Twins,Twins|The Twins|Minnesota,3,Won in 1924 (as Washington Senators) 1987 1991 (as Minnesota Twins)
+B026,UNIVERSE_REF,,ALL_MLB_WS_WINNERS,,24,All MLB franchises (current or historical) that have won at least one World Series; counts franchise wins including relocated/renamed teams
+B027,TOP10,1,Boston Celtics,Celtics|The Celtics|C's|The Green,18,"Won in 1957 1959-1966 1968-1969 1974 1976 1981 1984 1986 2008 2024; won record 18th title in 2024, surpassing LA Lakers"
+B027,TOP10,2,Los Angeles Lakers,Lakers|Showtime|The Lakers,17,Won in 1949-1950 1952-1954 (Minneapolis) 1972 1980 1982 1985 1987-1988 2000-2002 2009-2010 2020
+B027,TOP10,3,Golden State Warriors,Warriors|Dubs|The Warriors|W's,7,Won in 1947 (Philadelphia Warriors) 1956 1975 2015 2017 2018 2022
+B027,TOP10,4,Chicago Bulls,Bulls|The Bulls|Chicago,6,Won 1991 1992 1993 1996 1997 1998; two three-peats both under Michael Jordan and Phil Jackson
+B027,TOP10,5,San Antonio Spurs,Spurs|Silver and Black|San Antonio,5,Won 1999 2003 2005 2007 2014; all five under Gregg Popovich; Tim Duncan appeared in all five
+B027,TOP10,6,Detroit Pistons,Pistons|Bad Boys|Motor City|The Pistons,3,Won 1989 1990 2004; 1989-90 Bad Boys era and 2004 underdog team
+B027,TOP10,6,Miami Heat,Heat|The Heat|South Beach,3,Won 2006 2012 2013
+B027,TOP10,6,Philadelphia 76ers,76ers|Sixers|Philadelphia,3,Won 1955 (as Syracuse Nationals) 1967 (as Philadelphia 76ers) 1983
+B027,TOP10,9,Houston Rockets,Rockets|The Rockets|Houston,2,Won 1994 1995 (back-to-back with Hakeem Olajuwon)
+B027,TOP10,9,New York Knicks,Knicks|Knickerbockers|The Knicks|New York,2,Won 1970 1973
+B027,UNIVERSE,1,Cleveland Cavaliers,Cavaliers|Cavs|The Cavs|Cleveland,1,Won 2016 (first major professional sports title for Cleveland in 52 years; LeBron James Finals MVP)
+B027,UNIVERSE,1,Dallas Mavericks,Mavericks|Mavs|Dallas,1,Won 2011 (Dirk Nowitzki Finals MVP; defeated LeBron James and the Miami Heat)
+B027,UNIVERSE,1,Portland Trail Blazers,Trail Blazers|Blazers|Rip City|Portland,1,Won 1977 (Bill Walton Finals MVP)
+B027,UNIVERSE,1,Seattle SuperSonics,SuperSonics|Sonics|Seattle,1,"Won 1979; franchise relocated to Oklahoma City in 2008, became Thunder; title counted to Seattle franchise history"
+B027,UNIVERSE,1,Washington Wizards,Wizards|Washington|Washington Bullets,1,Won 1978 (as Washington Bullets; Elvin Hayes and Wes Unseld)
+B027,UNIVERSE_REF,,ALL_NBA_CHAMP_TEAMS,,17,All NBA franchises that have won at least one NBA championship; counts franchise wins including relocated/renamed teams; does not include the separate 1948 Baltimore Bullets franchise
+B028,TOP10,1,Emmitt Smith,Emmitt James Smith III,18355,Career: Cowboys/Cardinals; rushed for record 25th career TD in final game; retired Feb 2004
+B028,TOP10,2,Walter Payton,Sweetness|Walter Jerry Payton,16726,"Career: Chicago Bears; rushed for 275 yards in a single game (1977 record); deceased Nov 1999, age 45"
+B028,TOP10,3,Frank Gore,,16000,Career: 49ers/Colts/Dolphins/Bills/Jets/Lions; retired on one-day contract with 49ers in 2022; exactly 16000 career yards
+B028,TOP10,4,Barry Sanders,,15269,Career: Detroit Lions; retired unexpectedly in 1999 at age 31 with 2500 yards needed to break Payton's then-record
+B028,TOP10,5,Adrian Peterson,AP|All Day|Purple Jesus,14918,Career: Vikings/Saints/Cardinals/Redskins/Seahawks; last played 2021; 2012 NFL MVP; 296 rushing yards in single game (2007 record at time)
+B028,TOP10,6,Curtis Martin,,14101,Career: Patriots/Jets; HOF 2012; rushed for 1600+ yards at age 31 in 2004 to win rushing title
+B028,TOP10,7,LaDainian Tomlinson,LT|LaDainian|Tomlinson,13684,Career: Chargers/Jets; 28 rushing TDs in 2006 (single-season record); HOF 2017; retired 2012
+B028,TOP10,8,Jerome Bettis,The Bus|Jerome Abram Bettis,13662,Career: Rams/Steelers; Super Bowl XL champion in final game played in his hometown of Detroit; retired 2006
+B028,TOP10,9,Eric Dickerson,Eric Demetric Dickerson,13259,Career: Rams/Colts/Raiders/Falcons; 2105 rushing yards in 1984 (single-season record); HOF 1999
+B028,TOP10,10,Tony Dorsett,TD|Tony Dorsett,12739,Career: Cowboys/Broncos; 1977 Super Bowl champion; 99-yard TD run in 1983 (longest scrimmage run in NFL history)
+B028,UNIVERSE,1,Jim Brown,,12312,Career: Cleveland Browns (1957-1965); retired at his peak; considered the greatest RB of all time by many historians; HOF 1971
+B028,UNIVERSE,2,Marshall Faulk,,12279,Career: Colts/Rams; 2000 NFL MVP; Super Bowl XXXIV champion; HOF 2011
+B028,UNIVERSE,3,Edgerrin James,Edge|Edgerrin,12246,Career: Colts/Cardinals/Seahawks; 4x NFL rushing title; HOF 2020
+B028,UNIVERSE,4,Marcus Allen,,12243,Career: Raiders/Chiefs; Super Bowl XVIII MVP; HOF 2003
+B028,UNIVERSE,5,Franco Harris,Franco,12120,Career: Steelers/Seahawks; 4x Super Bowl champion; Immaculate Reception (1972 Divisional Playoff)
+B028,UNIVERSE_REF,,ALL_NFL_8000YD_RB,,50,"All NFL players with 8,000 or more career regular-season rushing yards"
+B029,TOP10,1,Nolan Ryan,The Ryan Express|Lynn Nolan Ryan Jr.,5714,Career: Mets/Angels/Astros/Rangers; record spans 27 seasons (1966-1993); 7 no-hitters
+B029,TOP10,2,Randy Johnson,The Big Unit,4875,Career: Expos/Mariners/Astros/Diamondbacks/Yankees/Giants; 5x Cy Young; 303-166 record
+B029,TOP10,3,Roger Clemens,The Rocket|Roger William Clemens,4672,Career: Red Sox/Blue Jays/Astros/Yankees; 7x Cy Young; PED suspicion; never inducted to HOF
+B029,TOP10,4,Steve Carlton,Lefty,4136,Career: Cardinals/Phillies/Giants/White Sox/Indians/Twins; 4x Cy Young; HOF 1994
+B029,TOP10,5,Bert Blyleven,Bert Blyleven|Rik Aalbert Blijleven,3701,Career: Twins/Rangers/Pirates/Indians/Angels; HOF 2011; 242 wins with 3701 Ks
+B029,TOP10,6,Tom Seaver,Tom Terrific|George Thomas Seaver,3640,Career: Mets/Reds/White Sox/Red Sox; 3x Cy Young; 311 wins; HOF 1992
+B029,TOP10,7,Don Sutton,Don Howard Sutton,3574,Career: Dodgers/Astros/Brewers/Athletics/Angels; HOF 1998; 324 wins
+B029,TOP10,8,Gaylord Perry,Gaylord Jackson Perry,3534,Career: Giants/Indians/Yankees/Padres/Rangers/Braves/Mariners/Royals; 2x Cy Young; HOF 1991; known for spitball
+B029,TOP10,9,Walter Johnson,The Big Train|Walter Perry Johnson,3509,Career: Washington Senators (1907-1927); 417 wins; Baseball-Reference retroactive total; some sources list 3342 using different counting rules
+B029,TOP10,10,Max Scherzer,Mad Max|Max,3400,Career: Tigers/Nationals/Dodgers/Mets/Rangers; active 2024; cracked top 10 during 2024 season; hamstring strain limited him to 9 starts in 2024; total approximate as of end of 2024 season
+B029,UNIVERSE,1,Justin Verlander,JV,3395,Career: Tigers/Astros/Mets/Astros; active 2024; returned from Tommy John surgery; 17 starts/74 Ks in 2024; passed Greg Maddux (3371) for 10th in May 2024; total approximate as of end of 2024 season; very close to Scherzer
+B029,UNIVERSE,2,Greg Maddux,The Professor|Gregory Alan Maddux,3371,Career: Cubs/Braves/Padres/Dodgers; 4x consecutive Cy Young (1992-1995); HOF 2014
+B029,UNIVERSE,3,Phil Niekro,Knucksie|Philip Henry Niekro,3342,Career: Braves/Yankees/Indians/Blue Jays; knuckleball specialist; HOF 1997
+B029,UNIVERSE,4,Ferguson Jenkins,Fergie,3192,Career: Cubs/Rangers/Red Sox; HOF 1991; only pitcher with 3000 Ks and fewer than 1000 career BBs
+B029,UNIVERSE,5,Pedro Martinez,Pedro,3154,Career: Dodgers/Expos/Red Sox/Mets/Phillies; 3x Cy Young; dominant 1999-2000 seasons; HOF 2015
+B029,UNIVERSE_REF,,ALL_MLB_2500K_PITCHER,,50,"All MLB pitchers with 2,500 or more career regular-season strikeouts"
+B030,TOP10,1,UCLA,UCLA Bruins|Bruins|UC Los Angeles,11,Won in 1964-1965 1967-1973 1975 1995; 10 of 11 under coach John Wooden; last won 1995
+B030,TOP10,2,Kentucky,UK|Kentucky Wildcats|The Cats,8,Won in 1948 1949 1951 1958 1978 1996 1998 2012
+B030,TOP10,3,Duke,Duke Blue Devils|The Blue Devils,6,Won in 1991 1992 1994 2001 2010 2015; all under coach Mike Krzyzewski
+B030,TOP10,3,North Carolina,UNC|North Carolina Tar Heels|Tar Heels,6,Won in 1957 1982 1993 2005 2009 2017; coaches include Frank McGuire and Roy Williams
+B030,TOP10,3,UConn,Connecticut|Connecticut Huskies,6,Won in 1999 2004 2011 2014 2023 2024; won back-to-back in 2023 and 2024
+B030,TOP10,6,Indiana,Indiana Hoosiers|The Hoosiers|IU,5,Won in 1940 1953 1976 1981 1987; 1987 was last title; all five under different coaching eras
+B030,TOP10,7,Kansas,Kansas Jayhawks|Jayhawks|KU,4,Won in 1952 1988 2008 2022
+B030,TOP10,8,Villanova,Villanova Wildcats|Nova,3,Won in 1985 2016 2018; all under different coaching eras
+B030,TOP10,9,Florida,Florida Gators|Gators|UF,2,Won in 2006 2007 (back-to-back under Billy Donovan)
+B030,TOP10,9,Michigan State,Spartans|MSU|Michigan State Spartans,2,Won in 1979 (Magic Johnson) 2000 (Tom Izzo)
+B030,UNIVERSE,1,Cincinnati,Cincinnati Bearcats|Bearcats,2,Won in 1961 1962 (back-to-back)
+B030,UNIVERSE,1,Louisville,Louisville Cardinals|Cards,2,Won in 1980 1986; 2013 title officially vacated by NCAA; currently 2 confirmed championships
+B030,UNIVERSE,1,NC State,NC State Wolfpack|North Carolina State,2,Won in 1974 and 1983; 1983 upset over Houston Phi Slama Jama
+B030,UNIVERSE,1,Oklahoma State,Cowboys|Oklahoma A&M Aggies|Oklahoma A&M,2,Won in 1945 1946 (as Oklahoma A&M; now known as Oklahoma State)
+B030,UNIVERSE,1,San Francisco,San Francisco Dons|USF|Dons,2,Won in 1955 1956 (back-to-back featuring Bill Russell)
+B030,UNIVERSE_REF,,ALL_NCAA_BBALL_CHAMPS,,36,All NCAA Division I men's basketball programs that have won at least one national championship through 2024
+B031,TOP10,1,Thriller,Michael Jackson|MJ,121.6,Worldwide sales in millions (bestsellingalbums.org)
+B031,TOP10,2,Hotel California,The Eagles|Eagles|Hotel California — Eagles,72.8,Worldwide sales in millions
+B031,TOP10,3,Saturday Night Fever,Bee Gees|Saturday Night Fever Soundtrack,70.5,Worldwide sales in millions; film soundtrack with Bee Gees
+B031,TOP10,4,Bad,Michael Jackson|MJ|Bad — Michael Jackson,65.8,Worldwide sales in millions; tied with Rumours
+B031,TOP10,4,Rumours,Fleetwood Mac|Rumors,65.8,Worldwide sales in millions; note British spelling Rumours
+B031,TOP10,6,Back in Black,AC/DC|ACDC|AC-DC,62.1,Worldwide sales in millions
+B031,TOP10,7,Led Zeppelin IV,Led Zeppelin|Zoso|Four Symbols|Led Zeppelin 4,59,Worldwide sales in millions; approximate; also called Zoso
+B031,TOP10,7,Nevermind,Nirvana|Nevermind — Nirvana,59,Worldwide sales in millions; approximate
+B031,TOP10,9,The Dark Side of the Moon,Pink Floyd|Dark Side of the Moon,58,Worldwide sales in millions
+B031,TOP10,10,The Bodyguard,Whitney Houston|The Bodyguard Soundtrack,56,Worldwide sales in millions; film soundtrack
+B031,UNIVERSE,1,Their Greatest Hits (1971-1975),The Eagles|Eagles Greatest Hits,44,Wikipedia estimate (~44M worldwide); different from Hotel California
+B031,UNIVERSE,2,Bat Out of Hell,Meat Loaf|Meatloaf,40,Wikipedia estimate (~40M worldwide)
+B031,UNIVERSE,2,Come On Over,Shania Twain,40,Wikipedia estimate (~40M worldwide)
+B031,UNIVERSE,4,Jagged Little Pill,Alanis Morissette|Alanis,33,Wikipedia estimate (~33M worldwide)
+B031,UNIVERSE,5,Dirty Dancing,Dirty Dancing Soundtrack|Various Artists,32,Wikipedia estimate (~32M worldwide); film soundtrack
+B031,UNIVERSE_REF,,Albums with 20 million or more estimated worldwide sales,,~100,Reference universe per bestsellingalbums.org methodology
+B032,TOP10,1,Beyoncé,Beyonce|Queen Bey|Beyoncé Knowles-Carter,35,Grammy wins through 67th ceremony (Feb 2025)
+B032,TOP10,2,Georg Solti,Sir Georg Solti|George Solti,31,Classical conductor; all wins posthumous after 1997
+B032,TOP10,3,Chick Corea,Armando Anthony Corea|Chick Corea Akoustic Band,28,Jazz pianist; deceased 2021; fixed count
+B032,TOP10,3,Quincy Jones,Q|Quincy Delight Jones Jr.,28,Tied with Corea at 28; deceased Nov 2024; fixed count
+B032,TOP10,5,Alison Krauss,,27,Country/bluegrass; tied with Lamar and Williams
+B032,TOP10,5,John Williams,Johnny Williams,27,Film composer; tied with Lamar and Krauss
+B032,TOP10,5,Kendrick Lamar,K-Dot|Kung Fu Kenny,27,Includes 5 wins at 67th Grammys for Not Like Us
+B032,TOP10,8,Pierre Boulez,Pierre Louis Joseph Boulez,26,Classical conductor/composer; deceased 2016; fixed count
+B032,TOP10,9,Jay-Z,Shawn Carter|Jay Z|Hov|Shawn Corey Carter,25,
+B032,TOP10,10,Kanye West,Ye|Kanye Omari West,24,Approximate; tied with multiple other artists at 24
+B032,UNIVERSE,1,Taylor Swift,T-Swift,23,Approximate; won multiple at 66th ceremony (Feb 2024)
+B032,UNIVERSE,2,Stevie Wonder,Stevland Morris|Little Stevie Wonder,22,Approximate
+B032,UNIVERSE,2,U2,,22,Approximate; rock band wins counted individually
+B032,UNIVERSE,4,Bruce Springsteen,The Boss,20,Approximate
+B032,UNIVERSE_REF,,Artists with 5 or more Grammy Award wins,,~150,Reference universe per Recording Academy records
+B033,TOP10,1,The Beatles,John Lennon|Paul McCartney|George Harrison|Ringo Starr|Fab Four,20,Most Hot 100 #1 hits all-time; 20 #1s 1964-1970
+B033,TOP10,2,Mariah Carey,,19,Most #1s by a solo artist
+B033,TOP10,3,Taylor Swift,T-Swift|Tay,15,Through end of 2024
+B033,TOP10,4,Drake,Aubrey Drake Graham|Young Money,14,Includes featured-artist #1s; tied with Rihanna
+B033,TOP10,4,Rihanna,Robyn Rihanna Fenty|RiRi,14,Includes featured-artist #1s; tied with Drake
+B033,TOP10,6,Michael Jackson,MJ|The King of Pop,13,
+B033,TOP10,7,Madonna,Madonna Louise Ciccone|The Queen of Pop,12,Tied with The Supremes
+B033,TOP10,7,The Supremes,Diana Ross and the Supremes,12,Includes entire Supremes run; tied with Madonna
+B033,TOP10,9,Whitney Houston,Nippy,11,Approximate
+B033,TOP10,10,Stevie Wonder,Stevland Morris|Little Stevie Wonder,10,Approximate; among ~13 artists with 10+ Hot 100 #1s
+B033,UNIVERSE,1,Janet Jackson,,10,Approximate
+B033,UNIVERSE,2,Elton John,,9,
+B033,UNIVERSE,3,Bruno Mars,,6,Approximate through 2024
+B033,UNIVERSE,4,Boyz II Men,,4,Frequently appeared at #1 via collaborations
+B033,UNIVERSE_REF,,Artists with 3 or more Billboard Hot 100 number-one singles,,~100,Reference universe per Billboard
+B034,TOP10,1,Despacito,Luis Fonsi|Daddy Yankee|Justin Bieber|Despacito — Luis Fonsi,8.7,Views in billions; most-viewed music video of all time
+B034,TOP10,2,See You Again,Wiz Khalifa|Charlie Puth|See You Again — Wiz Khalifa,6.65,Views in billions
+B034,TOP10,3,Shape of You,Ed Sheeran|Shape of You — Ed Sheeran,6.45,Views in billions
+B034,TOP10,4,Gangnam Style,PSY|Psy|Gang Nam Style,5.55,Views in billions; first video to reach 1B views (2012)
+B034,TOP10,4,Uptown Funk,Mark Ronson|Bruno Mars|Uptown Funk — Mark Ronson,5.55,Views in billions; approximately tied with Gangnam Style
+B034,TOP10,6,Axel F,Crazy Frog|Crazy Frog Axel F,5.18,Views in billions; animated novelty music release
+B034,TOP10,7,Dame Tu Cosita,El Chombo|Cutty Ranks|El Chombo ft. Cutty Ranks,5.03,Views in billions
+B034,TOP10,8,Sugar,Maroon 5|Sugar — Maroon 5,4.23,Views in billions
+B034,TOP10,9,Waka Waka (This Time for Africa),Shakira|Waka Waka|Shakira feat. Freshlyground,4.22,Views in billions; 2010 FIFA World Cup official song
+B034,TOP10,10,Counting Stars,OneRepublic|Counting Stars — OneRepublic,4.15,Views in billions
+B034,UNIVERSE,1,Cheap Thrills,Sia|Sia Cheap Thrills,4.1,Views in billions approximate
+B034,UNIVERSE,2,Roar,Katy Perry|Roar — Katy Perry,3.7,Views in billions approximate
+B034,UNIVERSE,2,Shake It Off,Taylor Swift|Shake It Off — Taylor Swift,3.7,Views in billions approximate
+B034,UNIVERSE,4,Lean On,Major Lazer|DJ Snake|MO|Lean On — Major Lazer,3.6,Views in billions approximate
+B034,UNIVERSE_REF,,Music videos with 3 billion or more YouTube views,,~50,Reference universe per kworb.net tracking
+B035,TOP10,1,The Beatles,John Lennon|Paul McCartney|George Harrison|Ringo Starr|Fab Four,521,Equivalent album sales in millions (ChartMasters)
+B035,TOP10,2,Michael Jackson,MJ|King of Pop,346,Equivalent album sales in millions
+B035,TOP10,3,Elvis Presley,The King|King of Rock and Roll|Elvis,325,Equivalent album sales in millions
+B035,TOP10,4,Queen,Freddie Mercury|Brian May|Roger Taylor|John Deacon,288,Equivalent album sales in millions
+B035,TOP10,5,Madonna,Madonna Louise Ciccone|Queen of Pop,252,Equivalent album sales in millions
+B035,TOP10,6,The Rolling Stones,Mick Jagger|Keith Richards|Rolling Stones,247,Equivalent album sales in millions
+B035,TOP10,7,Taylor Swift,T-Swift,244,Equivalent album sales in millions; includes streaming equivalents
+B035,TOP10,8,Frank Sinatra,Old Blue Eyes|The Voice|Ol Blue Eyes,243,Equivalent album sales in millions; approximately tied with Pink Floyd
+B035,TOP10,9,Pink Floyd,Roger Waters|David Gilmour|Syd Barrett,242,Equivalent album sales in millions
+B035,TOP10,10,Eminem,Marshall Mathers|Slim Shady|Marshall Bruce Mathers III,226,Equivalent album sales in millions
+B035,UNIVERSE,1,Led Zeppelin,Jimmy Page|Robert Plant|John Paul Jones,210,Approximate (ChartMasters)
+B035,UNIVERSE,2,Celine Dion,,200,Approximate
+B035,UNIVERSE,2,Rihanna,Robyn Rihanna Fenty|RiRi,200,Approximate; includes streaming
+B035,UNIVERSE,4,Ed Sheeran,,195,Approximate; includes streaming equivalents
+B035,UNIVERSE_REF,,Artists with 100 million or more equivalent album sales,,~50,Reference universe per ChartMasters estimates
+B036,TOP10,1,Ireland,Éire|Republic of Ireland,7,Eurovision wins; 1970 1980 1987 1992 1993 1994 1996; tied with Sweden
+B036,TOP10,1,Sweden,Sverige,7,Eurovision wins; 1974 1984 1991 1999 2012 2015 2023; tied with Ireland
+B036,TOP10,3,France,République française,5,Eurovision wins; 1958 1960 1962 1969 1977; tied 3rd
+B036,TOP10,3,Luxembourg,Grand Duchy of Luxembourg|Lëtzebuerg,5,Eurovision wins; 1961 1965 1972 1973 1983; tied 3rd with France/UK/Netherlands
+B036,TOP10,3,Netherlands,Holland|Nederland|The Netherlands,5,Eurovision wins; 1957 1959 1969 1975 2019; tied 3rd
+B036,TOP10,3,United Kingdom,UK|Great Britain|Britain|England,5,Eurovision wins; 1967 1969 1976 1981 1997; tied 3rd
+B036,TOP10,7,Israel,State of Israel|Yisra'el,4,Eurovision wins; 1978 1979 1998 2018
+B036,TOP10,8,Denmark,Danmark|Kingdom of Denmark,3,Eurovision wins; 1963 2000 2013; tied 8th
+B036,TOP10,8,Italy,Italia|Republic of Italy,3,Eurovision wins; 1964 1990 2021; tied 8th with Denmark/Norway/Switzerland
+B036,TOP10,8,Norway,Norge|Kingdom of Norway,3,Eurovision wins; 1985 1995 2009; tied 8th
+B036,UNIVERSE,1,Switzerland,,3,Eurovision wins; 1956 1988 2024; tied 8th but placed 11th here
+B036,UNIVERSE,2,Austria,Österreich,2,Eurovision wins; 1966 2014
+B036,UNIVERSE,2,Spain,España,2,Eurovision wins; 1968 1969
+B036,UNIVERSE,4,Greece,Hellas|Ελλάδα,1,Eurovision win; 2005
+B036,UNIVERSE,4,Portugal,República Portuguesa,1,Eurovision win; 2017
+B037,TOP10,1,Beyoncé,Beyonce|Queen Bey,30,Total including 26 solo plus 2 with Destiny's Child plus 2 as The Carters; tied at 30 with Taylor Swift
+B037,TOP10,1,Taylor Swift,T-Swift|Tay,30,Solo wins; through 2024 MTV VMAs (Sep 11 2024)
+B037,TOP10,3,Lady Gaga,Stefani Germanotta|Mother Monster,22,Approximate through 2024; includes 2020 Chromatica era and 2022 Vanguard wins
+B037,TOP10,4,Madonna,Madonna Louise Ciccone|Queen of Pop,20,Wins 1986-1999
+B037,TOP10,5,Eminem,Marshall Mathers|Slim Shady,15,
+B037,TOP10,6,Peter Gabriel,,13,Classic 1980s-90s era wins for innovative videos
+B037,TOP10,7,R.E.M.,REM,12,
+B037,TOP10,8,Green Day,Billie Joe Armstrong,11,Tied with Justin Timberlake
+B037,TOP10,8,Justin Timberlake,JT,11,Tied with Green Day
+B037,TOP10,10,Aerosmith,,10,
+B037,UNIVERSE,1,BTS,Bangtan Sonyeondan|Bangtan Boys,10,Approximate
+B037,UNIVERSE,2,Katy Perry,,9,Approximate
+B037,UNIVERSE,2,Rihanna,Robyn Rihanna Fenty|RiRi,9,Approximate
+B037,UNIVERSE,4,Kanye West,Ye,8,Approximate
+B037,UNIVERSE_REF,,Artists with 5 or more MTV Video Music Award wins,,~75,Reference universe per Billboard and VMA records
+B038,TOP10,1,All I Want for Christmas Is You,Mariah Carey|AIWCIY,21,Total weeks at #1; non-consecutive across multiple holiday seasons (2019 onward); through 2024 season
+B038,TOP10,2,A Bar Song (Tipsy),Shaboozey|Bar Song,19,Consecutive weeks at #1; 2024; tied record with Old Town Road
+B038,TOP10,2,Old Town Road,Lil Nas X|Billy Ray Cyrus|Lil Nas X ft. Billy Ray Cyrus,19,Consecutive weeks at #1; 2019 record
+B038,TOP10,4,Despacito,Luis Fonsi|Daddy Yankee|Justin Bieber,16,Consecutive weeks at #1; 2017; tied with One Sweet Day
+B038,TOP10,4,One Sweet Day,Mariah Carey|Boyz II Men|Mariah Carey & Boyz II Men,16,Consecutive weeks at #1; Dec 1995 - Mar 1996; tied with Despacito
+B038,TOP10,6,Candle in the Wind 1997,Elton John|Candle in the Wind,14,"14 weeks at #1; 1997; tied with I Will Always Love You, Macarena, Uptown Funk, We Belong Together"
+B038,TOP10,6,I Will Always Love You,Whitney Houston|I Will Always Love You — Whitney Houston,14,14 weeks at #1; 1992-1993; tied
+B038,TOP10,6,Macarena (Bayside Boys Mix),Los Del Rio|Macarena,14,14 weeks at #1; 1996; tied
+B038,TOP10,6,Uptown Funk,Mark Ronson|Bruno Mars|Uptown Funk — Mark Ronson,14,14 weeks at #1; 2015; tied
+B038,TOP10,6,We Belong Together,Mariah Carey|We Belong Together — Mariah Carey,14,14 weeks at #1; 2005; tied
+B038,UNIVERSE,1,That's What I Like,Bruno Mars,13,13 weeks at #1; 2017
+B038,UNIVERSE,2,Lose Yourself,Eminem|Lose Yourself — Eminem,12,12 consecutive weeks at #1; 2002
+B038,UNIVERSE,2,Shape of You,Ed Sheeran,12,12 weeks at #1; 2017
+B038,UNIVERSE_REF,,Songs with 10 or more weeks at #1 on the Billboard Hot 100,,~25,Reference universe per Billboard
+B039,TOP10,1,Blinding Lights,The Weeknd|Blinding Lights — The Weeknd,5.49,Spotify streams in billions; first song to surpass 5B streams
+B039,TOP10,2,Shape of You,Ed Sheeran|Shape of You — Ed Sheeran,5.00,Spotify streams in billions
+B039,TOP10,3,Sweater Weather,The Neighbourhood|The Neighbourhood Sweater Weather,4.73,Spotify streams in billions
+B039,TOP10,4,Starboy,The Weeknd|Daft Punk|The Weeknd ft. Daft Punk,4.64,Spotify streams in billions
+B039,TOP10,5,As It Was,Harry Styles|As It Was — Harry Styles,4.51,Spotify streams in billions
+B039,TOP10,6,Someone You Loved,Lewis Capaldi|Someone You Loved — Lewis Capaldi,4.38,Spotify streams in billions
+B039,TOP10,7,One Dance,Drake|One Dance — Drake,4.34,Spotify streams in billions
+B039,TOP10,8,Sunflower,Post Malone|Swae Lee|Post Malone & Swae Lee|Spider-Man Into the Spider-Verse,4.32,Spotify streams in billions; from Spider-Man: Into the Spider-Verse
+B039,TOP10,9,Perfect,Ed Sheeran|Perfect — Ed Sheeran,4.03,Spotify streams in billions
+B039,TOP10,10,STAY,The Kid LAROI|Justin Bieber|The Kid LAROI ft. Justin Bieber,3.99,Spotify streams in billions
+B039,UNIVERSE,1,Believer,Imagine Dragons|Believer — Imagine Dragons,3.90,Approximate as of mid-2025
+B039,UNIVERSE,2,I Wanna Be Yours,Arctic Monkeys|I Wanna Be Yours — Arctic Monkeys,3.88,Approximate as of mid-2025
+B039,UNIVERSE,3,Heat Waves,Glass Animals|Heat Waves — Glass Animals,3.85,Approximate as of mid-2025
+B039,UNIVERSE,3,Yellow,Coldplay|Yellow — Coldplay,3.85,Approximate as of mid-2025
+B039,UNIVERSE_REF,,Songs with 2 billion or more Spotify streams,,~500,Reference universe per kworb.net live tracking
+B040,TOP10,1,Their Greatest Hits (1971-1975),The Eagles|Eagles Greatest Hits|Eagles — Greatest Hits,40,RIAA certified US units in millions; highest RIAA certification for any album
+B040,TOP10,2,Thriller,Michael Jackson|MJ|Thriller — Michael Jackson,34,RIAA certified US units in millions
+B040,TOP10,3,Hotel California,The Eagles|Eagles|Hotel California — Eagles,28,RIAA certified US units in millions
+B040,TOP10,4,Back in Black,AC/DC|ACDC|AC-DC,27,RIAA certified US units in millions
+B040,TOP10,5,Double Live,Garth Brooks|Garth Brooks Double Live,25,RIAA certified US units in millions; live double album
+B040,TOP10,6,Led Zeppelin IV,Led Zeppelin|Zoso|Four Symbols|Led Zeppelin 4,24,RIAA certified US units in millions; tied with White Album
+B040,TOP10,6,The Beatles (The White Album),The Beatles|White Album|Double White Album,24,RIAA certified US units in millions; tied with Led Zeppelin IV
+B040,TOP10,8,Cracked Rear View,Hootie and the Blowfish|Hootie & the Blowfish,21,RIAA certified US units in millions; approximate
+B040,TOP10,9,Come On Over,Shania Twain,20,RIAA certified US units in millions; approximate; tied with Rumours
+B040,TOP10,9,Rumours,Fleetwood Mac|Rumors,20,RIAA certified US units in millions; approximate
+B040,UNIVERSE,1,The Wall,Pink Floyd|Pink Floyd The Wall,23,Note: may rank higher than position shown; approximate RIAA certification
+B040,UNIVERSE,2,No Fences,Garth Brooks|Garth Brooks No Fences,17,RIAA certified US units approximate
+B040,UNIVERSE,3,Tapestry,Carole King|Carole King Tapestry,16,RIAA certified US units approximate
+B040,UNIVERSE,4,Ropin' the Wind,Garth Brooks,14,RIAA certified US units approximate
+B040,UNIVERSE_REF,,Albums certified Diamond (10 million or more US equivalent units) by the RIAA,,~120,Reference universe per RIAA Gold and Platinum database
+B041,TOP10,1,Avatar (2009),James Cameron's Avatar|Avatar 2009,$2.92B,
+B041,TOP10,2,Avengers: Endgame (2019),Endgame|Avengers 4|MCU Endgame,$2.80B,
+B041,TOP10,3,Avatar: The Way of Water (2022),Avatar 2|The Way of Water,$2.34B,Passed Titanic to claim #3; James Cameron directed both Avatar films
+B041,TOP10,4,Titanic (1997),James Cameron's Titanic,$2.26B,
+B041,TOP10,5,Ne Zha 2 (2025),Nezha 2|Ne Zha: The Devil Child Enters the Sea,$2.15B,Approximate; Chinese animated sequel released Jan 2025 for Chinese New Year; still accruing at data cutoff
+B041,TOP10,6,Star Wars: The Force Awakens (2015),TFA|Star Wars Episode VII|The Force Awakens,$2.07B,
+B041,TOP10,7,Avengers: Infinity War (2018),Infinity War|MCU Infinity War,$2.05B,
+B041,TOP10,8,Spider-Man: No Way Home (2021),No Way Home|NWH,$1.90B,
+B041,TOP10,9,Inside Out 2 (2024),IO2,$1.70B,First animated film to gross $1B internationally
+B041,TOP10,10,Jurassic World (2015),JW|Jurassic World 2015,$1.67B,
+B041,UNIVERSE,1,The Lion King (2019),The Lion King Remake,$1.66B,Photorealistic animated remake of the 1994 original
+B041,UNIVERSE,2,Furious 7 (2015),Fast and Furious 7|Fast 7,$1.52B,Included tribute to Paul Walker; massive global draw
+B041,UNIVERSE,2,The Avengers (2012),Avengers 1|Marvel's The Avengers|Avengers Assemble,$1.52B,First MCU team-up film
+B041,UNIVERSE_REF,,All films with $1.5B+ worldwide gross,,~50,Approximately 50 films have grossed $1.5B or more at the worldwide box office (nominal USD) as of mid-2025
+B042,TOP10,1,Tetris (all platforms),Tetris,520,"All licensed versions across all platforms since 1984; The Tetris Company–cited figure. If counting only individual releases, Minecraft (#2) leads."
+B042,TOP10,2,Minecraft,Minecraft (PC/Console/Mobile),350,Updated to ~350M as of 2025; previously reported as ~300M
+B042,TOP10,3,Grand Theft Auto V,GTA V|GTA 5|GTA Five,225,
+B042,TOP10,4,Wii Sports,Wii Sports Resort,83,Bundled pack-in with Nintendo Wii in most regions; some sources exclude from rankings for this reason
+B042,TOP10,5,PUBG: Battlegrounds,PUBG|PlayerUnknown's Battlegrounds,75,Includes PC and mobile versions
+B042,TOP10,6,The Witcher 3: Wild Hunt,Witcher 3|TW3,65,
+B042,TOP10,7,Mario Kart 8 / Mario Kart 8 Deluxe,Mario Kart 8|MK8|MK8 Deluxe,63,Switch Deluxe edition counted together with Wii U original
+B042,TOP10,8,The Elder Scrolls V: Skyrim,Skyrim|TES5 Skyrim,60,Has been re-released many times; total counts all versions
+B042,TOP10,9,Super Mario Bros. (NES 1985),Super Mario Bros NES|SMB,58,Original 1985 NES release only
+B042,TOP10,10,Red Dead Redemption 2,RDR2|Red Dead 2,55,
+B042,UNIVERSE,1,Human Fall Flat,Human Fall Flat game,55,Physics-based puzzle game; hugely popular in Asia; figure cited by publisher No Brakes Games
+B042,UNIVERSE,2,Hogwarts Legacy,Hogwarts Legacy game,40,Released 2023; reached 40M+ copies within two years
+B042,UNIVERSE_REF,,All video games with 40M+ copies sold,,~35,Approximately 35 games have sold 40M or more copies across all platforms as of early 2025
+B043,TOP10,1,Baby Shark Dance – Pinkfong Kids' Songs & Stories,Baby Shark|Pinkfong Baby Shark,15.9B,
+B043,TOP10,2,Despacito – Luis Fonsi ft. Daddy Yankee,Despacito Luis Fonsi|Despacito Daddy Yankee,8.63B,
+B043,TOP10,3,Wheels on the Bus – Cocomelon,Wheels on the Bus Cocomelon|Cocomelon Wheels,7.55B,
+B043,TOP10,4,Bath Song – Cocomelon,Bath Song Cocomelon|Cocomelon Bath,7.2B,Approximate
+B043,TOP10,5,Johny Johny Yes Papa – LooLoo Kids,Johny Johny Yes Papa|LooLoo Kids Johny Johny,7.08B,Approximate; multiple versions exist; LooLoo Kids channel holds most-viewed version
+B043,TOP10,6,See You Again – Wiz Khalifa ft. Charlie Puth,See You Again Wiz Khalifa,6.3B,Originally from Furious 7 soundtrack; tribute to Paul Walker
+B043,TOP10,7,Phonics Song with Two Words – ChuChu TV,ChuChu TV Phonics|Phonics Song Two Words,5.8B,Approximate
+B043,TOP10,8,Uptown Funk – Mark Ronson ft. Bruno Mars,Uptown Funk Mark Ronson|Uptown Funk Bruno Mars,5.2B,Approximate
+B043,TOP10,9,Learning Colors – Miroshka TV,Learning Colors Colorful Eggs|Miroshka TV Learning,5.1B,Approximate; also known as Learning Colors – Colorful Eggs on a Farm
+B043,TOP10,10,Shape of You – Ed Sheeran,Shape of You Ed Sheeran,~5.0B,Approximate; was once the most-viewed music video until surpassed
+B043,UNIVERSE_REF,,All YouTube videos with 5B+ views,,~15,Approximately 15 YouTube videos have reached 5B or more views as of mid-2025; list is fluid as counts change daily
+B044,TOP10,1,Ben-Hur (1959),Ben-Hur,11,Three-way tie for all-time Oscar record. Won 11 of 12 nominations.
+B044,TOP10,1,The Lord of the Rings: The Return of the King (2003),LOTR Return of the King|ROTK|Return of the King,11,Three-way tie. Won all 11 of its nominations — the only film to achieve a perfect sweep at 11+ nominations.
+B044,TOP10,1,Titanic (1997),Titanic 1997|James Cameron Titanic,11,Three-way tie. 14 nominations; 11 wins.
+B044,TOP10,4,West Side Story (1961),West Side Story 1961,10,
+B044,TOP10,5,Gigi (1958),Gigi 1958,9,Won all 9 of its nominations
+B044,TOP10,5,The English Patient (1996),English Patient,9,
+B044,TOP10,5,The Last Emperor (1987),Last Emperor,9,Won all 9 of its nominations
+B044,TOP10,8,From Here to Eternity (1953),From Here to Eternity,8,8 wins from 13 nominations
+B044,TOP10,8,My Fair Lady (1964),My Fair Lady 1964,8,8 wins from 12 nominations
+B044,TOP10,8,On the Waterfront (1954),On the Waterfront,8,8 wins from 12 nominations
+B044,UNIVERSE,1,Amadeus (1984),Amadeus 1984,8,
+B044,UNIVERSE,1,Cabaret (1972),Cabaret 1972,8,Won 8 but lost Best Picture to The Godfather
+B044,UNIVERSE,1,Gandhi (1982),Gandhi 1982,8,
+B044,UNIVERSE,4,Everything Everywhere All at Once (2022),EEAAO|Everything Everywhere,7,
+B044,UNIVERSE,4,Oppenheimer (2023),Oppenheimer 2023,7,
+B044,UNIVERSE,4,Schindler's List (1993),Schindlers List,7,
+B044,UNIVERSE,4,Shakespeare in Love (1998),Shakespeare in Love,7,Controversial Best Picture win over Saving Private Ryan
+B044,UNIVERSE_REF,,All films with 5+ Oscar wins,,~55,Approximately 55 films have won 5 or more Academy Awards across all categories
+B046,TOP10,1,Cristiano Ronaldo (@cristiano),Cristiano Ronaldo Instagram|@cristiano|CR7,680M,Most followed person on Instagram
+B046,TOP10,2,Lionel Messi (@leomessi),Lionel Messi Instagram|@leomessi|Leo Messi,507M,
+B046,TOP10,3,Selena Gomez (@selenagomez),Selena Gomez Instagram|@selenagomez,420M,Most followed woman on Instagram
+B046,TOP10,4,Dwayne Johnson (@therock),The Rock Instagram|Dwayne Johnson Instagram|@therock,393M,Approximately tied with Kylie Jenner; order varies by source
+B046,TOP10,4,Kylie Jenner (@kyliejenner),Kylie Jenner Instagram|@kyliejenner,393M,
+B046,TOP10,6,Kim Kardashian (@kimkardashian),Kim Kardashian Instagram|@kimkardashian,356M,
+B046,TOP10,7,Ariana Grande (@arianagrande),Ariana Grande Instagram|@arianagrande,335M,Approximate
+B046,TOP10,8,Beyoncé (@beyonce),Beyonce Instagram|@beyonce,311M,
+B046,TOP10,9,Khloé Kardashian (@khloekardashian),Khloe Kardashian Instagram|@khloekardashian,302M,
+B046,TOP10,10,Nike (@nike),Nike Instagram|@nike,292M,Highest-followed brand account (excluding @instagram itself)
+B046,UNIVERSE,1,Taylor Swift (@taylorswift),Taylor Swift Instagram|@taylorswift,283M,
+B046,UNIVERSE,2,Virat Kohli (@virat.kohli),Virat Kohli Instagram|@virat.kohli,273M,Most followed person in Asia; first Indian to reach 270M+
+B046,UNIVERSE_REF,,All Instagram accounts with 200M+ followers,,~15,Approximately 15 Instagram accounts (personal or brand) have 200M+ followers as of late 2025; excludes official @instagram account (685M+)
+B047,TOP10,1,Marvel Cinematic Universe,MCU|Marvel Universe,$32B+,Approximately $32B+ nominal worldwide gross; 36 films as of 2025. Largest franchise by a wide margin.
+B047,TOP10,2,Star Wars,Star Wars franchise|Star Wars films,$10.3B,Includes main trilogies and anthology spin-off films
+B047,TOP10,3,Wizarding World (Harry Potter),Harry Potter franchise|Harry Potter films|Fantastic Beasts,$9.6B,Includes 8 Harry Potter films plus Fantastic Beasts films
+B047,TOP10,4,Spider-Man,Spider-Man franchise|Spiderman films,$9.0B,"Includes all versions: Sam Raimi trilogy, Marc Webb films, and MCU Spider-Man films"
+B047,TOP10,5,James Bond,James Bond films|007 franchise,$7.9B,26+ films from Dr. No (1962) through No Time to Die (2021)
+B047,TOP10,6,Fast and the Furious,Fast and Furious|Fast Furious franchise|Fast franchise,$7.3B,Includes main films and Hobbs & Shaw spin-off
+B047,TOP10,7,DC Extended Universe,DCEU|DC Extended Universe films,$7.2B,Includes main DCEU films from Man of Steel through Aquaman and the Lost Kingdom
+B047,TOP10,8,X-Men (franchise),X-Men films|Deadpool X-Men,$6.5B,"Includes original X-Men trilogy, prequels, Logan, and Deadpool films (including Deadpool & Wolverine 2024)"
+B047,TOP10,9,Jurassic Park / Jurassic World,Jurassic Park franchise|Jurassic World franchise,$6.0B,Includes Jurassic Park trilogy and Jurassic World trilogy
+B047,TOP10,10,Despicable Me,Despicable Me franchise|Minions franchise,$5.6B,Includes Despicable Me films and Minions spin-offs
+B047,UNIVERSE_REF,,All film franchises with $5B+ total worldwide gross (nominal),,~12,Approximately 12 film franchises have earned $5B or more in total worldwide box office (nominal USD) as of mid-2025
+B048,TOP10,1,Game of Thrones,Game of Thrones HBO|GoT,59,All-time record for any scripted TV series (164 nominations; 59 wins)
+B048,TOP10,2,Hill Street Blues,Hill Street Blues NBC,26,Tied with The West Wing; won Outstanding Drama Series 4 consecutive times (1981–1984)
+B048,TOP10,2,The West Wing,West Wing NBC,26,Tied with Hill Street Blues; won Outstanding Drama Series 4 consecutive times (2000–2003)
+B048,TOP10,4,ER,ER NBC|ER hospital drama,23,124 nominations over 15 seasons; 23 wins
+B048,TOP10,5,The Sopranos,Sopranos HBO,21,"Approximate; won Outstanding Drama Series 2x (2004, 2007) plus multiple acting and writing wins"
+B048,TOP10,6,NYPD Blue,NYPD Blue ABC,20,Won Outstanding Drama Series once (1995)
+B048,TOP10,6,Succession,Succession HBO,20,"Approximate; won Outstanding Drama Series 4 consecutive times (2020–2023) plus acting, writing, and directing wins"
+B048,TOP10,8,Breaking Bad,Breaking Bad AMC,16,Approximate; won Outstanding Drama Series 2 consecutive times (2013–2014)
+B048,TOP10,8,Mad Men,Mad Men AMC,16,Approximate; won Outstanding Drama Series 4 consecutive times (2008–2011)
+B048,TOP10,10,L.A. Law,LA Law NBC,15,"Approximate; won Outstanding Drama Series 4 times (1987, 1989, 1991, 1994)"
+B048,UNIVERSE,1,Six Feet Under,Six Feet Under HBO,12,Approximate
+B048,UNIVERSE,2,Downton Abbey,Downton Abbey ITV PBS,11,Approximate
+B048,UNIVERSE_REF,,All drama series with 10+ total Primetime Emmy wins,,~18,Approximately 18 drama series have won 10 or more total Primetime Emmy Awards; some figures for lower-ranked series are approximate
+B049,TOP10,1,Harry Potter (J.K. Rowling),Harry Potter series|Harry Potter books,600,8-book series; figure ranges 500–600M by source; 600M used per most commonly cited data
+B049,TOP10,2,Chicken Soup for the Soul (various authors),Chicken Soup for the Soul series,500,Multi-author compilation series; hundreds of volumes across many themed editions
+B049,TOP10,3,Goosebumps (R.L. Stine),Goosebumps series|RL Stine Goosebumps,400,"Includes original series, spin-offs, and Give Yourself Goosebumps; some sources cite 350M"
+B049,TOP10,4,Perry Mason (Erle Stanley Gardner),Perry Mason novels|Perry Mason series,300,82 novels featuring the defense attorney; by Erle Stanley Gardner
+B049,TOP10,5,Diary of a Wimpy Kid (Jeff Kinney),Diary of a Wimpy Kid series|Wimpy Kid,275,
+B049,TOP10,6,Berenstain Bears (Stan and Jan Berenstain),Berenstain Bears books|Berenstain Bears series,260,
+B049,TOP10,7,Choose Your Own Adventure (various authors),Choose Your Own Adventure series|CYOA,250,Published by Bantam Books; multiple authors across hundreds of titles
+B049,TOP10,7,Sweet Valley High (Francine Pascal),Sweet Valley High series,250,Approximately tied with Choose Your Own Adventure
+B049,TOP10,9,The Railway Series (Rev. W. Awdry),Thomas the Tank Engine books|Thomas and Friends books,201,Basis for Thomas & Friends TV franchise; started 1945
+B049,TOP10,10,Nancy Drew (various authors),Nancy Drew mystery series|Nancy Drew books,200,Ghost-written under pseudonym Carolyn Keene; multiple publisher runs
+B049,UNIVERSE,1,Noddy (Enid Blyton),Noddy books|Noddy Enid Blyton,200,Approximately tied with Nancy Drew
+B049,UNIVERSE_REF,,All book series with 100M+ copies sold worldwide,,~22,Approximately 22 book series have sold 100M or more copies worldwide
+B050,TOP10,1,M*A*S*H finale (1983),MASH finale|Goodbye Farewell and Amen,106.0,Episode title: Goodbye Farewell and Amen; most-watched scripted TV episode in US history
+B050,TOP10,2,Cheers finale (1993),Cheers final episode|One for the Road,80.4,Live broadcast Nielsen figure; same-day VCR viewing brought combined total to ~93.5M
+B050,TOP10,3,The Fugitive finale (1967),Fugitive 1967 finale,78.0,Range cited as 72–78M; 78M used per most commonly cited figure
+B050,TOP10,4,Seinfeld finale (1998),Seinfeld final episode|The Finale Seinfeld,76.3,
+B050,TOP10,5,Friends finale (2004),Friends final episode|The Last One Friends,52.5,
+B050,TOP10,6,Magnum P.I. finale (1988),Magnum PI finale,50.7,
+B050,TOP10,7,The Cosby Show finale (1992),Cosby Show final episode,44.4,
+B050,TOP10,8,All in the Family finale (1979),All in the Family final episode,40.2,
+B050,TOP10,9,Family Ties finale (1989),Family Ties final episode,36.3,
+B050,TOP10,10,Home Improvement finale (1999),Home Improvement final episode,35.5,
+B050,UNIVERSE,1,Everybody Loves Raymond finale (2005),Everybody Loves Raymond final episode,35.1,Approximate; sources vary on exact figure
+B050,UNIVERSE_REF,,All US TV series finales with 30M+ live broadcast viewers,,~13,Approximately 13 US TV series finales have drawn 30M or more live broadcast viewers; the threshold is rarely crossed in the modern fragmented TV era
+B051,TOP10,1,Caspian Sea,Caspian|Hazar Dengizi|Xəzər dənizi|Каспийское море,389000 km²,"Classified as lake/endorheic basin; area fluctuates; shared by Azerbaijan, Iran, Kazakhstan, Russia, Turkmenistan"
+B051,TOP10,2,Lake Superior,Superior|Gichi-gami,82100 km²,Canada and USA; largest of the Great Lakes by area
+B051,TOP10,3,Lake Victoria,Victoria|Nam Lolwe|Nyanza,59940 km²,"Tanzania, Uganda, Kenya"
+B051,TOP10,4,Lake Huron,Huron,59570 km²,Canada and USA; includes Georgian Bay
+B051,TOP10,5,Lake Michigan,Michigan,57800 km²,USA; only Great Lake lying entirely within the United States
+B051,TOP10,6,Lake Tanganyika,Tanganyika,32900 km²,"Tanzania, DRC, Burundi, Zambia; second deepest lake in world"
+B051,TOP10,7,Lake Baikal,Baikal|Ozero Baykal|Байкал,31722 km²,Russia; deepest lake in world (~1642 m); corrected from pre-given 31500 km²
+B051,TOP10,8,Great Bear Lake,Great Bear,31153 km²,Canada (Northwest Territories)
+B051,TOP10,9,Lake Malawi,Malawi|Lake Nyasa|Lago Niassa,29600 km²,"Malawi, Mozambique, Tanzania; also called Lake Nyasa"
+B051,TOP10,10,Great Slave Lake,Great Slave,27200 km²,Canada (Northwest Territories)
+B051,UNIVERSE,1,Lake Erie,Erie,25667 km²,"Canada, USA"
+B051,UNIVERSE,2,Lake Winnipeg,Winnipeg,24514 km²,Canada (Manitoba)
+B051,UNIVERSE,3,Lake Ontario,Ontario,19011 km²,"Canada, USA; smallest of the Great Lakes by surface area"
+B051,UNIVERSE,4,Lake Ladoga,Ladoga|Ladozhskoye Ozero|Ладожское озеро,17700 km²,Russia; largest lake entirely in Europe
+B051,UNIVERSE,5,Lake Balkhash,Balkhash|Balqash|Балқаш,16400 km²,Kazakhstan
+B051,UNIVERSE_REF,,ALL_LAKES_15000KM2,,18,All natural lakes with surface area ≥ 15000 km²
+B052,TOP10,1,Nile,Nile River|White Nile-Kagera system|النيل,6650 km,Length disputed; conventional #1; Nile-Kagera headwaters in Burundi; flows through 10+ countries to Egypt
+B052,TOP10,2,Amazon,Amazon River|Amazon-Ucayali-Tambo-Ene-Mantaro system|Río Amazonas,6400 km,"Brazil, Peru, Colombia; some methodologies place Amazon longer than Nile"
+B052,TOP10,3,Yangtze,Yangtze River|Chang Jiang|长江|Yangtze-Jinsha system,6300 km,China; longest river entirely within one country
+B052,TOP10,4,Mississippi-Missouri,Mississippi|Mississippi-Missouri-Jefferson system,6275 km,USA and Canada; longest river system in North America
+B052,TOP10,5,Yenisey-Angara,Yenisey River|Yenisei|Yenisey-Angara-Selenga system,5539 km,"Russia, Mongolia"
+B052,TOP10,6,Yellow River,Yellow River|Huang He|黄河,5464 km,China; second longest river in China
+B052,TOP10,7,Ob-Irtysh,Ob River|Ob-Irtysh system,5410 km,"Russia, Kazakhstan, China, Mongolia"
+B052,TOP10,8,Río de la Plata-Paraná,Paraná|Río de la Plata-Paraná-Rio Grande system,4880 km,"Brazil, Argentina, Paraguay, Bolivia, Uruguay"
+B052,TOP10,9,Congo,Congo River|Congo-Lualaba-Chambeshi system|Zaire River,4700 km,DRC and surrounding countries; deepest river in world
+B052,TOP10,10,Amur-Argun,Amur River|Amur-Argun system|Heilong Jiang|黑龙江,4444 km,"Russia, China, Mongolia"
+B052,UNIVERSE_REF,,ALL_RIVERS_3000KM,,25,All rivers with total length ≥ 3000 km
+B053,TOP10,1,Everest,Mount Everest|Sagarmatha|Chomolungma|珠穆朗玛峰,8849 m,Nepal/China border; Himalaya; elevation 8848.86 m per 2020 China-Nepal joint survey; classic 8848 m figure is superseded
+B053,TOP10,2,K2,K2|Qogir|Godwin-Austen|Chogori,8611 m,Pakistan/China border; Karakoram; second highest and considered hardest to climb
+B053,TOP10,3,Kangchenjunga,Kangchenjunga|Kangchendzönga|Kanchenjunga,8586 m,Nepal/India border; Himalaya; third highest
+B053,TOP10,4,Lhotse,Lhotse,8516 m,Nepal/China border; Himalaya; fourth highest
+B053,TOP10,5,Makalu,Makalu,8485 m,Nepal/China border; Himalaya; isolated summit with distinctive four-sided pyramid shape
+B053,TOP10,6,Cho Oyu,Cho Oyu|Qowowuyag,8188 m,Nepal/China border; Himalaya; considered easiest eight-thousander to climb
+B053,TOP10,7,Dhaulagiri I,Dhaulagiri,8167 m,Nepal; Himalaya
+B053,TOP10,8,Manaslu,Manaslu|Kutang,8163 m,Nepal; Himalaya
+B053,TOP10,9,Nanga Parbat,Nanga Parbat|Diamir,8125 m,Pakistan; Himalaya (western anchor); known as Killer Mountain
+B053,TOP10,10,Annapurna I,Annapurna,8091 m,Nepal; Himalaya; highest fatality rate of the eight-thousanders historically
+B053,UNIVERSE,1,Gasherbrum I,Gasherbrum I|Hidden Peak|K5,8080 m,Pakistan/China border; Karakoram
+B053,UNIVERSE,2,Broad Peak,Broad Peak|K3,8051 m,Pakistan/China border; Karakoram
+B053,UNIVERSE,3,Gasherbrum II,Gasherbrum II|K4,8034 m,Pakistan/China border; Karakoram
+B053,UNIVERSE,4,Shishapangma,Shishapangma|Gosainthan,8027 m,China (Tibet); Himalaya; only eight-thousander located entirely within China
+B054,TOP10,1,Russia,Russian Federation|Россия,17098246 km²,Largest country; spans 11 time zones
+B054,TOP10,2,Canada,,9984670 km²,Second largest country; includes large freshwater area
+B054,TOP10,3,China,People's Republic of China|PRC|中国,9596960 km²,China vs USA rank #3/#4 varies by source; China #3 by current Wikipedia/UN consensus
+B054,TOP10,4,United States,USA|United States of America,9525067 km²,
+B054,TOP10,5,Brazil,Brasil,8510346 km²,Largest country in South America
+B054,TOP10,6,Australia,Commonwealth of Australia,7741220 km²,
+B054,TOP10,7,India,Republic of India|Bharat|भारत,3287263 km²,
+B054,TOP10,8,Argentina,Argentine Republic|República Argentina,2780400 km²,
+B054,TOP10,9,Kazakhstan,Republic of Kazakhstan|Қазақстан,2724910 km²,
+B054,TOP10,10,Algeria,People's Democratic Republic of Algeria|الجزائر,2381741 km²,Largest country in Africa
+B054,UNIVERSE,1,DR Congo,Democratic Republic of the Congo|DRC|Congo-Kinshasa|Zaire,2344858 km²,
+B054,UNIVERSE,2,Saudi Arabia,Kingdom of Saudi Arabia,2149690 km²,
+B054,UNIVERSE,3,Mexico,United Mexican States|México,1964375 km²,
+B054,UNIVERSE,4,Indonesia,Republic of Indonesia,1904569 km²,
+B054,UNIVERSE,5,Sudan,Republic of Sudan,1878000 km²,
+B054,UNIVERSE,6,Libya,State of Libya,1759540 km²,
+B054,UNIVERSE,7,Iran,Islamic Republic of Iran|Persia|ایران,1648195 km²,
+B054,UNIVERSE,8,Mongolia,Mongol Uls|Монгол Улс,1564116 km²,
+B054,UNIVERSE,9,Peru,Republic of Peru|Perú,1285216 km²,
+B054,UNIVERSE,10,Chad,Republic of Chad|Tchad,1284000 km²,
+B054,UNIVERSE_REF,,ALL_COUNTRIES_195,,195,All 195 sovereign countries
+B055,TOP10,1,France,French Republic|République française,100.0 million arrivals (2023),Headline figure includes transit visitors; overnight-stay methodology gives ~89.4M; #1 not in dispute
+B055,TOP10,2,Spain,Kingdom of Spain|España,85.2 million arrivals (2023),
+B055,TOP10,3,United States,USA|United States of America,66.5 million arrivals (2023),
+B055,TOP10,4,Italy,Italian Republic|Italia,57.3 million arrivals (2023),
+B055,TOP10,5,Turkey,Republic of Türkiye|Türkiye,55.2 million arrivals (2023),
+B055,TOP10,6,Mexico,United Mexican States|México,42.0 million arrivals (2023),
+B055,TOP10,7,United Kingdom,UK|Great Britain,37.2 million arrivals (2023),
+B055,TOP10,8,Germany,Federal Republic of Germany|Deutschland,34.8 million arrivals (2023),
+B055,TOP10,9,Greece,Hellenic Republic|Ελλάδα,32.7 million arrivals (2023),
+B055,TOP10,10,Austria,Republic of Austria|Österreich,30.9 million arrivals (2023),
+B055,UNIVERSE,1,Thailand,Kingdom of Thailand|ประเทศไทย,28.15 million arrivals (2023),Tied with UAE at ranks 11-12
+B055,UNIVERSE,1,United Arab Emirates,UAE|الإمارات العربية المتحدة,28.15 million arrivals (2023),Tied with Thailand at ranks 11-12
+B055,UNIVERSE,3,Saudi Arabia,Kingdom of Saudi Arabia,27.4 million arrivals (2023),
+B055,UNIVERSE,4,Portugal,Portuguese Republic,26.5 million arrivals (2023),
+B055,UNIVERSE,5,Japan,Nippon|Nihon|日本,25.1 million arrivals (2023),Post-COVID recovery; was higher pre-pandemic
+B055,UNIVERSE,6,Netherlands,Kingdom of the Netherlands|Holland,20.3 million arrivals (2023),
+B055,UNIVERSE,7,Malaysia,,20.1 million arrivals (2023),
+B055,UNIVERSE,8,Poland,Republic of Poland|Polska,19.0 million arrivals (2023),
+B055,UNIVERSE,9,Canada,,18.3 million arrivals (2023),
+B055,UNIVERSE,10,Hong Kong,Hong Kong SAR|香港,17.2 million arrivals (2023),Special Administrative Region of China
+B055,UNIVERSE_REF,,ALL_COUNTRIES_195,,195,All countries receiving international tourist arrivals
+B056,TOP10,1,India,Republic of India|Bharat|भारत,1438069596,Surpassed China in 2023 to become world's most populous country
+B056,TOP10,2,China,People's Republic of China|PRC|中国,1422584933,Population declining ~0.18%/yr since 2022
+B056,TOP10,3,United States,USA|United States of America,343477335,
+B056,TOP10,4,Indonesia,Republic of Indonesia,281190067,
+B056,TOP10,5,Pakistan,Islamic Republic of Pakistan|پاکستان,247504495,
+B056,TOP10,6,Nigeria,Federal Republic of Nigeria,227882945,
+B056,TOP10,7,Brazil,Brasil,211140729,
+B056,TOP10,8,Bangladesh,People's Republic of Bangladesh|বাংলাদেশ,171466990,
+B056,TOP10,9,Russia,Russian Federation|Россия,145440500,
+B056,TOP10,10,Mexico,United Mexican States|México,129739759,
+B056,UNIVERSE,1,Ethiopia,Federal Democratic Republic of Ethiopia,128691692,
+B056,UNIVERSE,2,Japan,Nippon|日本,124370947,
+B056,UNIVERSE,3,Philippines,Republic of the Philippines,114891199,
+B056,UNIVERSE,4,Egypt,Arab Republic of Egypt|مصر,114535772,
+B056,UNIVERSE,5,DR Congo,Democratic Republic of the Congo|DRC,105789731,
+B056,UNIVERSE,6,Vietnam,Socialist Republic of Vietnam|Việt Nam,100352192,
+B056,UNIVERSE,7,Iran,Islamic Republic of Iran|ایران,90608707,
+B056,UNIVERSE,8,Turkey,Türkiye,87270501,
+B056,UNIVERSE,9,Germany,Federal Republic of Germany|Deutschland,84548231,
+B056,UNIVERSE,10,Thailand,Kingdom of Thailand|ประเทศไทย,71702435,
+B056,UNIVERSE_REF,,ALL_COUNTRIES_195,,195,All 195 sovereign countries; UN World Population Prospects 2024 mid-year 2023 estimates
+B057,TOP10,1,Antarctic Desert,Antarctica Desert,14200000 km²,Polar cold desert; Antarctica; largest desert on Earth; low precipitation due to katabatic winds
+B057,TOP10,2,Arctic Desert,,13900000 km²,"Polar cold desert; Arctic regions of N. America, Europe, Russia"
+B057,TOP10,3,Sahara,Sahara Desert|الصحراء الكبرى,9200000 km²,Largest hot desert; Northern Africa; 11 countries
+B057,TOP10,4,Arabian Desert,,2330000 km²,"Subtropical hot desert; Western Asia; Saudi Arabia, Yemen, Oman, UAE, Jordan, Iraq, Syria"
+B057,TOP10,5,Great Australian Desert,Australian Desert|Great Victoria-Sandy complex,1371000 km²,"Collective grouping of adjacent Australian deserts (Great Victoria, Great Sandy, Gibson, Tanami, Simpson, etc.)"
+B057,TOP10,6,Gobi Desert,Gobi,1295000 km²,"Cold winter desert; China, Mongolia"
+B057,TOP10,7,Kalahari Desert,Kalahari,900000 km²,"Subtropical semi-arid; Botswana, Namibia, South Africa"
+B057,TOP10,8,Patagonian Desert,Patagonia,673000 km²,"Cold winter desert; Argentina, Chile"
+B057,TOP10,9,Syrian Desert,,500000 km²,"Subtropical; Iraq, Jordan, Saudi Arabia, Syria"
+B057,TOP10,10,Great Basin Desert,,492000 km²,"Cold winter desert; USA (Nevada, Utah, California, Idaho)"
+B057,UNIVERSE_REF,,ALL_DESERTS_100000KM2,,23,All deserts (hot and cold) with area ≥ 100000 km²
+B058,TOP10,1,Angel Falls,Salto Ángel|Kerepakupai Merú|Parakupá-vená,979 m,Venezuela (Canaima National Park); 979 m = total uninterrupted height; single longest plunge within fall = 807 m
+B058,TOP10,2,Tugela Falls,Tugela,947 m,South Africa; KwaZulu-Natal; second tallest in world
+B058,TOP10,3,Tres Hermanas Falls,Three Sisters Falls,914 m,Peru; Ayacucho region
+B058,TOP10,4,Olo'upena Falls,Oloupena,900 m,USA (Hawaii); Molokai island
+B058,TOP10,5,Yumbilla Falls,,896 m,Peru; Amazonas region
+B058,TOP10,6,Skorga,,875 m,Norway
+B058,TOP10,7,Balåifossen,Balaifossen,850 m,Norway
+B058,TOP10,8,Vinnufossen,,845 m,Norway
+B058,TOP10,9,Mattenbachfall,,840 m,Switzerland; three-way tie at 840 m for ranks 9-11
+B058,TOP10,9,Pu'uka'oku Falls,Puukaoku,840 m,USA (Hawaii); Molokai; three-way tie at 840 m for ranks 9-11
+B058,UNIVERSE,1,James Bruce Falls,,840 m,Canada (British Columbia); three-way tie at 840 m for ranks 9-11
+B058,UNIVERSE,2,Browne Falls,,836 m,New Zealand (Fiordland)
+B058,UNIVERSE,3,Strupenfossen,,820 m,Norway
+B058,UNIVERSE,4,Ramnefjellsfossen,,818 m,Norway
+B058,UNIVERSE,5,Waihilau Falls,,792 m,USA (Hawaii)
+B058,UNIVERSE,6,Colonial Creek Falls,,788 m,USA (Washington state)
+B058,UNIVERSE,7,Mongefossen,,773 m,Norway
+B058,UNIVERSE,8,Gocta Cataracts,Gocta,771 m,Peru; rediscovered 2005-2006
+B058,UNIVERSE,9,Mutarazi Falls,,762 m,Zimbabwe
+B058,UNIVERSE,10,Kjelfossen,,755 m,Norway
+B058,UNIVERSE_REF,,ALL_WATERFALLS_700M,,20,All waterfalls with total height ≥ 700 m
+B059,TOP10,1,Greenland,Kalaallit Nunaat|Grønland,2130800 km²,Denmark (autonomous territory); largest island in world by area
+B059,TOP10,2,New Guinea,Papua|Irian,785753 km²,Indonesia (west/Papua) and Papua New Guinea (east); second largest island
+B059,TOP10,3,Borneo,Kalimantan,748168 km²,"Indonesia, Malaysia, Brunei; third largest island"
+B059,TOP10,4,Madagascar,Madagasikara,587041 km²,Madagascar; fourth largest island; ~90% endemic biodiversity
+B059,TOP10,5,Baffin Island,Baffin,507451 km²,Canada (Nunavut); fifth largest island
+B059,TOP10,6,Sumatra,Sumatera,443065 km²,Indonesia; sixth largest island
+B059,TOP10,7,Honshu,Honshū|本州,227938 km²,Japan; largest of Japan's main islands
+B059,TOP10,8,Great Britain,Britain,218634 km²,United Kingdom (England + Scotland + Wales)
+B059,TOP10,9,Victoria Island,,217291 km²,Canada (Nunavut and Northwest Territories)
+B059,TOP10,10,Ellesmere Island,,196236 km²,Canada (Nunavut); tenth largest island
+B059,UNIVERSE,1,Sulawesi,Celebes,180681 km²,Indonesia
+B059,UNIVERSE,2,South Island,Te Waipounamu,145836 km²,New Zealand; larger of New Zealand's two main islands
+B059,UNIVERSE,3,Java,Jawa,138794 km²,Indonesia; most populous island on Earth
+B059,UNIVERSE,4,North Island,Te Ika-a-Māui,111583 km²,New Zealand
+B059,UNIVERSE,5,Luzon,,109965 km²,Philippines; largest island in the Philippines
+B059,UNIVERSE,6,Newfoundland,,108860 km²,Canada (Newfoundland and Labrador)
+B059,UNIVERSE,7,Cuba,,104338 km²,Cuba; largest island in the Caribbean
+B059,UNIVERSE,8,Iceland,Ísland,101826 km²,Iceland; 18th and last island qualifying at ≥ 100000 km²
+B060,TOP10,1,Italy,Italian Republic|Italia,60 sites,2024 UNESCO count; leads by 1 site over China
+B060,TOP10,2,China,People's Republic of China|PRC|中国,59 sites,
+B060,TOP10,3,Germany,Federal Republic of Germany|Deutschland,54 sites,Most sites of any non-Asian country after Italy
+B060,TOP10,4,France,French Republic|République française,53 sites,
+B060,TOP10,5,Spain,Kingdom of Spain|España,50 sites,
+B060,TOP10,6,India,Republic of India|Bharat,43 sites,
+B060,TOP10,7,Mexico,United Mexican States|México,35 sites,Tied with UK at ranks 7-8
+B060,TOP10,7,United Kingdom,UK|Great Britain,35 sites,Tied with Mexico at ranks 7-8
+B060,TOP10,9,Russia,Russian Federation|Россия,32 sites,
+B060,TOP10,10,Iran,Islamic Republic of Iran|Persia|ایران,28 sites,
+B060,UNIVERSE,1,Japan,Nippon|日本,26 sites,Tied with USA at ranks 11-12
+B060,UNIVERSE,1,United States,USA|United States of America,26 sites,Tied with Japan at ranks 11-12
+B060,UNIVERSE,3,Brazil,Brasil,24 sites,
+B060,UNIVERSE,4,Canada,,22 sites,
+B060,UNIVERSE,5,Turkey,Türkiye,21 sites,
+B060,UNIVERSE,6,Australia,Commonwealth of Australia,20 sites,
+B060,UNIVERSE,7,Greece,Hellenic Republic|Ελλάδα,19 sites,
+B060,UNIVERSE,8,Czechia,Czech Republic|Česká republika,17 sites,Three-way tie at ranks 18-20
+B060,UNIVERSE,8,Poland,Republic of Poland|Polska,17 sites,Three-way tie at ranks 18-20
+B060,UNIVERSE,8,Portugal,Portuguese Republic,17 sites,Three-way tie at ranks 18-20
+B060,UNIVERSE_REF,,ALL_COUNTRIES_195,,195,All 195 sovereign countries; 168 have at least one UNESCO World Heritage Site; 1223 total sites globally as of 2024
+B061,TOP10,1,United States,USA|U.S.A.|America,813,Forbes 2024; values as of March 8 2024
+B061,TOP10,2,China,Mainland China|People's Republic of China|PRC,406,Mainland China only; Forbes lists HK separately; combined with HK = 473
+B061,TOP10,3,India,Republic of India,200,Record high for India in 2024
+B061,TOP10,4,Germany,Deutschland|Federal Republic of Germany,132,
+B061,TOP10,5,Russia,Russian Federation,120,Up 15 from prior year
+B061,TOP10,6,Italy,Repubblica Italiana|Italian Republic,73,
+B061,TOP10,7,Brazil,Brasil|Federative Republic of Brazil,69,
+B061,TOP10,8,Canada,,67,Tied with Hong Kong at 67; ranked 9th alphabetically
+B061,TOP10,8,Hong Kong,Hong Kong SAR|HK,67,Forbes counts separately from mainland China; tied with Canada at 67
+B061,TOP10,10,United Kingdom,UK|Great Britain|GB|England,55,
+B061,UNIVERSE,1,France,République française,53,
+B061,UNIVERSE,2,Taiwan,Republic of China|ROC,51,
+B061,UNIVERSE,3,Australia,,47,
+B061,UNIVERSE,4,Japan,,41,
+B061,UNIVERSE,4,Switzerland,,41,
+B061,UNIVERSE_REF,,,ALL_BILLIONAIRE_COUNTRIES,78,All 78 countries/territories with at least 1 Forbes 2024 billionaire
+B062,TOP10,1,Apple,Apple Inc.|AAPL,$3.67T,Approximate year-end Dec 31 2024 market cap
+B062,TOP10,2,Nvidia,NVDA|Nvidia Corporation,$3.28T,AI chip boom drove dramatic rise throughout 2024
+B062,TOP10,3,Microsoft,MSFT|Microsoft Corporation,$3.10T,
+B062,TOP10,4,Amazon,AMZN|Amazon.com|Amazon.com Inc.,$2.36T,
+B062,TOP10,5,Alphabet,GOOGL|GOOG|Google|Google LLC,$2.30T,Alphabet is parent company of Google
+B062,TOP10,6,Saudi Aramco,Aramco|Saudi Arabian Oil Company,$1.78T,Non-US company; approximate Dec 2024 value
+B062,TOP10,7,Meta Platforms,META|Facebook|Meta,$1.48T,Formerly known as Facebook
+B062,TOP10,8,Tesla,TSLA|Tesla Inc.,$1.34T,
+B062,TOP10,9,TSMC,Taiwan Semiconductor|TSM|Taiwan Semiconductor Manufacturing Company,$1.10T,Largest semiconductor foundry globally
+B062,TOP10,10,Broadcom,AVGO|Broadcom Inc.,$1.07T,
+B062,UNIVERSE_REF,,,ALL_LARGE_CAP_PUBLIC_COMPANIES,~15,All publicly traded companies with market cap above $500 billion USD as of Dec 31 2024
+B063,TOP10,1,Apple,Apple Inc.|AAPL,$502.68B,Interbrand brand value; #1 for 11th consecutive year
+B063,TOP10,2,Microsoft,MSFT|Microsoft Corporation,$316.66B,Highest growth in top 10 at +14%
+B063,TOP10,3,Amazon,AMZN|Amazon.com,$276.93B,
+B063,TOP10,4,Google,Alphabet|GOOGL|Google LLC,$260.26B,
+B063,TOP10,5,Samsung,Samsung Electronics,$91.41B,
+B063,TOP10,6,Toyota,Toyota Motor Corporation,$64.50B,
+B063,TOP10,7,Mercedes-Benz,Mercedes|Daimler,$61.41B,
+B063,TOP10,8,Coca-Cola,Coke,$58.05B,
+B063,TOP10,9,Nike,Nike Inc.,$53.77B,
+B063,TOP10,10,BMW,Bayerische Motoren Werke,$51.16B,Entered top 10 for the first time in 2023
+B063,UNIVERSE_REF,,,INTERBRAND_TOP_100,100,All brands in the Interbrand Best Global Brands 2023 Top 100; total value $3.3 trillion
+B064,TOP10,1,United States,USA|U.S.A.,$28.78T,IMF WEO April 2024 estimate; ~25% of world GDP
+B064,TOP10,2,China,People's Republic of China|PRC,$18.53T,
+B064,TOP10,3,Germany,Deutschland,$4.59T,Surpassed Japan in 2023 to become world's 3rd largest economy
+B064,TOP10,4,Japan,Nippon,$4.11T,Fell to 4th behind Germany in 2023
+B064,TOP10,5,India,Republic of India,$3.94T,Fastest-growing major economy
+B064,TOP10,6,United Kingdom,UK|Great Britain,$3.50T,
+B064,TOP10,7,France,République française,$3.13T,
+B064,TOP10,8,Italy,Repubblica Italiana,$2.33T,
+B064,TOP10,9,Canada,,$2.24T,
+B064,TOP10,10,Brazil,Brasil,$2.18T,
+B064,UNIVERSE,1,Russia,Russian Federation,$2.02T,IMF estimate; subject to exchange rate and sanctions complexities
+B064,UNIVERSE,2,Mexico,México,$1.79T,
+B064,UNIVERSE,3,South Korea,Republic of Korea|Korea,$1.76T,
+B064,UNIVERSE,4,Australia,,$1.72T,
+B064,UNIVERSE,5,Spain,España,$1.58T,
+B064,UNIVERSE,6,Indonesia,,$1.37T,
+B064,UNIVERSE,7,Netherlands,Holland,$1.12T,
+B064,UNIVERSE,8,Turkey,Türkiye,$1.11T,
+B064,UNIVERSE,9,Saudi Arabia,KSA|Kingdom of Saudi Arabia,$1.10T,
+B064,UNIVERSE,10,Switzerland,,$0.90T,
+B064,UNIVERSE_REF,,,ALL_COUNTRIES_195,195,All sovereign nations; source IMF WEO April 2024
+B065,TOP10,1,Hartsfield-Jackson Atlanta International Airport,ATL|Atlanta Airport,104.7M passengers,World's busiest for 25th consecutive year
+B065,TOP10,2,Dubai International Airport,DXB|Dubai Airport,86.9M passengers,First time ranked #2 globally
+B065,TOP10,3,Dallas/Fort Worth International Airport,DFW|Dallas Fort Worth Airport,81.8M passengers,
+B065,TOP10,4,London Heathrow Airport,LHR|Heathrow,79.2M passengers,Jumped from #8 in 2022 with 29% passenger increase
+B065,TOP10,5,Denver International Airport,DEN|Denver Airport,77.8M passengers,Up 13% vs 2019 pre-pandemic levels
+B065,TOP10,6,Tokyo Haneda International Airport,HND|Haneda,~77.0M passengers,Jumped from #16 in 2022 with 55% passenger increase; domestic+international
+B065,TOP10,7,Istanbul Airport,IST|Istanbul Havalimani,~76.1M passengers,Replaced Ataturk Airport as Istanbul's main hub
+B065,TOP10,8,Los Angeles International Airport,LAX|Los Angeles Airport,~75.1M passengers,
+B065,TOP10,9,Indira Gandhi International Airport,DEL|Delhi Airport,~72.0M passengers,Delhi; up ~5% vs 2019
+B065,TOP10,10,Chicago O'Hare International Airport,ORD|O'Hare,~71.2M passengers,
+B065,UNIVERSE,1,Paris Charles de Gaulle Airport,CDG|Roissy,~67.4M passengers,
+B065,UNIVERSE,2,Beijing Capital International Airport,PEK|Beijing Capital,~63.9M passengers,
+B065,UNIVERSE,3,Guangzhou Baiyun International Airport,CAN|Guangzhou Airport,~62.9M passengers,Regained 12th spot in 2023 after falling to 58th in 2022
+B065,UNIVERSE,4,John F. Kennedy International Airport,JFK|New York JFK,~62.1M passengers,
+B065,UNIVERSE,5,Shanghai Pudong International Airport,PVG|Shanghai Pudong,~59.3M passengers,
+B065,UNIVERSE,6,Singapore Changi Airport,SIN|Changi,~59.0M passengers,
+B065,UNIVERSE,7,Orlando International Airport,MCO|Orlando Airport,~57.7M passengers,
+B065,UNIVERSE,8,Adolfo Suárez Madrid–Barajas Airport,MAD|Madrid Barajas,~57.5M passengers,
+B065,UNIVERSE,8,Harry Reid International Airport,LAS|Las Vegas Airport|McCarran,~57.5M passengers,Renamed from McCarran in 2021
+B065,UNIVERSE,10,Incheon International Airport,ICN|Seoul Incheon,~56.7M passengers,Jumped from 99th in 2022 to 20th in 2023
+B065,UNIVERSE_REF,,,ALL_MAJOR_AIRPORTS,~25,All airports with 50 million or more annual passengers in 2023
+B066,TOP10,1,Dallas Cowboys,Cowboys,10.1B USD,NFL; first sports franchise to cross $10 billion valuation; #1 for 9th straight year
+B066,TOP10,2,Golden State Warriors,Warriors,8.8B USD,NBA
+B066,TOP10,3,Los Angeles Rams,Rams,7.6B USD,NFL
+B066,TOP10,4,New York Yankees,Yankees,7.55B USD,MLB
+B066,TOP10,5,New York Knicks,Knicks,7.5B USD,NBA
+B066,TOP10,6,New England Patriots,Patriots,7.4B USD,NFL
+B066,TOP10,7,New York Giants,Giants,7.3B USD,NFL
+B066,TOP10,8,Los Angeles Lakers,Lakers,7.1B USD,NBA
+B066,TOP10,9,San Francisco 49ers,49ers,~6.8B USD,NFL; approximate value — rank 9 not confirmed in available sources
+B066,TOP10,10,Philadelphia Eagles,Eagles,~6.75B USD,NFL; approximate value — rank 10 not confirmed in available sources
+B066,UNIVERSE,1,Real Madrid,Real Madrid CF,6.6B USD,La Liga; leads soccer franchises; tied for 12th per search results
+B066,UNIVERSE,2,Manchester United,Man United|MUFC,6.0B USD,Premier League
+B066,UNIVERSE_REF,,,FORBES_TOP_50_SPORTS,50+,All sports franchises valued at $3 billion or more per Forbes Dec 2024
+B067,TOP10,1,Industrial and Commercial Bank of China,ICBC|工商银行,$5.74T total assets,Largest bank in world by assets; S&P Global 2023 ranking uses Dec 31 2022 data
+B067,TOP10,2,Agricultural Bank of China,ABC|农业银行,$5.27T total assets,
+B067,TOP10,3,China Construction Bank,CCB|建设银行,$4.75T total assets,
+B067,TOP10,4,Bank of China,BOC|中国银行,$3.74T total assets,
+B067,TOP10,5,JPMorgan Chase,JPM|Chase Bank,$3.67T total assets,Largest US bank; grew significantly in 2023 after First Republic acquisition
+B067,TOP10,6,Bank of America,BofA|BAC,$3.05T total assets,
+B067,TOP10,7,Mitsubishi UFJ Financial Group,MUFG|三菱UFJ,$3.01T total assets,Largest Japanese bank
+B067,TOP10,8,HSBC Holdings,HSBC,$2.99T total assets,UK-headquartered; major Asia operations
+B067,TOP10,9,BNP Paribas,BNP,$2.92T total assets,Largest French bank
+B067,TOP10,10,Crédit Agricole,Credit Agricole,$2.70T total assets,
+B067,UNIVERSE,1,Citigroup,Citi|Citibank,$2.42T total assets,
+B067,UNIVERSE,2,Sumitomo Mitsui Financial Group,SMFG,$2.1T total assets,
+B067,UNIVERSE,3,Japan Post Bank,,$2.0T total assets,
+B067,UNIVERSE,4,Wells Fargo,WFC,$1.88T total assets,
+B067,UNIVERSE_REF,,,ALL_TRILLION_DOLLAR_BANKS,~30,All banks globally with $1 trillion or more in total assets; source S&P Global 2023
+B068,TOP10,1,United States,USA|U.S.A.,139 companies,Overtook China for first time since 2018
+B068,TOP10,2,China,PRC|Mainland China|People's Republic of China,133 companies,Mainland China only; down 9 from prior year; some sources count Greater China at 133+Taiwan/HK
+B068,TOP10,3,Japan,Nippon,40 companies,Down from 53 in 2020
+B068,TOP10,4,Germany,Deutschland,29 companies,
+B068,TOP10,5,France,République française,24 companies,
+B068,TOP10,6,South Korea,Republic of Korea|Korea,15 companies,
+B068,TOP10,6,United Kingdom,UK|Great Britain,15 companies,
+B068,TOP10,8,Canada,,14 companies,
+B068,TOP10,9,Netherlands,Holland,11 companies,
+B068,TOP10,9,Switzerland,,11 companies,Tied with Netherlands
+B068,UNIVERSE,1,Australia,,8 companies,
+B068,UNIVERSE,1,India,,8 companies,
+B068,UNIVERSE,3,Italy,Repubblica Italiana,7 companies,
+B068,UNIVERSE,3,Saudi Arabia,KSA,7 companies,
+B068,UNIVERSE,5,Brazil,Brasil,6 companies,
+B068,UNIVERSE_REF,,,ALL_FORTUNE500_COUNTRIES,35,All 35 countries/territories with at least 1 Fortune Global 500 company in 2024
+B069,TOP10,1,Saudi Aramco,Aramco|Saudi Arabian Oil Company,$121.3B net income,Calendar year 2023; world's most profitable company
+B069,TOP10,2,Apple,Apple Inc.|AAPL,$96.9B net income,Fiscal year ending September 2023
+B069,TOP10,3,Alphabet,Google|GOOGL|GOOG,$73.8B net income,Calendar year 2023; parent of Google
+B069,TOP10,4,Microsoft,MSFT|Microsoft Corporation,$72.4B net income,Fiscal year ending June 2023
+B069,TOP10,5,ICBC,Industrial and Commercial Bank of China|工商银行,$52.0B net income,Approximate; calendar year 2023
+B069,TOP10,6,JPMorgan Chase,JPM|Chase,$49.6B net income,Calendar year 2023; record profit for a US bank
+B069,TOP10,7,China Construction Bank,CCB|建设银行,$47.7B net income,Approximate; calendar year 2023
+B069,TOP10,8,Agricultural Bank of China,ABC|农业银行,$43.0B net income,Approximate; calendar year 2023
+B069,TOP10,9,Meta Platforms,META|Facebook,$39.1B net income,Calendar year 2023
+B069,TOP10,10,Amazon,AMZN|Amazon.com,$30.4B net income,Calendar year 2023; significant rebound from 2022 loss
+B069,UNIVERSE,1,Berkshire Hathaway,BRK.A|BRK.B,$96.2B net income,FY2023 total net earnings including investment gains; operating earnings were $37.4B
+B069,UNIVERSE,2,Bank of China,BOC|中国银行,$35.0B net income,Approximate calendar year 2023
+B069,UNIVERSE,3,Samsung Electronics,Samsung,$6.5B net income,Significant drop in 2023 due to memory chip downturn
+B069,UNIVERSE_REF,,,ALL_HIGH_PROFIT_COMPANIES,~15,All companies with $20 billion or more in annual net income (fiscal year 2023)
+B070,TOP10,1,Bernard Arnault,Bernard Arnault & family|LVMH,$233B net worth,France; LVMH; #1 for second consecutive year
+B070,TOP10,2,Elon Musk,Elon Reeve Musk|Tesla|SpaceX,$195B net worth,USA; Tesla/SpaceX/X
+B070,TOP10,3,Jeff Bezos,Jeffrey Preston Bezos|Amazon,$194B net worth,USA; Amazon founder
+B070,TOP10,4,Mark Zuckerberg,Zuckerberg|Meta|Facebook,$177B net worth,USA; Meta; biggest single-year gain (+$116.2B)
+B070,TOP10,5,Larry Ellison,Lawrence Joseph Ellison|Oracle,$141B net worth,USA; Oracle
+B070,TOP10,6,Warren Buffett,Warren Edward Buffett|Berkshire Hathaway|Oracle of Omaha,$133B net worth,USA; Berkshire Hathaway
+B070,TOP10,7,Bill Gates,William Henry Gates III|Microsoft,$128B net worth,USA; Microsoft co-founder
+B070,TOP10,8,Steve Ballmer,Steven Anthony Ballmer|Microsoft|Los Angeles Clippers,$121B net worth,USA; former Microsoft CEO; LA Clippers owner
+B070,TOP10,9,Mukesh Ambani,Mukesh Dhirubhai Ambani|Reliance Industries,$116B net worth,India; Reliance Industries; richest Asian
+B070,TOP10,10,Larry Page,Lawrence Edward Page|Google|Alphabet,$114B net worth,USA; Google co-founder
+B070,UNIVERSE,1,Sergey Brin,Sergei Mikhailovich Brin|Google|Alphabet,$110B net worth,USA; Google co-founder
+B070,UNIVERSE,2,Michael Bloomberg,Bloomberg LP|Bloomberg|NYC Mayor,$106B net worth,USA; Bloomberg LP
+B070,UNIVERSE,3,Amancio Ortega,Zara|Inditex,$103B net worth,Spain; Inditex/Zara founder
+B070,UNIVERSE,4,Carlos Slim,Carlos Slim Helú|América Móvil,$102B net worth,Mexico; telecom
+B070,UNIVERSE,5,Françoise Bettencourt Meyers,L'Oréal,$99B net worth,France; L'Oréal; richest woman in world
+B070,UNIVERSE_REF,,,ALL_ULTRA_HIGH_NET_WORTH,~100,All individuals with net worth $30 billion or more per Forbes 2024 annual list
+B071,TOP10,1,Mandarin Chinese,Chinese|Putonghua|Standard Chinese|普通话|中文|官话,920000000,Ethnologue 27th ed (2024); excludes Yue/Wu/Min/other Sinitic varieties counted separately
+B071,TOP10,2,Spanish,Español|Castilian|Castellano,475000000,
+B071,TOP10,3,English,British English|American English,373000000,
+B071,TOP10,4,Hindi,हिन्दी|Hindustani,344000000,Native Hindi speakers only; Urdu counted separately by Ethnologue
+B071,TOP10,5,Bengali,বাংলা|Bangla,234000000,
+B071,TOP10,6,Portuguese,Português,232000000,
+B071,TOP10,7,Russian,Русский,154000000,
+B071,TOP10,8,Japanese,日本語|Nihongo,125000000,
+B071,TOP10,9,Yue Chinese,Cantonese|粵語|广东话|Guangdonghua,85600000,Lahnda/Western Punjabi (~118M) ranks here in some other sources/datasets
+B071,TOP10,10,Vietnamese,Tiếng Việt,85300000,
+B071,UNIVERSE,1,Marathi,मराठी,83100000,
+B071,UNIVERSE,2,Telugu,తెలుగు,82000000,
+B071,UNIVERSE,3,Turkish,Türkçe,79300000,
+B071,UNIVERSE,4,Wu Chinese,Shanghainese|吴语|沪语,77100000,Often aggregated within Chinese in non-Ethnologue sources
+B071,UNIVERSE,5,Korean,한국어|Hangugeo|조선어,77000000,
+B071,UNIVERSE_REF,,ALL_MAJOR_LANGUAGES_50M,,23,Languages with 50M+ native speakers per Ethnologue 27th edition (2024)
+B072,TOP10,1,United States,USA|America|US,403,Count by primary citizenship/affiliation at time of award; some sources cite 423 using broader attribution
+B072,TOP10,2,United Kingdom,UK|Britain|Great Britain|England,138,
+B072,TOP10,3,Germany,Deutschland|West Germany|German Empire,115,Includes Weimar Republic and Imperial Germany era prizes
+B072,TOP10,4,France,France|République française,71,
+B072,TOP10,5,Sweden,Sverige,34,Nobel's home country; prizes awarded by Swedish and Norwegian institutions
+B072,TOP10,6,Russia,Soviet Union|USSR|Russian Federation,31,Combines Soviet-era and post-Soviet Russian laureates
+B072,TOP10,7,Japan,日本|Nippon,30,
+B072,TOP10,8,Switzerland,Schweiz|Suisse|Svizzera,27,
+B072,TOP10,9,Canada,Canada,26,
+B072,TOP10,10,Netherlands,Holland|Nederland,22,
+B072,UNIVERSE,1,Austria,Österreich,22,
+B072,UNIVERSE,2,Italy,Italia,21,
+B072,UNIVERSE,3,Australia,Australia,20,
+B072,UNIVERSE,4,Denmark,Danmark,15,
+B072,UNIVERSE,5,Norway,Norge|Noreg,13,
+B072,UNIVERSE_REF,,ALL_NOBEL_COUNTRIES,,~70,All countries with at least 1 Nobel Prize laureate 1901-2023
+B073,TOP10,1,The Bible,Holy Bible|Scripture|Old Testament|New Testament|Quran translation note: Quran is separate,3500,3500+ languages with full or partial translation; 717 complete Bible translations; 2191 New Testament only. Most translated text in history by a wide margin.
+B073,TOP10,2,The Little Prince,Le Petit Prince|El Principito|Der kleine Prinz|小王子,300,Sources range from 300 to 540 languages; higher counts include dialect editions. By Antoine de Saint-Exupéry (1943).
+B073,TOP10,3,The Adventures of Pinocchio,Pinocchio|Le avventure di Pinocchio,260,260+ languages. By Carlo Collodi (1883).
+B073,TOP10,4,Alice's Adventures in Wonderland,Alice in Wonderland|Alice au pays des merveilles,174,174+ languages. By Lewis Carroll (1865).
+B073,TOP10,5,Don Quixote,Don Quijote|El ingenioso hidalgo Don Quijote de la Mancha,150,~150 languages; often cited as most translated secular novel. By Miguel de Cervantes (1605).
+B073,TOP10,6,Asterix (series),Astérix|Asterix and Obelix,111,111 languages and dialects for the comic series. By Goscinny and Uderzo.
+B073,TOP10,7,Harry Potter (series),Harry Potter and the Philosopher's Stone|Sorcerer's Stone,80,~80 languages for the series. By J.K. Rowling. Individual books translated into ~80 languages as of 2023.
+B073,TOP10,7,One Thousand and One Nights,Arabian Nights|1001 Nights|Alf Layla wa-Layla|ألف ليلة وليلة,80,~80+ translations; ancient Arabic compilation.
+B073,TOP10,7,The Alchemist,O Alquimista,80,~80 languages. By Paulo Coelho (1988); one of best-selling novels of all time.
+B073,TOP10,10,The Diary of a Young Girl,The Diary of Anne Frank|Het Achterhuis|Diary of a Young Girl,70,70+ languages. By Anne Frank (1947 publication).
+B073,UNIVERSE,1,Tintin (series),The Adventures of Tintin|Les Aventures de Tintin,70,~70 languages. By Hergé.
+B073,UNIVERSE,2,The Lord of the Rings,LOTR|Fellowship of the Ring|The Hobbit,60,~60 languages. By J.R.R. Tolkien (1954-55).
+B073,UNIVERSE,2,Twenty Thousand Leagues Under the Sea,Vingt mille lieues sous les mers,60,~60 languages. By Jules Verne (1870).
+B073,UNIVERSE,4,Anne of Green Gables,,50,~50 languages. By L.M. Montgomery (1908).
+B073,UNIVERSE,4,Heidi,Heidi: Her Years of Wandering and Learning,50,~50 languages. By Johanna Spyri (1881).
+B073,UNIVERSE_REF,,ALL_BOOKS_50LANGS,,~100,Books translated into 50 or more languages; exact count varies by definition of translation vs. edition
+B074,TOP10,1,Christianity,Christian|Catholics|Protestants|Orthodox|Evangelical,2501000000,Pew Research 2020 data (published 2025); 28.8% of world population
+B074,TOP10,2,Islam,Muslim|Islamic|Sunni|Shia|Sufi,2002000000,Pew Research 2020; 25.6% of world population; fastest-growing major religion
+B074,TOP10,3,Hinduism,Hindu|Sanatana Dharma|हिन्दू धर्म,1211000000,Pew Research 2020; 14.9% of world population
+B074,TOP10,4,Folk religions,Folk religion|Traditional religion|Animism|Shamanism|Indigenous religion,430000000,"Pew Research 2020 aggregate category; includes African traditional religions, Chinese folk religion, Native American spirituality"
+B074,TOP10,5,Buddhism,Buddhist|Theravada|Mahayana|Vajrayana|Zen,324000000,Pew Research 2020 revised count; earlier Pew estimates (2015) put this at ~487M. 4.1% of world population.
+B074,TOP10,6,Sikhism,Sikh|ਸਿੱਖ ਧਰਮ,26000000,~25.7-26M; mostly concentrated in Punjab region of India
+B074,TOP10,7,Judaism,Jewish|Jews|Hebrew religion|ユダヤ教,14700000,Pew Research 2020; geographically concentrated in Israel and USA
+B074,TOP10,8,Bahá'í,Bahai|Baha'i Faith,8000000,~8M worldwide; present in virtually every country
+B074,TOP10,9,Jainism,Jain|जैन धर्म,5000000,~5M; primarily in India
+B074,TOP10,10,Shinto,神道|Shintoism,3500000,~3.5-4M declared adherents; much larger cultural practice in Japan not captured in formal count
+B074,UNIVERSE,1,Taoism,Daoism|道教,8000000,Often counted within Chinese folk religions; distinct formal tradition with ~8M formal adherents
+B074,UNIVERSE,2,Spiritism,Kardecism|Espiritismo,7000000,~7M; especially prevalent in Brazil
+B074,UNIVERSE,3,Caodaism,Cao Dai,4400000,~4.4M; Vietnamese syncretic religion
+B074,UNIVERSE,4,Tenrikyo,,1200000,~1.2M; Japanese new religion founded 1838
+B074,UNIVERSE,5,Zoroastrianism,Parsi|Parsee|Mazdayasna,200000,Ancient Persian religion; ~200K adherents remaining
+B074,UNIVERSE_REF,,ALL_MAJOR_RELIGIONS_5M,,~13,Major world religions with 5M or more estimated followers per Pew Research 2020; excludes unaffiliated (~1.19B) which would rank 4th if included
+B075,TOP10,1,Sobhuza II,Sobhuza|Nkhotfotjeni|King Sobhuza II of Swaziland,82.7,Ngwenyama of Swaziland (now Eswatini); 82 years 254 days (Dec 10 1899 - Aug 21 1982). Some sources count from 1921 when grandmother regent ceded power (61 years).
+B075,TOP10,2,Louis XIV,Louis the Great|Sun King|Roi Soleil|Louis XIV of France,72.3,72 years 110 days (Sep 14 1643 - Sep 1 1715). Longest-reigning sovereign of a major recognized state.
+B075,TOP10,3,Elizabeth II,Queen Elizabeth II|Elizabeth II of the United Kingdom,70.6,70 years 214 days (Feb 6 1952 - Sep 8 2022). Longest-reigning British monarch.
+B075,TOP10,4,Bhumibol Adulyadej,Rama IX|King Bhumibol|ภูมิพลอดุลยเดช,70.3,70 years 126 days (Jun 9 1946 - Oct 13 2016). King of Thailand.
+B075,TOP10,5,Johann II of Liechtenstein,Johann II|John II of Liechtenstein,70.2,70 years 91 days (Nov 12 1858 - Feb 11 1929).
+B075,TOP10,6,K'inich Janaab Pakal,Pakal the Great|Pacal|Lord Pakal|Pakal I,68.1,68 years 33 days (Jul 29 615 - Aug 28 683 AD). Maya ruler of Palenque; dates attested by inscriptions in Temple of the Inscriptions.
+B075,TOP10,7,Franz Joseph I,Franz Joseph|Francis Joseph I of Austria|Kaiser Franz Joseph,67.9,67 years 355 days (Dec 2 1848 - Nov 21 1916). Emperor of Austria and King of Hungary.
+B075,TOP10,8,Ferdinand III of Sicily,Ferdinand IV of Naples|Ferdinand I of the Two Sicilies,65.2,~65 years 90 days as King of Sicily (Jan 6 1759 - 1816 when kingdom renamed). Continued as King of the Two Sicilies until 1825.
+B075,TOP10,9,Queen Victoria,Victoria I|Queen Victoria of the United Kingdom,63.6,63 years 216 days (Jun 20 1837 - Jan 22 1901).
+B075,TOP10,10,Hirohito,Shōwa|Emperor Showa|昭和天皇,62.0,62 years 12 days (Dec 25 1926 - Jan 7 1989). Emperor of Japan.
+B075,UNIVERSE,1,Ramesses II,Ramesses the Great|Ramses II|Ozymandias,66.0,~66 years (c.1279-1213 BC). Ancient Egypt; dates based on modern Egyptological consensus but imprecise. Generally excluded from verified modern rankings due to ancient dating uncertainty.
+B075,UNIVERSE,2,George III,George III of Great Britain,59.3,59 years 96 days (Oct 25 1760 - Jan 29 1820). Reigned through American Revolution and Napoleonic Wars.
+B075,UNIVERSE,3,Wilhelmina,Queen Wilhelmina of the Netherlands|Wilhelmina Helena Pauline Maria,57.8,57 years ~7 months (Nov 23 1890 - Sep 4 1948). Abdicated in favor of daughter Juliana.
+B075,UNIVERSE,4,Hassanal Bolkiah,Sultan of Brunei|Sultan Hassanal Bolkiah Mu'izzaddin Waddaulah,57.0,Reigning since Oct 4 1967; still reigning as of 2024 (~57 years). Sultan and Prime Minister of Brunei.
+B075,UNIVERSE,5,Karl Friedrich of Baden,Carl Friedrich|Grand Duke Karl Friedrich,54.0,~54 years as Margrave/Elector of Baden (1757-1811). German principality.
+B075,UNIVERSE_REF,,ALL_LONG_REIGN_MONARCHS_50YR,,~25,All monarchs with verified reigns of 50 or more years based on documented historical or epigraphic records
+B076,TOP10,1,World War II,WWII|Second World War|WW2,70000000-85000000,"1939-1945; 70-85M deaths total (military + civilian). Deadliest conflict in recorded history. Includes Holocaust, bombing campaigns, famine and disease caused by war."
+B076,TOP10,2,Mongol Conquests,Mongol Invasions|Mongol Empire Expansion,40000000-60000000,"1206-1368; estimates 40-60M across Asia, Middle East, Eastern Europe over ~160 years. Represents ~10-15% of global population at the time."
+B076,TOP10,3,Three Kingdoms War,Three Kingdoms Period China|San Guo,36000000-40000000,184-280 AD; estimate based on population decline from census records. Highly debated; some historians question methodology.
+B076,TOP10,4,Taiping Rebellion,Taiping Civil War|太平天国运动,20000000-30000000,1850-1864; Chinese civil war; 20-30M deaths. One of history's deadliest civil wars; less well-known in Western education.
+B076,TOP10,5,World War I,WWI|The Great War|First World War|WW1,17000000-20000000,1914-1918; 17-20M deaths (military + civilian). Includes deaths from 1918 Spanish flu pandemic directly attributable to war conditions by some tallies.
+B076,TOP10,6,Qing Conquest of Ming Dynasty,Manchu Conquest of China|Ming-Qing Transition,15000000-25000000,1644-1683; estimate ~25M deaths. Conquest of China by Manchu Qing dynasty. Some sources place higher.
+B076,TOP10,7,An Lushan Rebellion,安史之乱|An-Shi Rebellion,13000000-36000000,755-763 AD; Tang Dynasty China. Wide range due to uncertain census data. High estimates based on recorded population decline.
+B076,TOP10,8,Russian Civil War,Russian Revolution and Civil War|Soviet Civil War,5000000-12000000,1917-1922; 5-12M deaths including famine and epidemics attributable to the conflict.
+B076,TOP10,9,Thirty Years' War,Dreißigjähriger Krieg,3000000-8000000,"1618-1648; primarily in Holy Roman Empire (Central Europe). Estimates 3-8M deaths from combat, famine and disease."
+B076,TOP10,10,Napoleonic Wars,Napoleonic Conflicts|French Revolutionary Wars,3500000-6000000,1803-1815; ~3.5-6M deaths across Europe and beyond.
+B076,UNIVERSE,11,Second Congo War,Great War of Africa|African World War,3800000-5400000,1998-2003; ~3.8-5.4M deaths mostly from disease and famine caused by conflict.
+B076,UNIVERSE,12,Korean War,한국전쟁|朝鮮戦争,2000000-3500000,1950-1953; 2-3.5M deaths (military + civilian).
+B076,UNIVERSE,13,Vietnam War,Second Indochina War|American War,1300000-3500000,1955-1975; 1.3-3.5M deaths (range includes North/South Vietnamese and US military plus civilian deaths).
+B076,UNIVERSE,14,Seven Years' War,French and Indian War,1400000-1400000,1756-1763; ~1.4M deaths across global theaters.
+B076,UNIVERSE,15,Cambodian Genocide,Khmer Rouge Genocide|Cambodian Holocaust,1500000-2000000,1975-1979; ~1.5-2M deaths; roughly 25% of Cambodia's population killed by the Khmer Rouge regime.
+B076,UNIVERSE_REF,,ALL_MAJOR_WARS,,~55,All wars and conflicts with at least 1 million estimated deaths per Wikipedia list of wars by death toll
+B077,TOP10,1,Louvre,Musée du Louvre|The Louvre,8900000,"Paris, France. 2023 attendance. Below 2019 record of ~9.6M. World's largest art museum by gallery space."
+B077,TOP10,2,National Museum of China,中国国家博物馆|National Museum Beijing,6800000,"Beijing, China. 2023 estimate. Methodology may differ from Western counting standards."
+B077,TOP10,2,Vatican Museums,Musei Vaticani|Vatican Museum,6800000,Vatican City. 2023 attendance ~6.8M; some sources cite ~6.35M.
+B077,TOP10,4,British Museum,,5820000,"London, UK. 2023 attendance 5.82M. Note: British Museum includes ancient art and historical artifacts; classified as art museum for this ranking."
+B077,TOP10,5,Metropolitan Museum of Art,The Met|Metropolitan Museum,5590000,"New York City, USA. 2023 attendance 5.59M (excluding The Met Cloisters)."
+B077,TOP10,6,Uffizi Gallery,Galleria degli Uffizi|The Uffizi,4400000,"Florence, Italy. 2023 record attendance of ~4.4M. Houses Botticelli, Leonardo, Michelangelo, Raphael."
+B077,TOP10,7,Tate Modern,,4100000,"London, UK. 2023 attendance ~4.1M. World's most-visited modern art museum."
+B077,TOP10,8,National Gallery,National Gallery London,3570000,"London, UK. 2023 attendance ~3.57M."
+B077,TOP10,9,Musée d'Orsay,Orsay Museum,3260000,"Paris, France. 2023 attendance ~3.26M. Houses world's largest Impressionist collection."
+B077,TOP10,10,Centre Pompidou,Pompidou Centre|Beaubourg,2930000,"Paris, France. 2023 attendance ~2.93M."
+B077,UNIVERSE,1,National Gallery of Art,NGA Washington,3220000,"Washington DC, USA. 2023 ~3.22M."
+B077,UNIVERSE,2,Museo del Prado,El Prado|Prado Museum,3200000,"Madrid, Spain. 2023 ~3.2M."
+B077,UNIVERSE,3,Art Institute of Chicago,,2800000,"Chicago, USA. ~2.8M."
+B077,UNIVERSE,3,Rijksmuseum,,2800000,"Amsterdam, Netherlands. ~2.8M."
+B077,UNIVERSE,5,Hermitage Museum,,2500000,"Saint Petersburg, Russia. ~2.5M (2023 post-sanctions estimate)."
+B077,UNIVERSE_REF,,ALL_ART_MUSEUMS_2M,,~28,Art museums or galleries with 2M+ annual visitors in 2023 per The Art Newspaper annual survey
+B078,TOP10,1,Italy,Italia,49.8,OIV 2022 data; 49.8 million hectoliters (Mhl). Led global production for third consecutive year.
+B078,TOP10,2,France,France,45.6,OIV 2022; 45.6 Mhl.
+B078,TOP10,3,Spain,España|Espana,35.7,OIV 2022; 35.7 Mhl.
+B078,TOP10,4,United States,USA|America|US,23.1,OIV 2022; 23.1 Mhl. Primarily California.
+B078,TOP10,5,Chile,República de Chile,12.4,OIV 2022; 12.4 Mhl.
+B078,TOP10,6,Australia,Australia,12.1,OIV 2022; 12.1 Mhl.
+B078,TOP10,7,Argentina,Argentine Republic|República Argentina,11.4,OIV 2022; 11.4 Mhl.
+B078,TOP10,8,South Africa,RSA|Republic of South Africa,10.4,OIV 2022; 10.4 Mhl.
+B078,TOP10,9,Germany,Deutschland,8.9,OIV 2022; ~8.9 Mhl. Germany is a consistent top-10 wine producer.
+B078,TOP10,10,Portugal,República Portuguesa,7.3,OIV 2022; ~7.3 Mhl.
+B078,UNIVERSE,1,Russia,Russian Federation,4.5,OIV 2022; ~4.5 Mhl.
+B078,UNIVERSE,2,New Zealand,NZ|Aotearoa,3.8,OIV 2022; ~3.8 Mhl.
+B078,UNIVERSE,3,Brazil,Brasil,3.2,OIV 2022; ~3.2 Mhl.
+B078,UNIVERSE,4,Romania,România,2.5,OIV 2022; ~2.5 Mhl.
+B078,UNIVERSE,5,Greece,Hellas|Ελλάδα,1.8,OIV 2022; ~1.8 Mhl.
+B078,UNIVERSE_REF,,ALL_WINE_PRODUCERS,,~22,Countries producing 1M+ hectoliters annually per OIV 2022 data
+B079,TOP10,1,Finland,Suomi,12.0,12.0 kg/person/year (2022). World's highest per-capita coffee consumption by a wide margin.
+B079,TOP10,2,Norway,Norge,9.9,9.9 kg/person/year.
+B079,TOP10,3,Iceland,Ísland,9.0,9.0 kg/person/year.
+B079,TOP10,4,Denmark,Danmark,8.7,8.7 kg/person/year.
+B079,TOP10,5,Netherlands,Holland|Nederland,8.4,8.4 kg/person/year.
+B079,TOP10,6,Luxembourg,,8.1,8.1 kg/person/year. Figure inflated by ~200K cross-border commuters not counted in population.
+B079,TOP10,7,Switzerland,Schweiz|Suisse|Svizzera,7.9,7.9 kg/person/year.
+B079,TOP10,8,Austria,Österreich,7.5,7.5 kg/person/year.
+B079,TOP10,9,Belgium,Belgique|België,6.8,6.8 kg/person/year.
+B079,TOP10,10,Germany,Deutschland,6.5,6.5 kg/person/year. Note: Sweden (~6.2 kg) also frequently appears in top 10 by some sources.
+B079,UNIVERSE,1,Sweden,Sverige,6.2,~6.2 kg/person/year. Sometimes ranks higher in other datasets.
+B079,UNIVERSE,2,Canada,,5.5,~5.5 kg/person/year.
+B079,UNIVERSE,3,Slovenia,,5.3,~5.3 kg/person/year.
+B079,UNIVERSE,4,Brazil,Brasil,5.0,~5.0 kg/person/year. Largest coffee producer AND second-largest consumer by total volume.
+B079,UNIVERSE,5,Italy,Italia,4.8,~4.8 kg/person/year. Espresso culture; lower per-capita than Nordic countries despite association with coffee.
+B079,UNIVERSE_REF,,ALL_HIGH_COFFEE_PERCAPITA,,~20,Countries with 3 or more kg per person per year coffee consumption (approximate)
+B080,TOP10,1,Monaco,Principality of Monaco|Principauté de Monaco,86.4,World Bank 2023. Highest life expectancy globally; small sample (~38K population) may affect reliability.
+B080,TOP10,2,San Marino,Repubblica di San Marino|Most Serene Republic of San Marino,85.7,World Bank 2023.
+B080,TOP10,3,Hong Kong,Hong Kong SAR|Hong Kong Special Administrative Region|香港,85.2,World Bank 2023. SAR of China counted separately.
+B080,TOP10,4,Liechtenstein,Principality of Liechtenstein|Fürstentum Liechtenstein,84.8,World Bank 2023. Very small population (~39K).
+B080,TOP10,5,Switzerland,Schweiz|Suisse|Svizzera|Helvetia,84.4,World Bank 2023.
+B080,TOP10,6,Japan,日本|Nippon|Nihon,84.3,World Bank 2023. World's oldest population by age structure.
+B080,TOP10,7,Italy,Italia|Repubblica Italiana,84.2,World Bank 2023.
+B080,TOP10,8,French Polynesia,Polynésie française|French Polynesia,84.1,World Bank 2023. French overseas collectivity.
+B080,TOP10,8,Spain,España|Kingdom of Spain,84.1,World Bank 2023.
+B080,TOP10,10,Andorra,Principat d'Andorra,84.0,World Bank 2023. Co-principality between France and Spain.
+B080,UNIVERSE,1,Singapore,Republic of Singapore|新加坡,84.3,World Bank 2023; ~84.3 years.
+B080,UNIVERSE,2,Australia,Australia,83.7,World Bank 2023.
+B080,UNIVERSE,2,South Korea,Republic of Korea|대한민국,83.7,World Bank 2023.
+B080,UNIVERSE,4,Iceland,Ísland,83.5,World Bank 2023.
+B080,UNIVERSE,5,Israel,State of Israel|ישראל,83.1,World Bank 2023.
+B080,UNIVERSE_REF,,ALL_COUNTRIES_195,,~46,Countries and territories with life expectancy above 80 years at birth (World Bank 2023)
+B081,TOP10,1,Blue Whale,Balaenoptera musculus|Great Blue Whale,"150,000 kg","Largest animal ever known to exist; maximum recorded individual ~190,000 kg; Wikipedia/IUCN"
+B081,TOP10,2,Bowhead Whale,Balaena mysticetus|Arctic Whale|Greenland Whale,"90,000 kg",Maximum ~100 tonnes; Arctic species; longest-lived mammal (200+ years)
+B081,TOP10,3,Fin Whale,Balaenoptera physalus|Finback Whale|Razorback Whale,"74,000 kg",Second longest whale species; max ~74 tonnes
+B081,TOP10,4,North Atlantic Right Whale,Eubalaena glacialis|Right Whale,"72,000 kg",Critically endangered; fewer than 350 individuals remain
+B081,TOP10,5,Sperm Whale,Physeter macrocephalus|Cachalot,"57,000 kg",Largest toothed predator on Earth; deepest-diving mammal; males much larger than females
+B081,TOP10,6,Humpback Whale,Megaptera novaeangliae,"40,000 kg",Known for complex songs; max ~40 tonnes; broad distribution
+B081,TOP10,7,Gray Whale,Eschrichtius robustus|Grey Whale,"36,000 kg",Eastern Pacific population recovered from near-extinction; long annual migration
+B081,TOP10,8,Sei Whale,Balaenoptera borealis,"28,000 kg",Third longest whale; named after Norwegian word for pollack; max ~28 tonnes
+B081,TOP10,9,Whale Shark,Rhincodon typus,"18,700 kg",Largest fish (not a mammal); filter feeder; max ~18.7 tonnes
+B081,TOP10,10,African Bush Elephant,Loxodonta africana|African Elephant,"9,500 kg",Largest living land animal; largest terrestrial mammal
+B081,UNIVERSE,1,Southern Right Whale,Eubalaena australis,"72,000 kg",Southern Ocean counterpart to North Atlantic Right Whale; similar maximum weight
+B081,UNIVERSE,2,Asian Elephant,Elephas maximus|Indian Elephant,"5,000 kg","Smaller ears and one trunk finger vs. African elephant; max ~5,000 kg"
+B081,UNIVERSE,3,Hippopotamus,Hippopotamus amphibius|Hippo|Common Hippopotamus,"3,600 kg","Third largest land animal; semi-aquatic; max ~3,600 kg"
+B081,UNIVERSE,4,White Rhinoceros,Ceratotherium simum|Square-lipped Rhinoceros,"2,300 kg","Largest rhinoceros species; max ~2,300 kg"
+B081,UNIVERSE_REF,,ALL_SPECIES_1000KG_PLUS,,~20,"All living species with adults regularly exceeding 1,000 kg in body weight"
+B082,TOP10,1,Cheetah,Acinonyx jubatus,120 km/h,Fastest land animal; peak sprint 120 km/h in short bursts of ~400 m; Wikipedia/Smithsonian
+B082,TOP10,2,Pronghorn,Antilocapra americana|Pronghorn Antelope,88.5 km/h,Fastest over distance; can sustain 65+ km/h for several km; North American prairie species
+B082,TOP10,3,Springbok,Antidorcas marsupialis,88 km/h,Southern African antelope; also known for pronking leaps
+B082,TOP10,4,Blackbuck,Antilope cervicapra|Indian Antelope,80 km/h,Notable endurance at speed; can sustain 80 km/h for over 1.5 km; Indian subcontinent
+B082,TOP10,4,Lion,Panthera leo,80 km/h,Top speed in short bursts only; relies on stalking rather than chase
+B082,TOP10,4,Thomson's Gazelle,Eudorcas thomsonii|Thomson's Gazelle|Tommie,80 km/h,Common East African gazelle; frequent cheetah prey; high agility offsets speed deficit
+B082,TOP10,4,Wildebeest,Connochaetes taurinus|Blue Wildebeest|Gnu,80 km/h,Large migratory antelope; Great Migration participant; top speed in short bursts
+B082,TOP10,8,Brown Hare,Lepus europaeus|European Hare,77 km/h,Fastest lagomorph; relies on zigzag evasion
+B082,TOP10,9,Greyhound,Canis lupus familiaris (Greyhound),74 km/h,Fastest domestic dog breed; included based on confirmed track records
+B082,TOP10,10,Ostrich,Struthio camelus,70 km/h,Fastest running bird; also largest living bird; up to 70 km/h in sprint
+B082,UNIVERSE,1,Quarter Horse,Equus caballus (Quarter Horse),88 km/h,Domestic horse breed; rivals pronghorn over short distances; excluded from wild animal rankings by some sources
+B082,UNIVERSE,2,Elk,Cervus canadensis|Wapiti,72 km/h,North American/Asian deer; large-bodied but fast in short bursts
+B082,UNIVERSE,3,Coyote,Canis latrans,69 km/h,North American canid; high endurance runner
+B082,UNIVERSE,4,Cape Hunting Dog,Lycaon pictus|African Wild Dog|Painted Dog,64 km/h,Exceptional endurance; pack hunter; sustained pursuit over km
+B082,UNIVERSE_REF,,ALL_LAND_ANIMALS_50KMH,,~30,All land animals with confirmed top speeds above 50 km/h
+B083,TOP10,1,Lake Baikal,Baikal|Ozero Baykal,"1,642 m","Deepest lake on Earth; largest by volume; ~25–30 million years old; Siberia, Russia"
+B083,TOP10,2,Lake Tanganyika,Tanganyika,"1,470 m",Second deepest; world's longest freshwater lake; spans Tanzania/DRC/Burundi/Zambia
+B083,TOP10,3,Caspian Sea,Caspian|Kaspi Denizi|Xəzər dənizi,"1,025 m",World's largest lake by area; saline; classified as lake despite 'sea' name
+B083,TOP10,4,Lake Vostok,Vostok,"~1,000 m","Subglacial lake in Antarctica; ~4 km below ice surface; isolated ~15 million years; depth ~900–1,005 m"
+B083,TOP10,5,Lake O'Higgins / San Martín,O'Higgins Lake|San Martín Lake|Lago San Martín,836 m,Patagonian glacial lake on Chile-Argentina border; fifth deepest lake in world
+B083,TOP10,6,Lake Malawi,Lake Nyasa|Lago Niassa,706 m,African Great Lake; Mozambique/Tanzania/Malawi; renowned cichlid biodiversity
+B083,TOP10,7,Issyk-Kul,Yssyk-Köl|Issyk Kul,668 m,"Saline lake in Tien Shan mountains, Kyrgyzstan; second-largest saline lake; never freezes"
+B083,TOP10,8,Great Slave Lake,,614 m,"Deepest lake in North America; Northwest Territories, Canada"
+B083,TOP10,9,Crater Lake,,592 m,"Deepest lake in USA; formed ~7,700 years ago in Mt. Mazama caldera; Oregon"
+B083,TOP10,10,Lake Matano,Danau Matano,590 m,"Sulawesi, Indonesia; one of the world's oldest lakes; ancient endemic fauna"
+B083,UNIVERSE,1,Lake Tahoe,,501 m,On California/Nevada border; second-deepest lake in USA
+B083,UNIVERSE,2,Lake Kivu,,480 m,DRC/Rwanda border; African Great Lake; methane-rich bottom layers
+B083,UNIVERSE,3,Lake Mjøsa,Mjøsa,449 m,Largest and deepest lake in Norway
+B083,UNIVERSE,4,Lake Como,Lago di Como,425 m,Deepest lake in Italy; northern Lombardy; 145 m above sea level
+B083,UNIVERSE_REF,,ALL_LAKES_400M_PLUS,,~25,All lakes with confirmed maximum depth exceeding 400 m
+B085,TOP10,1,Ganymede,,"5,270 km",Moon of Jupiter; largest moon in solar system; larger than Mercury; has its own magnetic field
+B085,TOP10,2,Titan,,"5,150 km",Moon of Saturn; only moon with a thick atmosphere; liquid methane lakes and rivers
+B085,TOP10,3,Callisto,,"4,820 km",Moon of Jupiter; most heavily cratered body in solar system; ancient surface
+B085,TOP10,4,Io,,"3,643 km",Moon of Jupiter; most volcanically active body in solar system; hundreds of active volcanoes
+B085,TOP10,5,Luna,Moon|Earth's Moon,"3,474 km",Earth's only natural satellite; fifth largest moon in solar system; stabilizes Earth's axial tilt
+B085,TOP10,6,Europa,,"3,122 km",Moon of Jupiter; subsurface liquid ocean; strong candidate for extraterrestrial life
+B085,TOP10,7,Triton,,"2,706 km",Moon of Neptune; retrograde orbit suggests captured Kuiper Belt object; active nitrogen geysers
+B085,TOP10,8,Titania,,"1,578 km",Largest moon of Uranus; eighth largest moon in solar system; discovered 1787 by Herschel
+B085,TOP10,9,Rhea,,"1,528 km",Second largest moon of Saturn; mostly water ice; very thin oxygen atmosphere
+B085,TOP10,10,Oberon,,"1,523 km",Second largest moon of Uranus; outermost large Uranian moon; discovered 1787 by Herschel
+B085,UNIVERSE,1,Iapetus,,"1,469 km","Moon of Saturn; striking two-toned coloration (one hemisphere dark, one bright)"
+B085,UNIVERSE,2,Charon,,"1,212 km",Largest moon of Pluto (dwarf planet); nearly half Pluto's diameter; mutual tidal lock
+B085,UNIVERSE,3,Umbriel,,"1,169 km",Moon of Uranus; darkest Uranian moon; heavily cratered
+B085,UNIVERSE,4,Ariel,,"1,158 km",Moon of Uranus; brightest and most reflective surface of Uranian moons
+B085,UNIVERSE,5,Dione,,"1,123 km",Moon of Saturn; bright ice cliffs on trailing hemisphere; possible thin oxygen atmosphere
+B085,UNIVERSE,6,Tethys,,"1,062 km",Moon of Saturn; mostly water ice; giant canyon Ithaca Chasma spans ~75% of circumference
+B085,UNIVERSE,7,Enceladus,,504 km,Moon of Saturn; active water-ice geysers at south pole; confirmed subsurface liquid ocean
+B085,UNIVERSE,8,Miranda,,472 km,Moon of Uranus; extreme and varied terrain; Verona Rupes cliff ~10 km high
+B085,UNIVERSE,9,Proteus,,420 km,Moon of Neptune; irregular shape; too dark to see from Earth; discovered by Voyager 2 (1989)
+B085,UNIVERSE,10,Mimas,,396 km,Moon of Saturn; large Herschel crater gives Death Star resemblance; mainly water ice
+B085,UNIVERSE_REF,,ALL_MAJOR_MOONS,,~19,All natural satellites of solar system bodies with mean diameter exceeding 200 km
+B086,TOP10,1,1960 Valdivia Earthquake,Great Chilean Earthquake|1960 Chile Earthquake,Mw 9.5,"22 May 1960; Biobío Region, Chile; largest earthquake ever recorded; ~1,655 killed; 2 million homeless; USGS"
+B086,TOP10,2,1964 Good Friday Earthquake,1964 Alaska Earthquake|Prince William Sound Earthquake,Mw 9.2,"27 March 1964; Prince William Sound, Alaska, USA; ~130 killed; $2.3 billion damage; USGS"
+B086,TOP10,3,2004 Indian Ocean Earthquake,2004 Sumatra–Andaman Earthquake|Boxing Day Earthquake,Mw 9.1,"26 December 2004; off northern Sumatra, Indonesia; triggered Indian Ocean tsunami; ~227,000 deaths; USGS"
+B086,TOP10,4,1952 Kamchatka Earthquake,1952 Severo-Kurilsk Earthquake,Mw 9.0,"4 November 1952; Kamchatka Peninsula, Russia; triggered Pacific-wide tsunami; tied Mw with 2011 Tōhoku; USGS"
+B086,TOP10,4,2011 Tōhoku Earthquake,2011 Japan Earthquake|Great East Japan Earthquake,Mw 9.0,"11 March 2011; Pacific Ocean off Tōhoku, Japan; triggered tsunami and Fukushima disaster; ~19,759 deaths; USGS"
+B086,TOP10,6,1906 Ecuador–Colombia Earthquake,1906 Ecuador Earthquake,Mw 8.8,31 January 1906; off coast of Ecuador; triggered destructive Pacific tsunami; USGS
+B086,TOP10,6,2010 Maule Earthquake,2010 Chile Earthquake,Mw 8.8,"27 February 2010; Maule Region, Chile; ~525 killed; triggered tsunami; USGS"
+B086,TOP10,8,1965 Rat Islands Earthquake,1965 Aleutian Islands Earthquake,Mw 8.7,"4 February 1965; Rat Islands, Aleutian Islands, Alaska, USA; triggered tsunami; USGS"
+B086,TOP10,9,1950 Assam–Tibet Earthquake,1950 Assam Earthquake,Mw 8.6,"15 August 1950; Assam/Tibet border region, India/China; ~1,526 killed; USGS"
+B086,TOP10,9,2005 Nias–Simeulue Earthquake,2005 Sumatra Earthquake,Mw 8.6,"28 March 2005; off coast of Nias Island, Indonesia; ~1,313 killed; three months after 2004 event; USGS"
+B086,UNIVERSE_REF,,ALL_EARTHQUAKES_M8_5_PLUS,,~25,All recorded earthquakes with moment magnitude 8.5 or greater since reliable seismographic records began c.1900
+B087,TOP10,1,Coast Redwood,Sequoia sempervirens|California Redwood,116.07 m,Record specimen: Hyperion; Northern California; measured 2006 by Sillett and Taylor; tallest species on Earth
+B087,TOP10,2,Himalayan Cypress,Cupressus torulosa|Bhutan Cypress,102.3 m,"Record specimen in Yarlung Zangbo Grand Canyon Reserve, Tibet; confirmed ~2024; tallest non-redwood"
+B087,TOP10,3,Yellow Meranti,Shorea faguetiana,100.8 m,"Record specimen: Menara; Danum Valley Conservation Area, Borneo, Malaysia; tallest tropical tree measured"
+B087,TOP10,4,Mountain Ash,Eucalyptus regnans|Giant Mountain Ash|Swamp Gum,100.5 m,"Record specimen: Centurion; Arve Valley, Tasmania, Australia; tallest flowering plant (angiosperm)"
+B087,TOP10,5,Sitka Spruce,Picea sitchensis,100.2 m,"Record specimen in Prairie Creek Redwoods State Park, California; largest spruce species by volume"
+B087,TOP10,6,Coast Douglas-fir,Pseudotsuga menziesii|Oregon Pine|Douglas Fir,99.7 m,"Record specimen: Doerner Fir; Coos County, Oregon; tallest Douglas-fir; some sources cite 99.4 m"
+B087,TOP10,7,Southern Blue Gum,Eucalyptus globulus,92 m,"Record specimen: Neeminah Loggerale Meena; Evercreech/Blue Tier area, Tasmania"
+B087,TOP10,8,Noble Fir,Abies procera,89.9 m,"Record specimen in Goat Marsh Research Natural Area, Washington State"
+B087,TOP10,9,Manna Gum,Eucalyptus viminalis|Ribbon Gum|White Gum,88.4 m,"Record specimen: White Knight; Evercreech Forest Reserve, Tasmania"
+B087,TOP10,10,Giant Sequoia,Sequoiadendron giganteum|Sierra Redwood|Big Tree,85 m,"World's largest tree by volume (General Sherman); not the tallest species; Sierra Nevada, California"
+B087,UNIVERSE_REF,,ALL_TREES_ABOVE_80M,,~15,All tree species with any verified individual specimen exceeding 80 m in height
+B088,TOP10,1,Ecuador,,"~2,301",Highest total threatened species; exceptional Andean and Galápagos biodiversity; IUCN Red List 2023
+B088,TOP10,2,United States,USA|United States of America,"~1,648",High count reflects extensive IUCN assessment coverage and diverse biomes; IUCN Red List 2023
+B088,TOP10,3,Malaysia,,"~1,226",Tropical deforestation in Borneo and Peninsular Malaysia driving losses; IUCN Red List 2023
+B088,TOP10,4,Indonesia,,"~1,211",Mega-diverse archipelago; palm oil and logging major threats; IUCN Red List 2023
+B088,TOP10,5,Mexico,,"~1,097",Mega-diverse country; high endemism; habitat loss and overexploitation; IUCN Red List 2023
+B088,TOP10,6,Madagascar,,"~1,020",Island endemism; ~98% of lemur species threatened; ~83% of palms threatened; IUCN Red List 2023
+B088,TOP10,7,Australia,,~916,High endemism; invasive species and habitat fragmentation major drivers; IUCN Red List 2023
+B088,TOP10,8,Brazil,,~752,Amazon deforestation; largest tropical forest country by area; IUCN Red List 2023
+B088,TOP10,9,Colombia,,~726,Second most biodiverse country; high endemism in Andes and Amazon; IUCN Red List 2023
+B088,TOP10,10,India,,~721,High human population pressure on habitats; varied biomes; IUCN Red List 2023
+B088,UNIVERSE,1,Philippines,,~700,Highly endemic island fauna; severe historic deforestation; IUCN Red List 2023
+B088,UNIVERSE,2,China,,~680,Vast and varied biomes; extensively assessed; IUCN Red List 2023
+B088,UNIVERSE,3,Tanzania,,~640,High biodiversity including Serengeti and Eastern Arc Mountains; IUCN Red List 2023
+B088,UNIVERSE,4,Peru,,~620,Andean and Amazonian high biodiversity; IUCN Red List 2023
+B088,UNIVERSE_REF,,ALL_COUNTRIES_195,,195,All 195 sovereign countries assessed in IUCN Red List country statistics
+B089,TOP10,1,United States,USA,165,"Includes 90+ in Alaska; also Hawaii, Cascades, and western US; Smithsonian GVP"
+B089,TOP10,2,Russia,,160,Predominantly Kamchatka Peninsula and Kuril Islands; home to some of world's most active; Smithsonian GVP
+B089,TOP10,3,Indonesia,,127,"Straddles Pacific Ring of Fire; highest eruption frequency; Krakatoa, Merapi, Tambora; Smithsonian GVP"
+B089,TOP10,4,Japan,,111,"Dense island arc volcanic chain; Mount Fuji, Sakurajima, Unzen; Ring of Fire; Smithsonian GVP"
+B089,TOP10,5,Chile,,91,"Andean Volcanic Belt runs length of country; Villarrica, Llaima, Calbuco; Smithsonian GVP"
+B089,TOP10,6,Ethiopia,,65,East African Rift System; Erta Ale permanent lava lake; Dalol geothermal field; Smithsonian GVP
+B089,TOP10,7,Papua New Guinea,,57,"Pacific Ring of Fire; Rabaul caldera, Ulawun; southwestern Pacific; Smithsonian GVP"
+B089,TOP10,8,Philippines,,50,"Western Pacific arc; Pinatubo (1991 eruption), Mayon, Taal; Smithsonian GVP"
+B089,TOP10,9,Iceland,,35,"Mid-Atlantic Ridge; Eyjafjallajökull, Katla, Hekla, Bárðarbunga; extremely active per unit area; Smithsonian GVP"
+B089,TOP10,9,Mexico,,35,"Trans-Mexican Volcanic Belt; Popocatépetl, Colima; Smithsonian GVP"
+B089,UNIVERSE,1,Peru,,30,"Andes volcanic zone; El Misti, Ubinas; Smithsonian GVP"
+B089,UNIVERSE,2,Ecuador,,27,"Mainland Andes and Galápagos; Cotopaxi, Tungurahua; Smithsonian GVP"
+B089,UNIVERSE,3,New Zealand,,17,"Taupo Volcanic Zone; Ruapehu, Tongariro, White Island; Smithsonian GVP"
+B089,UNIVERSE,3,Vanuatu,,17,Western Pacific island chain; Yasur lava lake; highly active per unit area; Smithsonian GVP
+B089,UNIVERSE_REF,,ALL_VOLCANIC_COUNTRIES,,~50,All countries with 5 or more Holocene active volcanoes per Smithsonian Global Volcanism Program
+B090,TOP10,1,Challenger Deep,Mariana Trench deep,"10,935 m",Southern Mariana Trench; western Pacific; deepest known point on Earth; NOAA 2010 measurement ± 6 m
+B090,TOP10,2,Horizon Deep,Tonga Trench deep,"10,820 m",Tonga Trench; southwestern Pacific; deepest point in the Southern Hemisphere
+B090,TOP10,3,Sirena Deep,,"10,714 m",Mariana Trench; ~200 km east of Challenger Deep; third deepest directly measured point; Pacific
+B090,TOP10,4,Kuril-Kamchatka Trench maximum,Kuril Trench|Kuril-Kamchatka Deep,"10,542 m",Northwest Pacific; off Kamchatka and Kuril Islands; Pacific Plate subducts under Okhotsk Plate
+B090,TOP10,5,Emden Deep,Galathea Deep|Philippine Trench maximum|Galathea Depth,"10,540 m",Philippine Trench; western Pacific; also known as Galathea Depth; differs from Kuril by ~2 m
+B090,TOP10,6,Kermadec Trench maximum,Kermadec Deep,"10,047 m",Northeast of New Zealand; southwestern Pacific; fifth deepest trench
+B090,TOP10,7,Izu-Ogasawara Trench maximum,Izu-Bonin Trench,"9,810 m",Northwestern Pacific; extends south from Japan's Izu Islands; sixth deepest
+B090,TOP10,8,Planet Deep,New Britain Trench maximum,"9,140 m","Bismarck Sea, Papua New Guinea; southwestern Pacific; eighth deepest ocean point"
+B090,TOP10,9,Milwaukee Deep,Puerto Rico Trench maximum,"8,376 m",Puerto Rico Trench; North Atlantic Ocean; deepest point in the Atlantic Ocean
+B090,TOP10,10,Richards Deep,Peru-Chile Trench maximum|Atacama Trench maximum,"8,065 m",Eastern Pacific off western South America; deepest point in southeastern Pacific
+B090,UNIVERSE,1,South Sandwich Trench maximum,Meteor Deep,"~8,266 m",South Atlantic; south of South Sandwich Islands; depth estimates vary by source
+B090,UNIVERSE,2,Diamantina Trench maximum,,"8,047 m",Eastern Indian Ocean; southwest of Australia; deepest point in Indian Ocean sector
+B090,UNIVERSE,3,Romanche Trench maximum,,"7,760 m",Central equatorial Atlantic Ocean; fracture zone; deepest equatorial Atlantic point
+B090,UNIVERSE,4,Banda Sea maximum,Weber Deep,"7,440 m","Banda Sea, Indonesia; deepest enclosed sea on Earth"
+B090,UNIVERSE_REF,,ALL_OCEAN_TRENCHES_8000M,,~15,"All named ocean deep points or trench maxima with measured depth exceeding 8,000 m"
+B091,TOP10,1,Elon Musk,@elonmusk|Elon Reeve Musk|Tesla CEO|SpaceX CEO,~183M followers,Grew dramatically after acquiring Twitter/X in Oct 2022; approximate mid-2024 figure
+B091,TOP10,2,Barack Obama,@BarackObama|44th US President|POTUS 44,~131M followers,Former US president; second-most followed for years
+B091,TOP10,3,Cristiano Ronaldo,@Cristiano|CR7|Ronaldo,~112M followers,Portuguese footballer; most followed athlete on Instagram (600M+)
+B091,TOP10,4,Justin Bieber,@justinbieber|Bieber|JB,~111M followers,Canadian pop singer; early social media giant
+B091,TOP10,5,Katy Perry,@katyperry|Katheryn Hudson,~107M followers,First person to reach 100M Twitter followers (2017)
+B091,TOP10,5,Rihanna,@rihanna|Robyn Fenty|RiRi,~107M followers,Barbadian singer and Fenty entrepreneur
+B091,TOP10,7,Narendra Modi,@narendramodi|NaMo|Indian PM|PM Modi,~100M followers,Indian Prime Minister; most followed world leader after Musk/Obama
+B091,TOP10,8,Taylor Swift,@taylorswift13|Taylor Alison Swift|T-Swift,~93M followers,Rapidly growing; engagement outsizes follower count
+B091,TOP10,9,Donald Trump,@realDonaldTrump|45th US President|POTUS 45|Trump,~88M followers,Account suspended Jan 2021; reinstated Nov 2022 by Musk
+B091,TOP10,10,Lady Gaga,@ladygaga|Stefani Germanotta|Mother Monster,~84M followers,
+B091,UNIVERSE,1,Ariana Grande,@ArianaGrande|Ari Grande,~80M followers,
+B091,UNIVERSE,2,Shakira,@shakira|Shakira Isabel Mebarak,~79M followers,Colombian singer
+B091,UNIVERSE,3,Ellen DeGeneres,@TheEllenShow|Ellen,~76M followers,Retired from talk show in 2022
+B091,UNIVERSE,3,YouTube,@YouTube|YouTube Official,~76M followers,Brand / corporate account
+B091,UNIVERSE,5,Kim Kardashian,@KimKardashian|Kim K,~73M followers,
+B091,UNIVERSE,6,Britney Spears,@britneyspears|Britney Jean Spears,~65M followers,
+B091,UNIVERSE,7,CNN Breaking News,@cnnbrk|CNN Breaking,~62M followers,News account
+B091,UNIVERSE,8,Neymar Jr,@neymarjr|Neymar|NJr,~58M followers,Brazilian footballer
+B091,UNIVERSE,9,Eminem,@Eminem|Marshall Mathers|Slim Shady,~52M followers,Rarely tweets; high passive following
+B091,UNIVERSE,10,Jimmy Fallon,@jimmyfallon|The Tonight Show,~51M followers,
+B091,UNIVERSE_REF,,,All X accounts with 80M+ followers,~15,As of mid-2024; count fluctuates as accounts gain or lose followers
+B092,TOP10,1,google.com,Google|Google Search|Google.com,~80B monthly visits,By far the largest; includes Google Search and associated properties
+B092,TOP10,2,youtube.com,YouTube|YT|youtube,~33B monthly visits,
+B092,TOP10,3,facebook.com,Facebook|FB|Meta,~18B monthly visits,Meta platform
+B092,TOP10,4,wikipedia.org,Wikipedia|Wiki|Wikimedia,~10B monthly visits,Free encyclopedia; 908M+ unique monthly visitors
+B092,TOP10,5,instagram.com,Instagram|IG|Insta,~9B monthly visits,Meta platform
+B092,TOP10,6,x.com,X|Twitter|twitter.com|X (formerly Twitter),~6B monthly visits,Rebranded from twitter.com to x.com in 2023; some traffic still via twitter.com redirect
+B092,TOP10,7,reddit.com,Reddit|The Front Page of the Internet,~5B monthly visits,Went public via IPO in March 2024
+B092,TOP10,8,tiktok.com,TikTok|TT,~4.5B monthly visits,
+B092,TOP10,9,yahoo.com,Yahoo|Yahoo!,~4.2B monthly visits,Significant legacy traffic; email and finance sections dominant
+B092,TOP10,10,amazon.com,Amazon|Amazon.com,~3.9B monthly visits,
+B092,UNIVERSE,1,chatgpt.com,ChatGPT|OpenAI ChatGPT,~3.5B monthly visits,Rose dramatically in 2024; may have displaced some top-10 sites by year-end
+B092,UNIVERSE,2,baidu.com,Baidu|Baidu Search|百度,~3.3B monthly visits,China's dominant search engine; traffic concentrated within China
+B092,UNIVERSE,3,netflix.com,Netflix,~2.9B monthly visits,
+B092,UNIVERSE,4,bing.com,Bing|Microsoft Bing,~2.8B monthly visits,
+B092,UNIVERSE,5,whatsapp.com,WhatsApp|WhatsApp Web,~2.5B monthly visits,Primarily used for WhatsApp Web browser client
+B092,UNIVERSE_REF,,,All websites with 2B+ monthly visits,~8,Per Similarweb 2024 annual data; web-only (excludes app-only traffic)
+B093,TOP10,1,Facebook,Facebook|Meta|FB|Facebook.com,3.1B MAU,Meta platform; largest social network by MAU
+B093,TOP10,2,YouTube,YouTube|YT,2.5B MAU,Google/Alphabet; video platform counted as social media by most researchers
+B093,TOP10,3,Instagram,Instagram|IG|Insta,2.0B MAU,Meta platform
+B093,TOP10,3,WhatsApp,WhatsApp|WhatsApp Messenger,2.0B MAU,Meta platform; end-to-end encrypted messaging
+B093,TOP10,5,TikTok,TikTok|TT|Douyin (global version),1.6B MAU,ByteDance; combined global TikTok + Chinese Douyin figure. International TikTok alone ~1.04B.
+B093,TOP10,6,WeChat,WeChat|Weixin|微信,1.3B MAU,Tencent; dominant in China; messaging + social + payments + mini-programs
+B093,TOP10,7,Facebook Messenger,Messenger|Facebook Messenger|Meta Messenger,1.0B MAU,Meta platform; cross-platform messaging
+B093,TOP10,8,Telegram,Telegram Messenger|TG,900M MAU,Pavel Durov-founded; significant growth in privacy-conscious markets
+B093,TOP10,9,Snapchat,Snapchat|Snap,800M MAU,
+B093,TOP10,10,Douyin,Douyin|抖音|Chinese TikTok,755M MAU,ByteDance; China-only version of TikTok. Sometimes combined with global TikTok figure above.
+B093,UNIVERSE,1,Twitter / X,Twitter|X|@X|X (formerly Twitter),~600M MAU,Sometimes classified separately from social media; rebranded 2023
+B093,UNIVERSE,2,Pinterest,Pinterest,~522M MAU,
+B093,UNIVERSE,3,LinkedIn,LinkedIn|LinkedIn Professional Network,~310M MAU (active),~1B+ total registered members but lower monthly active users
+B093,UNIVERSE,4,Discord,Discord,~300M MAU,Popular with gaming and community groups
+B093,UNIVERSE,4,Reddit,Reddit,~300M MAU,Went public (IPO) March 2024; significant growth in 2024
+B093,UNIVERSE_REF,,,All social and messaging platforms with 500M+ monthly active users,~10,Per DataReportal / Statista 2024
+B094,TOP10,1,China,People's Republic of China|PRC|中国,~1300M,~93% penetration; largest absolute user count; led global internet user totals for 20+ years
+B094,TOP10,2,India,Republic of India|भारत|Bharat,~1030M,~70% penetration; crossed 1 billion internet users in 2023
+B094,TOP10,3,United States,USA|US|America|United States of America,~311M,~93% penetration
+B094,TOP10,4,Indonesia,Republic of Indonesia|Indonesia,~212M,~75% penetration; fourth-most populous country
+B094,TOP10,5,Brazil,Brasil|Federative Republic of Brazil,~187M,~86% penetration
+B094,TOP10,6,Russia,Russian Federation|RF|Russia,~130M,~89% penetration
+B094,TOP10,7,Nigeria,Federal Republic of Nigeria,~122M,~55% penetration; largest country in Africa by both population and internet users
+B094,TOP10,8,Japan,日本|Nippon|Nihon,~102M,~83% penetration
+B094,TOP10,9,Mexico,United Mexican States|México,~97M,~74% penetration
+B094,TOP10,10,Bangladesh,People's Republic of Bangladesh|বাংলাদেশ,~87M,~50% penetration; rapid growth
+B094,UNIVERSE,1,Philippines,Republic of the Philippines,~84M,~74% penetration
+B094,UNIVERSE,2,Pakistan,Islamic Republic of Pakistan,~81M,~34% penetration; large population offsets low rate
+B094,UNIVERSE,3,Vietnam,Socialist Republic of Vietnam|Việt Nam,~78M,~79% penetration
+B094,UNIVERSE,4,Germany,Federal Republic of Germany|Deutschland,~76M,~91% penetration
+B094,UNIVERSE,4,Iran,Islamic Republic of Iran|ایران,~76M,~80% penetration; significant despite restrictions
+B094,UNIVERSE,6,Egypt,Arab Republic of Egypt|مصر,~72M,~66% penetration
+B094,UNIVERSE,7,Turkey,Republic of Türkiye|Türkiye,~71M,~82% penetration
+B094,UNIVERSE,8,United Kingdom,UK|Great Britain|England (colloquial),~67M,~96% penetration
+B094,UNIVERSE,9,France,French Republic|République française,~63M,~92% penetration
+B094,UNIVERSE,10,South Korea,Republic of Korea|대한민국|ROK,~52M,~98% penetration; nearly universal access
+B094,UNIVERSE_REF,,,ALL_COUNTRIES_195,195,All ~195 sovereign states; per ITU / World Bank 2024 data
+B095,TOP10,1,Python,Python programming language,18.04%,TIOBE Language of the Year 2024; dominant in AI/ML/data science
+B095,TOP10,2,C++,C plus plus|CPP,10.04%,Systems programming; gaming; competitive with C and Java for #2
+B095,TOP10,3,C,C programming language|C language,9.17%,Low-level systems and embedded; C and Java swap #3/#4 frequently
+B095,TOP10,4,Java,Java programming language|Java SE|JVM,9.16%,Enterprise standard; Android; C and Java nearly tied Aug 2024
+B095,TOP10,5,C#,C sharp|C# programming language|CSharp,5.38%,Microsoft/.NET ecosystem
+B095,TOP10,6,JavaScript,JS|JavaScript|ECMAScript,3.49%,Dominant on the web front-end; note TIOBE often undercounts JS relative to actual usage
+B095,TOP10,7,Go,Go programming language|Golang,2.87%,Google-developed; cloud-native infrastructure
+B095,TOP10,8,Visual Basic,VB|Visual Basic .NET|VB.NET,2.82%,Microsoft; declining but large legacy enterprise footprint
+B095,TOP10,9,SQL,Structured Query Language|SQL language,2.27%,Database query language; TIOBE counts it as a programming language
+B095,TOP10,10,PHP,PHP: Hypertext Preprocessor,1.81%,Server-side web scripting
+B095,UNIVERSE,1,Fortran,Fortran|FORTRAN,~1.50%,Scientific/numeric computing; still strong in HPC and climate modeling
+B095,UNIVERSE,2,Delphi / Object Pascal,Delphi|Object Pascal,~1.45%,
+B095,UNIVERSE,3,MATLAB,MATLAB|MathWorks MATLAB,~1.30%,Engineering and scientific computing
+B095,UNIVERSE,4,Assembly,Assembly language|ASM|x86 Assembly,~1.25%,Low-level hardware programming
+B095,UNIVERSE,5,Swift,Swift programming language|Swift (Apple),~1.20%,Apple-developed; iOS and macOS apps
+B095,UNIVERSE,6,Kotlin,Kotlin programming language,~1.10%,JetBrains; official Android language
+B095,UNIVERSE,7,Rust,Rust programming language,~1.05%,Memory-safe systems language; growing rapidly
+B095,UNIVERSE,8,Ruby,Ruby programming language,~1.00%,Rails ecosystem
+B095,UNIVERSE,9,COBOL,Common Business-Oriented Language,~0.90%,Mainframe / legacy banking and government systems
+B095,UNIVERSE,9,TypeScript,TypeScript|TS,~0.90%,Microsoft; typed superset of JavaScript; TIOBE often undercounts relative to real-world share
+B095,UNIVERSE_REF,,,TIOBE_TOP_25,25,Top 25 languages tracked by TIOBE Index as of August 2024
+B096,TOP10,1,Apple,iPhone|Apple Inc.|iOS|Apple smartphone,20.1% (234.6M units),#1 for the first time in a full calendar year; prior to 2023 Samsung had led since 2010
+B096,TOP10,2,Samsung,Samsung Electronics|Samsung Galaxy|Samsung Android,19.4% (226.6M units),Held top spot for 12+ consecutive years before 2023
+B096,TOP10,3,Xiaomi,Xiaomi Corporation|小米|Redmi|POCO,12.5% (145.9M units),Chinese OEM; strong in India and Europe
+B096,TOP10,4,OPPO,OPPO|OnePlus|BBK Electronics (OPPO brand),8.8% (103.1M units),OnePlus included in OPPO group figures; BBK Electronics subsidiary
+B096,TOP10,5,Transsion,Transsion Holdings|Tecno|Itel|Infinix,8.1% (94.9M units),"Reached #5 globally in 2023, displacing Vivo; dominant in Africa and emerging markets"
+B096,TOP10,6,Vivo,vivo|BBK Electronics (vivo brand),~7.5% (~88M units),BBK Electronics subsidiary; strong in China and Southeast Asia
+B096,TOP10,7,Motorola,Motorola|Lenovo Motorola|Moto,~4.6% (~54M units),Owned by Lenovo; strong comeback in budget/mid-range segment
+B096,TOP10,8,Honor,Honor|Honor Device Co.|Hono,~3.9% (~46M units),Formerly a Huawei sub-brand; spun off and relaunched without US restrictions
+B096,TOP10,9,Huawei,Huawei Technologies|华为,~3.2% (~37M units),Impacted by US export controls since 2019; recovering with in-house Kirin chips in 2023
+B096,TOP10,10,realme,realme|Realme,~2.8% (~33M units),Spun off from OPPO; popular budget brand in Asia
+B096,UNIVERSE_REF,,,All smartphone brands with 1%+ global market share (full-year 2023),~12,Per IDC Worldwide Smartphone Tracker; full-year 2023
+B097,TOP10,1,Singapore,Republic of Singapore|SGP|SG,~292 Mbps,Consistent global leader; near-universal fiber deployment across 5.9M population
+B097,TOP10,2,Chile,Republic of Chile|CHL|Chile,~253 Mbps,South America leader; major fiber rollout drove rapid climb into top 3 globally
+B097,TOP10,3,Iceland,Republic of Iceland|Ísland|ISL,~242 Mbps,Tiny population with excellent fiber infrastructure
+B097,TOP10,4,UAE,United Arab Emirates|Emirates|Dubai,~231 Mbps,State-backed Etisalat fiber-to-the-home across 90%+ urbanized population
+B097,TOP10,5,Hong Kong,Hong Kong SAR|HKSAR|HK|Hong Kong China,~222 Mbps,
+B097,TOP10,6,Denmark,Kingdom of Denmark|Danmark|DNK,~218 Mbps,Nordic leader in broadband infrastructure
+B097,TOP10,7,USA,United States|US|America|United States of America,~213 Mbps,Cited by Ookla as 6th fastest at points in 2023; exact Q4 rank varies. Large country variation.
+B097,TOP10,8,France,French Republic|République française,~196 Mbps,Rapid fiber rollout accelerated through 2022-2023
+B097,TOP10,9,Switzerland,Swiss Confederation|Schweiz|Suisse|CHE,~193 Mbps,
+B097,TOP10,10,Romania,România|Romania|ROM,~189 Mbps,Among the fastest in Eastern Europe
+B097,UNIVERSE,1,Spain,Kingdom of Spain|España,~186 Mbps,
+B097,UNIVERSE,2,South Korea,Republic of Korea|대한민국|ROK,~183 Mbps,Historically top-5 but somewhat surpassed by newer fiber deployments elsewhere
+B097,UNIVERSE,3,Thailand,Kingdom of Thailand|ประเทศไทย,~178 Mbps,
+B097,UNIVERSE,4,Sweden,Kingdom of Sweden|Sverige,~173 Mbps,
+B097,UNIVERSE,5,Norway,Kingdom of Norway|Norge,~170 Mbps,
+B097,UNIVERSE_REF,,,All countries with median fixed broadband download speed above 50 Mbps,~60,Per Ookla Speedtest Global Index Q4 2023; approximately 60 countries qualify
+B098,TOP10,1,China,People's Republic of China|PRC|中国,359.08M hl,#1 beer producer for 20+ consecutive years; represents ~19% of global production
+B098,TOP10,2,United States,USA|US|America,193.03M hl,Declined from 204.5M hl in 2022; only major country in Americas to record a 2023 decline
+B098,TOP10,3,Brazil,Brasil|Federative Republic of Brazil,148.9M hl,
+B098,TOP10,4,Mexico,United Mexican States|México,142.41M hl,"Grew from 141M hl in 2022; major export market (Corona, Modelo)"
+B098,TOP10,5,Germany,Federal Republic of Germany|Deutschland,84.89M hl,Declined from 87.81M hl in 2022; historic beer culture (Reinheitsgebot)
+B098,TOP10,6,Russia,Russian Federation|RF,~78M hl,Estimate; some decline due to economic conditions and sanctions post-2022
+B098,TOP10,7,United Kingdom,UK|Great Britain|England (colloquial),~36M hl,Includes ales and lagers; estimate for 2023
+B098,TOP10,8,Poland,Republic of Poland|Polska,~35.8M hl,Central European market; strong lager production
+B098,TOP10,9,South Africa,Republic of South Africa|RSA|ZA,~35.1M hl,Largest beer producer in Africa
+B098,TOP10,10,Vietnam,Socialist Republic of Vietnam|Việt Nam,~34M hl,Rapid growth market; Bia Hoi culture; one of Asia's fastest-growing beer markets
+B098,UNIVERSE,1,Spain,Kingdom of Spain|España,~33M hl,
+B098,UNIVERSE,2,Colombia,Republic of Colombia,~22M hl,
+B098,UNIVERSE,3,Argentina,Argentine Republic,~20M hl,
+B098,UNIVERSE,3,Japan,日本|Nippon,~20M hl,Declining domestic market; strong craft and import competition
+B098,UNIVERSE,5,Australia,Commonwealth of Australia,~18M hl,
+B098,UNIVERSE_REF,,,ALL_BEER_PRODUCERS,~35,All countries producing 5M+ hectoliters of beer annually; per Kirin / BarthHaas 2023
+B099,TOP10,1,France,French Republic|République française,~639,Birthplace of the Michelin Guide; entire country covered; also has the most 3-star restaurants (31)
+B099,TOP10,2,Japan,日本|Nippon,~413,"Tokyo is the world's most Michelin-starred city; multiple regional guide editions (Tokyo, Kyoto/Osaka, Hokkaido, etc.)"
+B099,TOP10,3,Italy,Italian Republic|Italia,~385,
+B099,TOP10,4,Germany,Federal Republic of Germany|Deutschland,~311,
+B099,TOP10,5,Spain,Kingdom of Spain|España,~269,
+B099,TOP10,6,USA,United States|US|America|United States of America,~235,"Partial coverage only: NYC, Chicago, California, DC, Miami, Atlanta, and a few others"
+B099,TOP10,7,United Kingdom,UK|Great Britain,~201,London + Edinburgh + select UK regions
+B099,TOP10,8,Belgium,Kingdom of Belgium|België|Belgique,~158,
+B099,TOP10,9,Austria,Republic of Austria|Österreich,~141,
+B099,TOP10,10,Switzerland,Swiss Confederation|Schweiz|Suisse,~128,
+B099,UNIVERSE,1,Netherlands,Kingdom of the Netherlands|Nederland,~118,
+B099,UNIVERSE,2,China,People's Republic of China|PRC (mainland),~112,Mainland China; Hong Kong and Macau sometimes counted separately
+B099,UNIVERSE,3,Hong Kong,Hong Kong SAR|HKSAR|HK,~80,Separate Michelin guide from mainland China
+B099,UNIVERSE,4,Portugal,Portuguese Republic|Portugal,~76,
+B099,UNIVERSE,5,Singapore,Republic of Singapore|SGP,~56,Small city-state with very high restaurant density
+B099,UNIVERSE,6,Sweden,Kingdom of Sweden|Sverige,~42,
+B099,UNIVERSE,7,South Korea,Republic of Korea|대한민국,~34,
+B099,UNIVERSE,8,Denmark,Kingdom of Denmark|Danmark,~30,
+B099,UNIVERSE,9,Norway,Kingdom of Norway|Norge,~19,
+B099,UNIVERSE,10,Ireland,Republic of Ireland|Éire,~18,
+B099,UNIVERSE_REF,,,All countries with at least 10 Michelin-starred restaurants,~35,Per Michelin Guide 2024 editions worldwide; coverage varies by country
+B100,TOP10,1,MrBeast,MrBeast|Jimmy Donaldson|@MrBeast,~310M subs,Overtook T-Series as #1 in June 2024; US creator known for philanthropy and extreme challenges
+B100,TOP10,2,T-Series,T-Series|TSeries|@tseries,~270M subs,Indian music label and film production company; held #1 spot for years
+B100,TOP10,3,Cocomelon,Cocomelon - Nursery Rhymes|@Cocomelon,~182M subs,US children's animated nursery rhymes; massive preschool audience
+B100,TOP10,4,SET India,SET India|Sony Entertainment Television India|@setindia,~175M subs,Indian TV network (Sony Entertainment); drama and variety programming
+B100,TOP10,5,Kids Diana Show,Kids Diana Show|@KidsDianaShow,~122M subs,Ukrainian-American children's channel; Diana and family
+B100,TOP10,6,Vlad and Niki,Vlad and Niki|@VladandNiki,~121M subs,Children's content; Russian-American brothers
+B100,TOP10,7,Like Nastya,Like Nastya|Nastya|@LikeNastya,~115M subs,Russian-American children's channel; lifestyle and educational
+B100,TOP10,8,PewDiePie,PewDiePie|Felix Kjellberg|@PewDiePie,~111M subs,Swedish gaming and commentary creator; was #1 for years; semi-retired but retains large subscriber base
+B100,TOP10,9,WWE,WWE|World Wrestling Entertainment|@WWE,~102M subs,Professional wrestling; significant international audience
+B100,TOP10,10,Zee Music Company,Zee Music Company|@ZeeMusicCompany,~96M subs,Indian music label (Zee Entertainment Enterprises)
+B100,UNIVERSE,1,BLACKPINK,Blackpink|@BLACKPINK,~92M subs,K-pop group; largest K-pop act on YouTube
+B100,UNIVERSE,2,Sony Music India,Sony Music India|@SonyMusicIndia,~87M subs,Indian music label
+B100,UNIVERSE,3,5-Minute Crafts,5-Minute Crafts|@5MinuteCrafts,~80M subs,DIY / life hacks channel (TheSoul Publishing)
+B100,UNIVERSE,4,ChuChu TV Nursery Rhymes,ChuChu TV|@ChuChuTV,~75M subs,Indian children's content; nursery rhymes and animation
+B100,UNIVERSE,5,Justin Bieber,Justin Bieber|@justinbieber,~72M subs,Canadian pop artist
+B100,UNIVERSE_REF,,,ALL_YT_100M_CLUBS,~40,YouTube channels with 100M+ subscribers as of mid-2024; count grows as channels reach milestone

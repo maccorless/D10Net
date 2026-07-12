@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+pnpm-lock.yaml
+.pnpm-workspace-state*
+
+# Build outputs
+dist/
+build/
+coverage/
+out/
+
+# IDE & Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Testing & logs
+test-results/
+playwright-report/
+.nyc_output/
+*.log
+npm-debug.log*
+
+# Superpowers & tooling
+.superpowers/
+.worktrees/
+.codegraph/

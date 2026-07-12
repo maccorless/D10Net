@@ -131,8 +131,15 @@ export function combine(
     const top10 = items
       .filter((r) => r.rowType === "TOP10")
       .sort((a, b) => (a.rank ?? 99) - (b.rank ?? 99));
-    const universeItems = items.filter((r) => r.rowType !== "UNIVERSE_REF");
     const ref = items.find((r) => r.rowType === "UNIVERSE_REF");
+    // Deduplicate by canonicalValue; TOP10 rows carry rank so prefer them.
+    const universeByValue = new Map<string, ItemsCsvRow>();
+    for (const r of items) {
+      if (r.rowType === "UNIVERSE_REF") continue;
+      if (!universeByValue.has(r.canonicalValue) || r.rowType === "TOP10")
+        universeByValue.set(r.canonicalValue, r);
+    }
+    const universeItems = [...universeByValue.values()];
 
     if (top10.length < 10) {
       errors.push({

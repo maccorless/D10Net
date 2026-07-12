@@ -45,17 +45,35 @@ function headerError(
 
 function SignIn({ onKey }: { onKey: (key: string) => void }) {
   const [key, setKey] = useState("");
+  const [error, setError] = useState("");
+  const [checking, setChecking] = useState(false);
+
+  const submit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setChecking(true);
+    setError("");
+    try {
+      const res = await fetch("/v1/publisher/ping", {
+        headers: { authorization: `Bearer ${key}` },
+      });
+      if (!res.ok) {
+        setError("Invalid publisher key.");
+        return;
+      }
+      sessionStorage.setItem("publisher_key", key);
+      publisherKey = key;
+      onKey(key);
+    } catch {
+      setError("Could not reach server.");
+    } finally {
+      setChecking(false);
+    }
+  };
+
   return (
     <main>
       <h1>Publisher</h1>
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          sessionStorage.setItem("publisher_key", key);
-          publisherKey = key;
-          onKey(key);
-        }}
-      >
+      <form onSubmit={(e) => void submit(e)}>
         <label>
           Publisher key
           <input
@@ -66,8 +84,13 @@ function SignIn({ onKey }: { onKey: (key: string) => void }) {
             style={{ display: "block", marginTop: "0.25rem" }}
           />
         </label>
-        <button type="submit" style={{ marginTop: "0.5rem" }}>
-          Sign in
+        {error && <p role="alert">{error}</p>}
+        <button
+          type="submit"
+          disabled={checking}
+          style={{ marginTop: "0.5rem" }}
+        >
+          {checking ? "Checking…" : "Sign in"}
         </button>
       </form>
     </main>

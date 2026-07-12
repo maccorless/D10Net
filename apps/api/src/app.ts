@@ -322,6 +322,7 @@ export function createApp(
     c.set("accountId" as never, actor as never);
     await next();
   });
+  app.get("/v1/publisher/ping", (c) => c.json({ ok: true }));
   app.post("/v1/publisher/boards", async (c) =>
     c.json(
       await services.publisher!.import(

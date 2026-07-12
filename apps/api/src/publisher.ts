@@ -92,6 +92,7 @@ export class PostgresPublisherRepository implements PublisherRepository {
   }
   async deleteAll() {
     await this.sql.begin(async (tx) => {
+      await tx`delete from plays`;
       await tx`delete from schedule_assignments`;
       await tx`delete from board_versions`;
       await tx`delete from boards`;

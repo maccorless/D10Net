@@ -6,6 +6,7 @@ import {
   auditEvents,
   boards,
   boardVersions,
+  plays,
   scheduleAssignments,
 } from "./db/schema.js";
 import type {
@@ -116,18 +117,17 @@ export class DrizzlePublisherRepository implements PublisherRepository {
     );
   }
   async auditEvent(e: Audit) {
-    await this.db
-      .insert(auditEvents)
-      .values({
-        id: crypto.randomUUID(),
-        actorAccountId: e.actorId,
-        kind: e.action,
-        payload: { boardId: e.boardId, detail: e.detail } as any,
-        createdAt: e.at,
-      });
+    await this.db.insert(auditEvents).values({
+      id: crypto.randomUUID(),
+      actorAccountId: e.actorId,
+      kind: e.action,
+      payload: { boardId: e.boardId, detail: e.detail } as any,
+      createdAt: e.at,
+    });
   }
   async deleteAll() {
     await this.db.transaction(async (tx) => {
+      await tx.delete(plays);
       await tx.delete(scheduleAssignments);
       await tx.delete(boardVersions);
       await tx.delete(boards);

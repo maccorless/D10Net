@@ -145,17 +145,14 @@ export function createApp(
   app.use(
     "/v1/*",
     bodyLimit({
-      maxSize: 10 * 1024 * 1024,
+      maxSize: options.bodyLimit ?? 10 * 1024 * 1024,
       onError: (c) => c.json({ error: "Request body too large" }, 413),
     }),
   );
   app.use("/v1/*", async (c, next) => {
-    const limit =
-      c.req.path === "/v1/publisher/boards/bulk"
-        ? 10 * 1024 * 1024
-        : (options.bodyLimit ?? 65_536);
     const length = Number(c.req.header("content-length") ?? 0);
-    if (length > limit) return c.json({ error: "Request body too large" }, 413);
+    if (length > (options.bodyLimit ?? 10 * 1024 * 1024))
+      return c.json({ error: "Request body too large" }, 413);
     const cookieToken = c.req
       .header("cookie")
       ?.split(";")

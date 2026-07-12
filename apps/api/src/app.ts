@@ -130,10 +130,7 @@ export function createApp(
       strictTransportSecurity: options.production
         ? "max-age=31536000; includeSubDomains"
         : false,
-      contentSecurityPolicy: {
-        defaultSrc: ["'none'"],
-        frameAncestors: ["'none'"],
-      },
+      contentSecurityPolicy: undefined,
       referrerPolicy: "strict-origin-when-cross-origin",
       xContentTypeOptions: "nosniff",
     }),
@@ -244,23 +241,11 @@ export function createApp(
     await services.resetTodayPlay(player);
     return c.json({ ok: true });
   });
-  app.get("/test", (c) =>
-    c.html(
-      `<!doctype html><html><head><meta charset=UTF-8><title>Test</title></head><body>
-<h2>Test controls</h2>
-${c.req.query("done") === "1" ? "<p>✅ Today's play reset.</p>" : ""}
-<form method=post action=/test/reset>
-  <button type=submit>Reset today's play</button>
-</form>
-<p><a href=/>Back to game</a></p>
-</body></html>`,
-    ),
-  );
-  app.post("/test/reset", async (c) => {
+  app.get("/test", async (c) => {
     const player = c.get("playerId" as never) as string | null;
     if (player && services.resetTodayPlay)
       await services.resetTodayPlay(player);
-    return c.redirect("/test?done=1");
+    return c.redirect("/today");
   });
   app.get("/v1/rankings/:gameDay", async (c) => {
     const params = RankingParams.safeParse(c.req.param());

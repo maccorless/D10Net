@@ -118,6 +118,7 @@ export function App() {
   });
   const [status, setStatus] = useState("");
   const [loading, setLoading] = useState(false);
+  const [deleteFirst, setDeleteFirst] = useState(false);
 
   if (!key) return <SignIn onKey={setKey} />;
 
@@ -143,6 +144,8 @@ export function App() {
     setLoading(true);
     setStatus("");
     try {
+      if (deleteFirst)
+        await request("/v1/publisher/boards", undefined, "DELETE");
       const res = (await request(
         "/v1/publisher/boards/bulk",
         result.validBoards,
@@ -187,6 +190,15 @@ export function App() {
         {itemsHeaderError && (
           <p role="alert">Items: {itemsHeaderError.message}</p>
         )}
+
+        <label style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+          <input
+            type="checkbox"
+            checked={deleteFirst}
+            onChange={(e) => setDeleteFirst(e.target.checked)}
+          />
+          Delete all existing board data before import
+        </label>
 
         <button
           disabled={!canImport || loading}

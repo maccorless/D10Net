@@ -16,6 +16,7 @@ export interface PublisherRepository {
   versions(id: string): Promise<StoredBoard[]>;
   dateConflict(day: string, id: string): Promise<boolean>;
   auditEvent(event: Audit): Promise<void>;
+  deleteAll(): Promise<void>;
 }
 export class InMemoryPublisherRepository implements PublisherRepository {
   boards: StoredBoard[] = [];
@@ -44,6 +45,9 @@ export class InMemoryPublisherRepository implements PublisherRepository {
   }
   async auditEvent(e: Audit) {
     this.audit.push(e);
+  }
+  async deleteAll() {
+    this.boards = [];
   }
 }
 export class PostgresPublisherRepository implements PublisherRepository {
@@ -85,6 +89,13 @@ export class PostgresPublisherRepository implements PublisherRepository {
   async auditEvent(e: Audit) {
     await this
       .sql`insert into audit_events(id,actor_account_id,kind,payload,created_at) values(${crypto.randomUUID()},${e.actorId},${e.action},${this.sql.json({ boardId: e.boardId, detail: e.detail } as any)},${e.at})`;
+  }
+  async deleteAll() {
+    await this.sql.begin(async (tx) => {
+      await tx`delete from schedule_assignments`;
+      await tx`delete from board_versions`;
+      await tx`delete from boards`;
+    });
   }
 }
 export function createPublisherService(repo: PublisherRepository) {
@@ -214,6 +225,10 @@ export function createPublisherService(repo: PublisherRepository) {
       await repo.save(b);
       await audit(actorId, "retire", id);
       return b;
+    },
+    async deleteAll(actorId: string | null) {
+      await repo.deleteAll();
+      await audit(actorId, "delete_all");
     },
     async importBulkPublished(actorId: string | null, inputs: unknown[]) {
       let count = 0;

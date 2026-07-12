@@ -350,6 +350,12 @@ export function createApp(
       201,
     ),
   );
+  app.delete("/v1/publisher/boards", async (c) => {
+    await services.publisher!.deleteAll(
+      c.get("accountId" as never) as string | null,
+    );
+    return c.json({ ok: true });
+  });
   app.post("/v1/publisher/boards/bulk", async (c) =>
     c.json(
       await services.publisher!.importBulkPublished(

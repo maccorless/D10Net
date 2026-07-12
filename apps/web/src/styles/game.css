@@ -31,3 +31,22 @@
 .setup-actions button { min-height:48px; border:0; border-radius:12px; background:var(--surface); color:var(--ink); font-weight:700; }
 .setup-shell [role="alert"] { color:var(--danger); }
 .loading { color:var(--muted); text-align:center; }
+.wrong-feedback { font-size:13px; color:var(--danger); margin:4px 1px 0; min-height:18px; }
+.hint { grid-column:1/-1; display:flex; align-items:center; gap:6px; flex-wrap:wrap; }
+.hint span { font-size:11px; color:var(--muted); font-weight:600; flex:1 0 100%; }
+.hint button { min-height:38px; border:0; border-radius:10px; padding:4px 12px; background:var(--surface); color:var(--ink); font-size:12px; cursor:pointer; }
+
+/* Results screen */
+.results-shell { padding:20px 0 40px; }
+.results-score { font-size:64px; font-weight:900; line-height:1; margin:20px 0 0; }
+.results-score-unit { font-size:28px; font-weight:600; color:var(--muted); }
+.results-meta { margin:6px 0 0; color:var(--muted); font-size:13px; }
+.results-streak { margin:4px 0 0; font-size:13px; color:var(--muted); }
+.results-grid { font-size:18px; line-height:1.5; background:color-mix(in srgb,var(--surface) 80%,transparent); border-radius:12px; padding:12px 16px; margin:16px 0 0; white-space:pre; letter-spacing:.05em; }
+.results-share { display:block; width:100%; min-height:50px; margin:12px 0 0; border:0; border-radius:13px; background:var(--accent); color:#fff; font-size:15px; font-weight:700; cursor:pointer; }
+.results-missed-label { margin:20px 0 6px; font-size:11px; font-weight:700; letter-spacing:.07em; text-transform:uppercase; color:var(--muted); }
+.results-missed { list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:5px; }
+.results-missed li { padding:10px 14px; border-radius:10px; background:color-mix(in srgb,var(--danger) 10%,transparent); color:var(--danger); font-size:13px; font-weight:500; }
+.results-next { margin:24px 0 0; text-align:center; font-size:12px; color:var(--muted); }
+@keyframes reveal { from { opacity:0; transform:translateY(6px); } }
+.revealed { animation:reveal 250ms ease-out; }

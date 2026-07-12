@@ -2,6 +2,7 @@ import type { Board, PlayStart } from "@daily/contracts";
 import { SearchPicker } from "./SearchPicker";
 import { useGame, type GamePersistence } from "./useGame";
 import { deriveResult, getGuessRank } from "@daily/game";
+import { Results } from "../results/Results";
 
 type Props = { board: Board; start: PlayStart; persistence?: GamePersistence };
 
@@ -26,12 +27,29 @@ export function GameScreen({ board, start, persistence }: Props) {
       </main>
     );
   if (game.state.foundIds.length === 10 || game.state.strikes === 5) {
-    const result = deriveResult(game.state);
+    const gr = deriveResult(game.state);
+    const shareResult = {
+      score: gr.score,
+      answersFound: gr.answersFound,
+      strikes: gr.strikes,
+      hintMode: game.state.hintMode,
+      hintUsed: game.state.hintUsed,
+      elapsedMs: Date.now() - game.state.startedAtMs,
+    };
+    const missed = board.ranked
+      .filter((id) => !game.state.foundIds.includes(id))
+      .map((id) => board.universe.find((u) => u.id === id)?.label ?? "");
+    const nextBoardAt = new Date();
+    nextBoardAt.setHours(24, 0, 0, 0);
     return (
       <main className="game-shell results-shell" aria-label="Results">
-        <h1>{result.score} points</h1>
-        <p>{result.answersFound}/10</p>
-        <p>{start.hintMode === "off" ? "Hints Off" : "Hints On"}</p>
+        <Results
+          result={shareResult}
+          streak={0}
+          bestStreak={0}
+          nextBoardAt={nextBoardAt}
+          missedAnswers={missed}
+        />
       </main>
     );
   }

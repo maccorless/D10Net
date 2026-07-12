@@ -43,15 +43,17 @@ const ITEMS_COLUMNS = [
 function parseHeader(
   tsv: string,
   expected: readonly string[],
-): { lines: string[] } | null {
+): { lines: string[]; sep: string } | null {
   const lines = tsv.replace(/\r/g, "").split("\n").filter(Boolean);
-  const header = lines.shift()?.split("\t") ?? [];
+  const firstLine = lines.shift() ?? "";
+  const sep = firstLine.includes("\t") ? "\t" : ",";
+  const header = firstLine.split(sep);
   if (
     header.length !== expected.length ||
     expected.some((c, i) => header[i] !== c)
   )
     return null;
-  return { lines };
+  return { lines, sep };
 }
 
 export function parseBoards(tsv: string): BoardsCsvRow[] | ImportError {
@@ -64,7 +66,7 @@ export function parseBoards(tsv: string): BoardsCsvRow[] | ImportError {
       message: `Header must exactly match: ${BOARDS_COLUMNS.join(", ")}`,
     };
   return parsed.lines.map((line) => {
-    const v = line.split("\t");
+    const v = line.split(parsed.sep);
     const size = v[12] ? parseInt(v[12], 10) : undefined;
     return {
       boardId: v[0] ?? "",
@@ -95,7 +97,7 @@ export function parseItems(tsv: string): ItemsCsvRow[] | ImportError {
       message: `Header must exactly match: ${ITEMS_COLUMNS.join(", ")}`,
     };
   return parsed.lines.map((line) => {
-    const v = line.split("\t");
+    const v = line.split(parsed.sep);
     const rank = v[2] ? parseInt(v[2], 10) : null;
     return {
       boardId: v[0] ?? "",

@@ -1,6 +1,5 @@
 import { execFileSync, spawn } from "node:child_process";
 import { readdirSync, readFileSync, statSync } from "node:fs";
-import { homedir } from "node:os";
 import { resolve } from "node:path";
 import { chromium } from "@playwright/test";
 import { expect, test } from "vitest";

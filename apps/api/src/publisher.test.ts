@@ -24,6 +24,21 @@ const board = {
   })),
   ranked: Array.from({ length: 10 }, (_, i) => `c${i}`),
 };
+describe("importBulkPublished", () => {
+  it("saves boards directly as Published with null gameDay", async () => {
+    const repo = new InMemoryPublisherRepository(),
+      service = createPublisherService(repo);
+    const result = await service.importBulkPublished("actor", [
+      { ...board, gameDay: null },
+    ]);
+    expect(result.count).toBe(1);
+    const saved = await repo.get("cities", 1);
+    expect(saved?.state).toBe("Published");
+    expect(saved?.gameDay).toBeNull();
+    expect(repo.audit.some((e) => e.action === "import_publish")).toBe(true);
+  });
+});
+
 describe("publisher lifecycle", () => {
   it("makes published versions immutable and corrections increment version", async () => {
     const repo = new InMemoryPublisherRepository(),

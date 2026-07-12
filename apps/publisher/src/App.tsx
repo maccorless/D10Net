@@ -47,9 +47,8 @@ export function App() {
     validBoards: [],
     errors: [],
   });
-  const [states, setStates] = useState<Record<string, string>>({});
-  const [dates, setDates] = useState<Record<string, string>>({});
-  const [error, setError] = useState("");
+  const [status, setStatus] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const boardsResult = boardsText ? parseBoards(boardsText) : null;
   const itemsResult = itemsText ? parseItems(itemsText) : null;
@@ -62,20 +61,26 @@ export function App() {
     Array.isArray(itemsResult) &&
     itemsResult.length > 0;
 
-  const runImport = () => {
+  const runImport = async () => {
     if (!canImport) return;
-    setPreview(
-      combine(boardsResult as BoardsCsvRow[], itemsResult as ItemsCsvRow[]),
+    const result = combine(
+      boardsResult as BoardsCsvRow[],
+      itemsResult as ItemsCsvRow[],
     );
-  };
-
-  const act = async (id: string, fn: () => Promise<any>) => {
+    setPreview(result);
+    if (result.validBoards.length === 0) return;
+    setLoading(true);
+    setStatus("");
     try {
-      setError("");
-      const value = await fn();
-      setStates((s) => ({ ...s, [id]: value.state }));
+      const res = await request(
+        "/v1/publisher/boards/bulk",
+        result.validBoards,
+      );
+      setStatus(`${res.count} board${res.count !== 1 ? "s" : ""} saved.`);
     } catch (e) {
-      setError(e instanceof Error ? e.message : "Publisher action failed");
+      setStatus(e instanceof Error ? e.message : "Import failed");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -112,12 +117,15 @@ export function App() {
           <p role="alert">Items: {itemsHeaderError.message}</p>
         )}
 
-        <button disabled={!canImport} onClick={runImport}>
-          Validate &amp; Import
+        <button
+          disabled={!canImport || loading}
+          onClick={() => void runImport()}
+        >
+          {loading ? "Saving…" : "Validate & Import"}
         </button>
       </div>
 
-      {error && <p role="alert">{error}</p>}
+      {status && <p role="status">{status}</p>}
 
       {preview.errors.map((e, i) => (
         <p role="alert" key={i}>
@@ -125,76 +133,11 @@ export function App() {
         </p>
       ))}
 
-      {preview.validBoards.map((board) => {
-        const day = dates[board.id] ?? board.gameDay ?? "";
-        const state = states[board.id] ?? "Preview";
-        const url = `/v1/publisher/boards/${board.id}/${board.version}`;
-        const publish = () =>
-          act(board.id, async () => {
-            await request("/v1/publisher/boards", { ...board, gameDay: day });
-            await request(`${url}/validate`);
-            await overrideSchedule(board.id, board.version, day);
-            return request(`${url}/publish`);
-          });
-        return (
-          <section key={board.id}>
-            <h2>{board.title}</h2>
-            <p>
-              {board.universe.length} candidates · {board.ranked.length} ranked
-            </p>
-            <label>
-              Publish date{" "}
-              <input
-                type="date"
-                value={day}
-                onChange={(e) =>
-                  setDates((d) => ({ ...d, [board.id]: e.target.value }))
-                }
-              />
-            </label>
-            <p>State: {state}</p>
-            <button
-              disabled={
-                !day || preview.errors.some((e) => e.boardId === board.id)
-              }
-              onClick={() => void publish()}
-            >
-              Publish
-            </button>
-            <button
-              onClick={() =>
-                void act(board.id, () =>
-                  request(url, { title: board.title }, "PATCH"),
-                )
-              }
-            >
-              Save edit
-            </button>
-            <button
-              disabled={!day}
-              onClick={() =>
-                void act(board.id, () =>
-                  overrideSchedule(board.id, board.version, day),
-                )
-              }
-            >
-              Override schedule
-            </button>
-            <button
-              onClick={() =>
-                void act(board.id, () => request(`${url}/correct`, board))
-              }
-            >
-              Correct
-            </button>
-            <button
-              onClick={() => void act(board.id, () => request(`${url}/retire`))}
-            >
-              Retire
-            </button>
-          </section>
-        );
-      })}
+      {preview.validBoards.length > 0 && !status && (
+        <p>
+          {preview.validBoards.length} boards validated — click import to save.
+        </p>
+      )}
     </main>
   );
 }

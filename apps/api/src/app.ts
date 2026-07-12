@@ -320,6 +320,15 @@ export function createApp(
       201,
     ),
   );
+  app.post("/v1/publisher/boards/bulk", async (c) =>
+    c.json(
+      await services.publisher!.importBulkPublished(
+        c.get("accountId" as never) as string,
+        await c.req.json(),
+      ),
+      201,
+    ),
+  );
   app.post("/v1/publisher/import/validate", async (c) =>
     c.json(
       await services.publisher!.validateImport(

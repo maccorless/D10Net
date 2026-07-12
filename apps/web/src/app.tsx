@@ -29,6 +29,14 @@ function authHeaders(getAccessToken: () => string | undefined) {
   };
 }
 
+function readHintPref(): HintMode {
+  try {
+    return (localStorage.getItem("d10_hint") as HintMode) ?? "off";
+  } catch {
+    return "off";
+  }
+}
+
 function TodaySetup({
   fetcher,
   getAccessToken,
@@ -39,6 +47,7 @@ function TodaySetup({
   const [sessionReady, setSessionReady] = useState(false);
   const [cached, setCached] = useState<{ board: Board; play: PlayStart }>();
   const [clockError, setClockError] = useState(false);
+  const [hintMode, setHintMode] = useState<HintMode>(readHintPref);
   useEffect(() => {
     fetcher("/v1/sessions", {
       method: "POST",
@@ -54,7 +63,18 @@ function TodaySetup({
         setError(true);
       });
   }, [fetcher, getAccessToken]);
-  async function begin(hintMode: HintMode) {
+
+  function toggleHint() {
+    const next: HintMode = hintMode === "off" ? "on" : "off";
+    try {
+      localStorage.setItem("d10_hint", next);
+    } catch {
+      /* ignore */
+    }
+    setHintMode(next);
+  }
+
+  async function begin() {
     setLoading(true);
     setError(false);
     try {
@@ -87,22 +107,22 @@ function TodaySetup({
     <main className="setup-shell">
       <h1>Daily Top Ten</h1>
       <p>Find the top 10. Five wrong guesses ends it.</p>
-      <div className="setup-actions" aria-label="Choose hint mode">
-        <button
-          disabled={loading || !sessionReady}
-          onClick={() => void begin("on")}
-        >
-          Hints On
-        </button>
-        <button
-          disabled={loading || !sessionReady}
-          onClick={() => void begin("off")}
-        >
-          Hints Off
+      <button
+        className="play-btn"
+        disabled={loading || !sessionReady}
+        onClick={() => void begin()}
+      >
+        {loading ? "Loading…" : "Play Today"}
+      </button>
+      <div className="hint-toggle">
+        <button onClick={toggleHint} aria-pressed={hintMode === "on"}>
+          {hintMode === "on" ? "Hints: On" : "Hints: Off"}
         </button>
       </div>
-      {(loading || !sessionReady) && !error && (
-        <p role="status">Loading today’s game…</p>
+      {!sessionReady && !error && (
+        <p role="status" className="loading">
+          Connecting…
+        </p>
       )}
       {error && (
         <>

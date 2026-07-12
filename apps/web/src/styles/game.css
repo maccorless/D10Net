@@ -29,6 +29,11 @@
 .setup-shell h1,.setup-shell p { margin:0; }
 .setup-actions { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
 .setup-actions button { min-height:48px; border:0; border-radius:12px; background:var(--surface); color:var(--ink); font-weight:700; }
+.play-btn { min-height:54px; border:0; border-radius:14px; background:var(--accent); color:#fff; font-size:17px; font-weight:700; cursor:pointer; }
+.play-btn:disabled { opacity:.5; cursor:default; }
+.hint-toggle { margin-top:10px; text-align:center; }
+.hint-toggle button { border:0; background:none; color:var(--muted); font-size:13px; cursor:pointer; padding:6px 10px; border-radius:8px; }
+.hint-toggle button[aria-pressed="true"] { color:var(--accent); }
 .setup-shell [role="alert"] { color:var(--danger); }
 .loading { color:var(--muted); text-align:center; }
 .wrong-feedback { font-size:13px; color:var(--danger); margin:4px 1px 0; min-height:18px; }

@@ -214,6 +214,11 @@ export function createPostgresServices(
         await sql`select sa.game_day,case when p.finished_at is null then 'playable' else 'review' end status,case when p.finished_at is null then null else p.authoritative_result end result,bv.board_id,bv.version from schedule_assignments sa join board_versions bv on (bv.board_id,bv.version)=(sa.board_id,sa.board_version) left join plays p on p.player_id=${playerId} and p.board_id=bv.board_id and p.board_version=bv.version where sa.game_day=${gameDay} and sa.published=true and sa.game_day=bv.game_day and bv.published_at<=${now()} and bv.game_day is not null and bv.game_day<${day} limit 1`;
       return rows[0];
     },
+    async resetTodayPlay(playerId: string) {
+      const day = canonicalGameDay(now(), options.zone);
+      await sql`delete from plays where player_id=${playerId} and game_day=${day} and mode='daily'`;
+      await sql`update players set latest_game_day=null where id=${playerId} and latest_game_day=${day}`;
+    },
   };
 }
 

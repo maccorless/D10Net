@@ -37,9 +37,9 @@ test("boots /today through hint setup, authenticated start, and player mount", a
     await screen.findByRole("heading", { name: /Daily Top Ten/ }),
   ).toBeVisible();
   await waitFor(() =>
-    expect(screen.getByRole("button", { name: "Hints On" })).toBeEnabled(),
+    expect(screen.getByRole("button", { name: "Play Today" })).toBeEnabled(),
   );
-  screen.getByRole("button", { name: "Hints On" }).click();
+  screen.getByRole("button", { name: "Play Today" }).click();
   await waitFor(() => expect(fetcher).toHaveBeenCalledTimes(2));
   expect(fetcher.mock.calls[0][0]).toBe("/v1/sessions");
   expect(fetcher.mock.calls[0][1]).toMatchObject({
@@ -58,7 +58,6 @@ test("shows a friendly start error", async () => {
   startTodayApp({
     fetcher: vi.fn().mockResolvedValue(new Response("no", { status: 503 })),
   });
-  (await screen.findByRole("button", { name: "Hints Off" })).click();
   expect(await screen.findByRole("alert")).toHaveTextContent(
     /reconnect to start/i,
   );

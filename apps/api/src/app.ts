@@ -48,6 +48,7 @@ export type ApiServices = {
   ): Promise<{ playerId: string; token: string }>;
   archive?(playerId: string): Promise<unknown>;
   archiveDay?(playerId: string, gameDay: string): Promise<unknown>;
+  resetTodayPlay?(playerId: string): Promise<void>;
   requestMagicLink?(email: string, ip: string): Promise<unknown>;
   consumeMagicLink?(token: string): Promise<{ sessionToken: string } | null>;
   resolveMergeRetry?(
@@ -235,6 +236,13 @@ export function createApp(
     if (!id.success || !player.success || !parsed.success)
       return c.json({ error: "Invalid request" }, 400);
     return c.json(await services.finish(player.data, id.data, parsed.data));
+  });
+  app.delete("/v1/plays/today", async (c) => {
+    const player = c.get("playerId" as never) as string | null;
+    if (!player || !services.resetTodayPlay)
+      return c.json({ error: "Not found" }, 404);
+    await services.resetTodayPlay(player);
+    return c.json({ ok: true });
   });
   app.get("/v1/rankings/:gameDay", async (c) => {
     const params = RankingParams.safeParse(c.req.param());

@@ -33,3 +33,7 @@ npm-debug.log*
 # Dev tooling
 .superpowers/
 .codegraph/
+.worktrees/
+
+# Local game data
+docs/superpowers/gameboards/

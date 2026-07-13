@@ -252,7 +252,9 @@ export function mountToday(board: Board, start: PlayStart) {
   mountedRoot.render(<GameScreen board={board} start={start} />);
 }
 if (!import.meta.env.VITEST) {
-  if (location.pathname === "/today") startTodayApp();
+  if (location.pathname === "/" || location.pathname === "")
+    location.replace("/today");
+  else if (location.pathname === "/today") startTodayApp();
   else if (location.pathname === "/archive")
     mount(<ArchivePage fetcher={fetch} />);
   else if (location.pathname === "/sign-in")

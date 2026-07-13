@@ -66,10 +66,23 @@ export function submitGuess(
   if (calledNumberOne && state.numberOneCallUsed)
     throw new Error("Number-one call already used");
 
-  const correct = state.board.ranked.includes(candidateId);
+  const candidate = state.board.universe.find((c) => c.id === candidateId);
+  const correct = candidate?.rank != null && candidate.rank <= 10;
+
+  // When a rank slot is filled, remove all other same-rank items so the
+  // slot cannot be answered twice (e.g. three items tied for 10th).
+  const tiedSiblingIds =
+    correct && candidate.rank != null
+      ? state.board.universe
+          .filter((c) => c.rank === candidate.rank && c.id !== candidateId)
+          .map((c) => c.id)
+      : [];
+
+  const removedIds = new Set([candidateId, ...tiedSiblingIds]);
+
   return {
     ...state,
-    availableIds: state.availableIds.filter((id) => id !== candidateId),
+    availableIds: state.availableIds.filter((id) => !removedIds.has(id)),
     foundIds: correct ? [...state.foundIds, candidateId] : state.foundIds,
     strikes: state.strikes + (correct ? 0 : 1),
     numberOneCallUsed: state.numberOneCallUsed || calledNumberOne,

@@ -60,7 +60,7 @@ export const BoardSchema = z
           label: z.string(),
           aliases: z.array(z.string()),
           metricValue: z.string().max(80).optional(),
-          rank: z.number().int().min(1).max(10).optional(),
+          rank: z.number().int().min(1).optional(),
         }),
       )
       .min(10),

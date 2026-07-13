@@ -95,6 +95,10 @@ if (
   );
   app.get("/publisher", (c) => c.redirect("/publisher/"));
   app.get(
+    "/publisher/",
+    serveStatic({ root: publisherRoot, path: "index.html" }),
+  );
+  app.get(
     "/publisher/*",
     serveStatic({ root: publisherRoot, path: "index.html" }),
   );

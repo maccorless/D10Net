@@ -163,8 +163,7 @@ export function combine(
       label: r.canonicalValue,
       aliases: r.aliases ? r.aliases.split("|").filter(Boolean) : [],
       ...(r.metricValue ? { metricValue: r.metricValue } : {}),
-      // Only carry rank for items actually in the top 10 range (rank > 10 are near-misses in the CSV)
-      ...(r.rank != null && r.rank <= 10 ? { rank: r.rank } : {}),
+      ...(r.rank != null ? { rank: r.rank } : {}),
     }));
 
     const refSize = ref?.metricValue

@@ -7,6 +7,8 @@ export type ResultsProps = {
   bestStreak: number;
   nextBoardAt: Date;
   missedAnswers?: string[];
+  wrongGuesses?: { label: string; rank: number | null }[];
+  foundInOrder?: string[];
 };
 
 export function Results({
@@ -15,6 +17,8 @@ export function Results({
   bestStreak,
   nextBoardAt,
   missedAnswers = [],
+  wrongGuesses = [],
+  foundInOrder = [],
 }: ResultsProps) {
   const reduced =
     typeof matchMedia === "function" &&
@@ -70,6 +74,36 @@ export function Results({
       >
         Share result
       </button>
+
+      {foundInOrder.length > 0 && (
+        <>
+          <p className="results-section-label">Found</p>
+          <ol className="results-found">
+            {foundInOrder.map((label) => (
+              <li className="results-found-item" key={label}>
+                {label}
+              </li>
+            ))}
+          </ol>
+        </>
+      )}
+
+      {wrongGuesses.length > 0 && (
+        <>
+          <p className="results-section-label">Wrong guesses</p>
+          <ul className="results-wrong">
+            {wrongGuesses.map(({ label, rank }) => (
+              <li className="results-wrong-item" key={label}>
+                <span>{label}</span>
+                <span className="results-wrong-rank">
+                  {rank != null ? `#${rank}` : "Not in top 10"}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+
       {missedAnswers.length > 0 && (
         <>
           <p className="results-missed-label">Not found</p>

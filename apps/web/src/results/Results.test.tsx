@@ -51,4 +51,44 @@ describe("result sharing", () => {
     expect(screen.getByText("Missed")).toHaveClass("revealed-immediately");
     vi.unstubAllGlobals();
   });
+
+  it("renders wrong guesses with their correct rank position", () => {
+    vi.stubGlobal("matchMedia", () => ({ matches: true }));
+    render(
+      <Results
+        result={result}
+        streak={0}
+        bestStreak={0}
+        nextBoardAt={new Date(Date.now() + 10_000)}
+        wrongGuesses={[
+          { label: "Wrong Song", rank: 14 },
+          { label: "Off List Song", rank: null },
+        ]}
+      />,
+    );
+    expect(screen.getByText("Wrong Song")).toBeInTheDocument();
+    expect(screen.getByText("#14")).toBeInTheDocument();
+    expect(screen.getByText("Off List Song")).toBeInTheDocument();
+    expect(screen.getByText("Not in top 10")).toBeInTheDocument();
+    vi.unstubAllGlobals();
+  });
+
+  it("renders found answers in guess order", () => {
+    vi.stubGlobal("matchMedia", () => ({ matches: true }));
+    render(
+      <Results
+        result={{ ...result, answersFound: 2, score: 2 }}
+        streak={0}
+        bestStreak={0}
+        nextBoardAt={new Date(Date.now() + 10_000)}
+        foundInOrder={["Blinding Lights", "Shape of You"]}
+      />,
+    );
+    const items = screen.getAllByRole("listitem");
+    const labels = items.map((li) => li.textContent ?? "");
+    const blinding = labels.findIndex((t) => t.includes("Blinding Lights"));
+    const shape = labels.findIndex((t) => t.includes("Shape of You"));
+    expect(blinding).toBeLessThan(shape);
+    vi.unstubAllGlobals();
+  });
 });

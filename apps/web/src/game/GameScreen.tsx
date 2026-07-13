@@ -29,6 +29,7 @@ export function GameScreen({ board, start, persistence }: Props) {
   if (game.state.foundIds.length === 10 || game.state.strikes === 5) {
     const gr = deriveResult(game.state);
     const shareResult = {
+      title: board.title,
       score: gr.score,
       answersFound: gr.answersFound,
       strikes: gr.strikes,

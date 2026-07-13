@@ -62,3 +62,7 @@
 .results-wrong { list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:5px; }
 .results-wrong-item { display:flex; justify-content:space-between; align-items:center; padding:10px 14px; border-radius:10px; background:color-mix(in srgb,var(--surface) 80%,transparent); font-size:13px; }
 .results-wrong-rank { color:var(--muted); font-size:12px; white-space:nowrap; margin-left:8px; }
+
+/* Metric value chips */
+.metric-chip { font-size:11px; color:var(--muted); font-variant-numeric:tabular-nums; }
+.slot-metric { display:block; font-size:10px; color:var(--muted); margin-top:1px; line-height:1.2; }

@@ -1,4 +1,8 @@
-import type { Board, PlayStart } from "@daily/contracts";
+import {
+  formatMetricValue,
+  type Board,
+  type PlayStart,
+} from "@daily/contracts";
 import { SearchPicker } from "./SearchPicker";
 import { useGame, type GamePersistence } from "./useGame";
 import { deriveResult, getGuessRank } from "@daily/game";
@@ -104,7 +108,21 @@ export function GameScreen({ board, start, persistence }: Props) {
               key={id}
             >
               <b>{rank + 1}</b>
-              <span>{found ? candidate?.label : `?${hint}`}</span>
+              {found ? (
+                <span>
+                  {candidate?.label}
+                  {candidate?.metricValue && (
+                    <span className="slot-metric">
+                      {formatMetricValue(
+                        candidate.metricValue,
+                        board.metricFormat,
+                      )}
+                    </span>
+                  )}
+                </span>
+              ) : (
+                <span>{`?${hint}`}</span>
+              )}
             </li>
           );
         })}
@@ -112,12 +130,35 @@ export function GameScreen({ board, start, persistence }: Props) {
       {game.lastWrongGuess &&
         (() => {
           const rank = getGuessRank(game.lastWrongGuess, board);
+          const candidate = board.universe.find(
+            (u) => u.id === game.lastWrongGuess,
+          );
+          const metric =
+            candidate?.metricValue != null
+              ? formatMetricValue(candidate.metricValue, board.metricFormat)
+              : null;
           if (rank == null)
-            return <p className="wrong-feedback">Not in the top 10.</p>;
+            return (
+              <p className="wrong-feedback">
+                Not in the top 10.
+                {metric && (
+                  <>
+                    {" "}
+                    · <span className="metric-chip">{metric}</span>
+                  </>
+                )}
+              </p>
+            );
           const tied = board.universe.filter((c) => c.rank === rank).length > 1;
           return (
             <p className="wrong-feedback">
               {tied ? `Tied for #${rank}.` : `That was #${rank}.`}
+              {metric && (
+                <>
+                  {" "}
+                  · <span className="metric-chip">{metric}</span>
+                </>
+              )}
             </p>
           );
         })()}

@@ -60,7 +60,7 @@ test("date mismatch is friendly and failed start rolls back", async ({
   const sql = postgres(process.env.TEST_DATABASE_URL!);
   await sql`delete from audit_events where play_id in (select id from plays where player_id=${player} and board_id='missed-cities')`;
   await sql`delete from plays where player_id=${player} and board_id='missed-cities'`;
-  await sql`update players set latest_game_day='2026-07-13' where id=${player}`;
+  await sql`update players set latest_game_day='2099-12-31' where id=${player}`;
   const before = Number(
     (await sql`select count(*) n from plays where player_id=${player}`)[0].n,
   );

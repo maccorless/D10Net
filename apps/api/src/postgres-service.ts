@@ -219,6 +219,52 @@ export function createPostgresServices(
       await sql`delete from plays where player_id=${playerId} and game_day=${day} and mode='daily'`;
       await sql`update players set latest_game_day=null where id=${playerId} and latest_game_day=${day}`;
     },
+    async stats() {
+      const [totals] = await sql`
+        select
+          count(*)::int                                          as total_plays,
+          count(finished_at)::int                               as completed_plays,
+          count(distinct player_id)::int                        as unique_players,
+          count(distinct case when started_at > now() - interval '7 days' then player_id end)::int as active_players_7d
+        from plays`;
+      const byDay = await sql`
+        select
+          game_day::text,
+          count(*)::int        as started,
+          count(finished_at)::int as finished
+        from plays
+        where game_day >= current_date - 30
+        group by game_day
+        order by game_day desc`;
+      const topBoards = await sql`
+        select
+          p.board_id,
+          b.title,
+          count(*)::int           as plays,
+          count(p.finished_at)::int as finished
+        from plays p
+        join boards b on b.id = p.board_id
+        group by p.board_id, b.title
+        order by plays desc
+        limit 15`;
+      return {
+        totalPlays: totals!.total_plays as number,
+        completedPlays: totals!.completed_plays as number,
+        uniquePlayers: totals!.unique_players as number,
+        activePlayers7d: totals!.active_players_7d as number,
+        byDay: byDay.map((r) => ({
+          gameDay: r.game_day as string,
+          started: r.started as number,
+          finished: r.finished as number,
+        })),
+        topBoards: topBoards.map((r) => ({
+          boardId: r.board_id as string,
+          title: r.title as string,
+          plays: r.plays as number,
+          finished: r.finished as number,
+        })),
+      };
+    },
   };
 }
 

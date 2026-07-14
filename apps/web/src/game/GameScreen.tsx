@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import {
   formatMetricValue,
   type Board,
@@ -7,6 +8,7 @@ import { SearchPicker } from "./SearchPicker";
 import { useGame, type GamePersistence } from "./useGame";
 import { deriveResult, getGuessRank } from "@daily/game";
 import { Results } from "../results/Results";
+import { logGameStart, logGameEnd } from "./tracker";
 
 type Props = { board: Board; start: PlayStart; persistence?: GamePersistence };
 
@@ -22,6 +24,34 @@ function StrikeMeter({ strikes }: { strikes: number }) {
 
 export function GameScreen({ board, start, persistence }: Props) {
   const game = useGame(board, start, persistence);
+  const loggedStart = useRef(false);
+  const loggedEnd = useRef(false);
+
+  useEffect(() => {
+    if (game.restoring || loggedStart.current) return;
+    const done = game.state.foundIds.length === 10 || game.state.strikes === 5;
+    if (!done) {
+      logGameStart(board.id, board.title);
+      loggedStart.current = true;
+    }
+  }, [
+    game.restoring,
+    game.state.foundIds.length,
+    game.state.strikes,
+    board.id,
+    board.title,
+  ]);
+
+  useEffect(() => {
+    if (!loggedStart.current || loggedEnd.current) return;
+    const done = game.state.foundIds.length === 10 || game.state.strikes === 5;
+    if (done) {
+      const gr = deriveResult(game.state);
+      logGameEnd(board.id, board.title, gr.score, gr.strikes);
+      loggedEnd.current = true;
+    }
+  }, [game.state, board.id, board.title]);
+
   if (game.restoring)
     return (
       <main className="game-shell">
@@ -84,7 +114,7 @@ export function GameScreen({ board, start, persistence }: Props) {
           {game.elapsed}
         </time>
       </header>
-      <h1>{board.prompt}</h1>
+      <h1>{board.title}</h1>
       <p className="metric">{board.metricDesc}</p>
       <p className="instructions">
         Find the top 10. Five wrong guesses ends it.

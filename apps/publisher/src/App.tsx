@@ -10,7 +10,7 @@ import type { BoardsCsvRow, ItemsCsvRow } from "@daily/contracts";
 
 let publisherKey = (() => {
   try {
-    return sessionStorage.getItem("publisher_key") ?? "";
+    return localStorage.getItem("publisher_key") ?? "";
   } catch {
     return "";
   }
@@ -31,6 +31,12 @@ const request = async (path: string, body?: unknown, method = "POST") => {
     value = JSON.parse(text);
   } catch {
     value = {};
+  }
+  if (response.status === 401 || response.status === 403) {
+    localStorage.removeItem("publisher_key");
+    publisherKey = "";
+    location.reload();
+    throw Error("Session expired");
   }
   if (!response.ok)
     throw Error(
@@ -70,7 +76,7 @@ function SignIn({ onKey }: { onKey: (key: string) => void }) {
         setError("Invalid publisher key.");
         return;
       }
-      sessionStorage.setItem("publisher_key", key);
+      localStorage.setItem("publisher_key", key);
       publisherKey = key;
       onKey(key);
     } catch {

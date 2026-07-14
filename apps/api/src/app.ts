@@ -7,6 +7,101 @@ import { PlayResultSchema, type StartedGame } from "@daily/contracts";
 import type { createPublisherService } from "./publisher.js";
 import { timingSafeEqual } from "node:crypto";
 
+const STATS_HTML = `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>D10Net Stats</title>
+<style>
+  html{font-size:18px}
+  body{font-family:sans-serif;max-width:900px;margin:2rem auto;padding:0 1rem;color:#222}
+  h1{margin-bottom:1.5rem}
+  .cards{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2rem}
+  .card{background:#f5f5f5;border-radius:.5rem;padding:1rem 1.5rem;min-width:10rem}
+  .card strong{display:block;font-size:1.5rem}
+  .card span{font-size:.8rem;color:#666}
+  table{border-collapse:collapse;width:100%;margin-bottom:2rem}
+  th,td{text-align:left;padding:.4rem .75rem;border-bottom:1px solid #e0e0e0}
+  th{background:#f5f5f5;font-size:.85rem}
+  #signin{max-width:360px}
+  #signin input{display:block;margin:.5rem 0;padding:.4rem;width:100%;font-size:1rem}
+  #signin button{padding:.4rem 1rem;font-size:1rem}
+  .err{color:red}
+  @media(prefers-color-scheme:dark){
+    body{background:#111;color:#eee}
+    .card{background:#222}
+    th{background:#1a1a1a}
+    th,td{border-color:#333}
+  }
+</style>
+</head>
+<body>
+<h1>D10Net Stats</h1>
+<div id="signin" style="display:none">
+  <form id="keyform">
+    <label>Publisher key<input type="password" id="keyinput" required></label>
+    <button type="submit">Sign in</button>
+    <p class="err" id="keyerr"></p>
+  </form>
+</div>
+<div id="content" style="display:none">
+  <div class="cards" id="cards"></div>
+  <h2>Plays per day (last 30 days)</h2>
+  <table id="byday"><thead><tr><th>Date</th><th>Started</th><th>Finished</th></tr></thead><tbody></tbody></table>
+  <h2>Top boards</h2>
+  <table id="boards"><thead><tr><th>Board</th><th>ID</th><th>Plays</th><th>Finished</th></tr></thead><tbody></tbody></table>
+</div>
+<script>
+(function(){
+  var key=localStorage.getItem('publisher_key')||'';
+  function load(k){
+    fetch('/admin/stats-data',{headers:{authorization:'Bearer '+k}})
+      .then(function(r){
+        if(r.status===403){showSignIn();return;}
+        return r.json().then(render);
+      }).catch(function(){showSignIn();});
+  }
+  function showSignIn(){
+    document.getElementById('signin').style.display='';
+    document.getElementById('content').style.display='none';
+  }
+  function render(d){
+    document.getElementById('content').style.display='';
+    document.getElementById('signin').style.display='none';
+    var stats=[
+      {label:'Total plays',value:d.totalPlays},
+      {label:'Completed',value:d.completedPlays},
+      {label:'Unique players',value:d.uniquePlayers},
+      {label:'Active 7d',value:d.activePlayers7d}
+    ];
+    document.getElementById('cards').innerHTML=stats.map(function(s){
+      return '<div class="card"><strong>'+s.value+'</strong><span>'+s.label+'</span></div>';
+    }).join('');
+    var dayBody=document.querySelector('#byday tbody');
+    dayBody.innerHTML=d.byDay.map(function(r){
+      return '<tr><td>'+r.gameDay+'</td><td>'+r.started+'</td><td>'+r.finished+'</td></tr>';
+    }).join('');
+    var boardBody=document.querySelector('#boards tbody');
+    boardBody.innerHTML=d.topBoards.map(function(r){
+      return '<tr><td>'+r.title+'</td><td>'+r.boardId+'</td><td>'+r.plays+'</td><td>'+r.finished+'</td></tr>';
+    }).join('');
+  }
+  document.getElementById('keyform').addEventListener('submit',function(e){
+    e.preventDefault();
+    var k=document.getElementById('keyinput').value;
+    fetch('/admin/stats-data',{headers:{authorization:'Bearer '+k}}).then(function(r){
+      if(!r.ok){document.getElementById('keyerr').textContent='Invalid key.';return;}
+      localStorage.setItem('publisher_key',k);
+      return r.json().then(render);
+    });
+  });
+  if(key){load(key);}else{showSignIn();}
+})();
+</script>
+</body>
+</html>`;
+
 const Id = z.string().max(128);
 const StartBody = z.discriminatedUnion("mode", [
   z
@@ -49,6 +144,7 @@ export type ApiServices = {
   archive?(playerId: string): Promise<unknown>;
   archiveDay?(playerId: string, gameDay: string): Promise<unknown>;
   resetTodayPlay?(playerId: string): Promise<void>;
+  stats?(): Promise<unknown>;
   requestMagicLink?(email: string, ip: string): Promise<unknown>;
   consumeMagicLink?(token: string): Promise<{ sessionToken: string } | null>;
   resolveMergeRetry?(
@@ -487,6 +583,15 @@ export function createApp(
       );
     return c.redirect("/publisher/");
   });
+  app.get("/admin/stats-data", async (c) => {
+    const bearer = (c.req.header("authorization") ?? "").trim();
+    const secret = options.publisherSecret?.trim();
+    if (!secret || bearer !== `Bearer ${secret}`)
+      return c.json({ error: "Forbidden" }, 403);
+    if (!services.stats) return c.json({ error: "Not available" }, 501);
+    return c.json(await services.stats());
+  });
+  app.get("/admin/stats", (c) => c.html(STATS_HTML));
   app.post("/v1/auth/merge-guest", async (c) => {
     if (!services.mergeGuest) return c.json({ error: "Not found" }, 404);
     if (!options.origins.includes(c.req.header("origin") ?? ""))

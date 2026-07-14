@@ -2,6 +2,7 @@ Created: 12-Jul-2026 20:25 EDT
 
 | Date | ID | Description |
 |---|---|---|
+| 2026-07-14 | BKL-004 | Feat: streaks and achievements system — consecutive-day streak, 14 tiered badges, toast on results, /achievements badge wall, bottom nav |
 | 2026-07-13 | — | Feat: /admin/stats page with plays, players, plays per day, top boards |
 | 2026-07-13 | — | Fix: publisher key now persists across hard refreshes (localStorage); 401/403 triggers re-auth |
 | 2026-07-12 | BKL-003 | Feat: metric value shown in wrong-guess feedback and revealed rank slots |

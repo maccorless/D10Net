@@ -11,6 +11,8 @@ import { Archive, type ArchiveEntry } from "./archive/Archive";
 import { SignIn } from "./account/SignIn";
 import { setAccessTokenProvider } from "./game/useGame";
 import { loadLatestIssuedGame, saveIssuedGame } from "./issued-context";
+import { BottomNav } from "./nav/BottomNav";
+import { AchievementWall } from "./achievements/AchievementWall";
 import "./styles/tokens.css";
 import "./styles/game.css";
 
@@ -104,46 +106,49 @@ function TodaySetup({
   }
   if (player) return <GameScreen board={player.board} start={player.start} />;
   return (
-    <main className="setup-shell">
-      <h1>Daily Top Ten</h1>
-      <p>Find the top 10. Five wrong guesses ends it.</p>
-      <button
-        className="play-btn"
-        disabled={loading || !sessionReady}
-        onClick={() => void begin()}
-      >
-        {loading ? "Loading…" : "Play Today"}
-      </button>
-      <div className="hint-toggle">
-        <button onClick={toggleHint} aria-pressed={hintMode === "on"}>
-          {hintMode === "on" ? "Hints: On" : "Hints: Off"}
+    <>
+      <main className="setup-shell" style={{ paddingBottom: 72 }}>
+        <h1>Daily Top Ten</h1>
+        <p>Find the top 10. Five wrong guesses ends it.</p>
+        <button
+          className="play-btn"
+          disabled={loading || !sessionReady}
+          onClick={() => void begin()}
+        >
+          {loading ? "Loading…" : "Play Today"}
         </button>
-      </div>
-      {!sessionReady && !error && (
-        <p role="status" className="loading">
-          Connecting…
-        </p>
-      )}
-      {error && (
-        <>
-          <p role="alert">
-            {clockError
-              ? "Your device date seems to have traveled backward. We’ve kept your progress safe, but today’s game needs a quick time check before it can open."
-              : "Reconnect to start today’s game."}
+        <div className="hint-toggle">
+          <button onClick={toggleHint} aria-pressed={hintMode === "on"}>
+            {hintMode === "on" ? "Hints: On" : "Hints: Off"}
+          </button>
+        </div>
+        {!sessionReady && !error && (
+          <p role="status" className="loading">
+            Connecting…
           </p>
-          {cached && (
-            <button
-              onClick={() =>
-                setPlayer({ board: cached.board, start: cached.play })
-              }
-            >
-              Resume your issued game
-            </button>
-          )}
-          <a href="/archive">Open Archive</a>
-        </>
-      )}
-    </main>
+        )}
+        {error && (
+          <>
+            <p role="alert">
+              {clockError
+                ? "Your device date seems to have traveled backward. We’ve kept your progress safe, but today’s game needs a quick time check before it can open."
+                : "Reconnect to start today’s game."}
+            </p>
+            {cached && (
+              <button
+                onClick={() =>
+                  setPlayer({ board: cached.board, start: cached.play })
+                }
+              >
+                Resume your issued game
+              </button>
+            )}
+            <a href="/archive">Open Archive</a>
+          </>
+        )}
+      </main>
+      <BottomNav current="today" />
+    </>
   );
 }
 
@@ -199,25 +204,31 @@ function ArchivePage({ fetcher }: { fetcher: typeof fetch }) {
   if (game) return <GameScreen board={game.board} start={game.start} />;
   if (review)
     return (
-      <main>
-        <h1>Archive result</h1>
-        <p>{review.gameDay}</p>
-        <p>{review.score} points</p>
-        <button onClick={() => setReview(undefined)}>Back to Archive</button>
-      </main>
+      <>
+        <main style={{ paddingBottom: 72 }}>
+          <h1>Archive result</h1>
+          <p>{review.gameDay}</p>
+          <p>{review.score} points</p>
+          <button onClick={() => setReview(undefined)}>Back to Archive</button>
+        </main>
+        <BottomNav current="archive" />
+      </>
     );
   return (
-    <main>
-      {error && <p role="alert">{error}</p>}
-      <Archive
-        entries={entries}
-        onPlay={(day) => void play(day)}
-        onReview={(day) => {
-          const e = entries.find((x) => x.gameDay === day);
-          setReview({ gameDay: day, score: e?.result?.score ?? 0 });
-        }}
-      />
-    </main>
+    <>
+      <main style={{ paddingBottom: 72 }}>
+        {error && <p role="alert">{error}</p>}
+        <Archive
+          entries={entries}
+          onPlay={(day) => void play(day)}
+          onReview={(day) => {
+            const e = entries.find((x) => x.gameDay === day);
+            setReview({ gameDay: day, score: e?.result?.score ?? 0 });
+          }}
+        />
+      </main>
+      <BottomNav current="archive" />
+    </>
   );
 }
 
@@ -257,6 +268,13 @@ if (!import.meta.env.VITEST) {
   else if (location.pathname === "/today") startTodayApp();
   else if (location.pathname === "/archive")
     mount(<ArchivePage fetcher={fetch} />);
+  else if (location.pathname === "/achievements")
+    mount(
+      <>
+        <AchievementWall />
+        <BottomNav current="achievements" />
+      </>,
+    );
   else if (location.pathname === "/sign-in")
     mount(
       <main>

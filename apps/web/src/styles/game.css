@@ -68,7 +68,7 @@
 .slot-metric { display:block; font-size:10px; color:var(--muted); margin-top:1px; line-height:1.2; }
 
 /* Bottom nav */
-.bottom-nav { display:flex; background:var(--surface); border-top:1px solid color-mix(in srgb,var(--muted) 22%,transparent); padding-bottom:env(safe-area-inset-bottom,0px); }
+.bottom-nav { position:fixed; bottom:0; left:0; right:0; display:flex; background:var(--surface); border-top:1px solid color-mix(in srgb,var(--muted) 22%,transparent); padding-bottom:env(safe-area-inset-bottom,0px); z-index:10; }
 .nav-item { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:3px; min-height:56px; padding:8px 4px; border:0; background:none; color:var(--muted); font:inherit; font-size:10px; font-weight:600; letter-spacing:.02em; cursor:pointer; -webkit-tap-highlight-color:transparent; transition:color 120ms; }
 .nav-item:disabled { opacity:.5; cursor:default; pointer-events:none; }
 .nav-item.active { color:var(--accent); }
@@ -94,3 +94,35 @@
 .toast-bar.silver { background:#7090a8; }
 .toast-bar.gold { background:#b89828; }
 @keyframes toast-drain { from { transform:scaleX(1); } to { transform:scaleX(0); } }
+/* Badge wall */
+.badge-shell { min-height:100dvh; max-width:390px; margin:auto; background:var(--bg); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:var(--ink); display:flex; flex-direction:column; }
+.badge-header { display:flex; align-items:center; gap:8px; padding:16px 20px 12px; border-bottom:1px solid color-mix(in srgb,var(--muted) 22%,transparent); position:sticky; top:0; background:var(--bg); z-index:2; }
+.badge-title { font-size:17px; font-weight:700; flex:1; }
+.badge-content { padding:0 20px 120px; overflow-y:auto; }
+.badge-section-label { margin:20px 0 8px; font-size:11px; font-weight:700; letter-spacing:.07em; text-transform:uppercase; color:var(--muted); }
+/* Streak track */
+.streak-track { display:flex; align-items:center; margin:4px 0 8px; }
+.streak-node { display:flex; flex-direction:column; align-items:center; gap:4px; }
+.streak-dot { width:14px; height:14px; border-radius:50%; border:2px solid color-mix(in srgb,var(--muted) 35%,transparent); background:transparent; position:relative; }
+.streak-dot.earned { background:var(--accent); border-color:var(--accent); }
+.streak-dot.earned::after { content:''; position:absolute; inset:-4px; border-radius:50%; background:color-mix(in srgb,var(--accent) 20%,transparent); }
+.streak-label { font-size:10px; font-weight:600; color:var(--muted); font-variant-numeric:tabular-nums; }
+.streak-line { flex:1; height:2px; background:color-mix(in srgb,var(--muted) 22%,transparent); margin-bottom:14px; position:relative; overflow:hidden; }
+.streak-line::after { content:''; position:absolute; left:0; top:0; bottom:0; background:var(--accent); width:0; }
+.streak-line.filled::after { width:100%; }
+/* Achievement rows */
+.ach-row { display:flex; align-items:flex-start; gap:12px; padding:10px 0; border-bottom:1px solid color-mix(in srgb,var(--muted) 15%,transparent); }
+.ach-row:last-child { border-bottom:0; }
+.ach-info { flex:1; min-width:0; }
+.ach-name { font-size:14px; font-weight:600; line-height:1.2; }
+.ach-desc { font-size:12px; color:var(--muted); margin-top:2px; line-height:1.3; }
+.ach-progress { font-size:12px; color:var(--muted); font-variant-numeric:tabular-nums; margin-top:2px; }
+.ach-right { flex-shrink:0; display:flex; flex-direction:column; align-items:flex-end; gap:4px; }
+.ach-row.locked .ach-name { color:var(--muted); }
+/* Tier pips */
+.tier-pips { display:flex; gap:3px; }
+.tier-pip { display:inline-flex; align-items:center; justify-content:center; min-width:26px; height:17px; border-radius:4px; font-size:10px; font-weight:700; font-variant-numeric:tabular-nums; border:1.5px solid color-mix(in srgb,var(--muted) 35%,transparent); color:var(--muted); background:transparent; opacity:.55; }
+.tier-pip.bronze-earned { background:#b5724a; border-color:#b5724a; color:#fff; opacity:1; }
+.tier-pip.silver-earned { background:#7090a8; border-color:#7090a8; color:#fff; opacity:1; }
+.tier-pip.gold-earned { background:#b89828; border-color:#b89828; color:#fff; opacity:1; }
+.ach-row.locked .tier-pips { opacity:.4; }

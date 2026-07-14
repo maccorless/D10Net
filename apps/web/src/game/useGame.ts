@@ -7,9 +7,8 @@ import {
   useHint as revealHint,
   type GameState,
 } from "@daily/game";
+import { read, write, remove, getAll } from "../db";
 
-const DB_NAME = "daily-top-ten";
-const DB_VERSION = 2;
 let accessTokenProvider: () => string | undefined = () => undefined;
 
 export function setAccessTokenProvider(provider: () => string | undefined) {
@@ -24,59 +23,6 @@ function requestHeaders() {
   };
 }
 
-function openDb(): Promise<IDBDatabase> {
-  return new Promise((resolve, reject) => {
-    const request = indexedDB.open(DB_NAME, DB_VERSION);
-    request.onupgradeneeded = () => {
-      const db = request.result;
-      if (!db.objectStoreNames.contains("games")) db.createObjectStore("games");
-      if (!db.objectStoreNames.contains("finishQueue"))
-        db.createObjectStore("finishQueue");
-      if (!db.objectStoreNames.contains("issuedGames"))
-        db.createObjectStore("issuedGames");
-    };
-    request.onsuccess = () => resolve(request.result);
-    request.onerror = () => reject(request.error);
-  });
-}
-
-async function read<T>(store: string, key: string): Promise<T | undefined> {
-  const db = await openDb();
-  return new Promise((resolve, reject) => {
-    const request = db.transaction(store).objectStore(store).get(key);
-    request.onsuccess = () => resolve(request.result as T | undefined);
-    request.onerror = () => reject(request.error);
-  });
-}
-
-async function write(
-  store: string,
-  key: string,
-  value: unknown,
-): Promise<void> {
-  const db = await openDb();
-  return new Promise((resolve, reject) => {
-    const request = db
-      .transaction(store, "readwrite")
-      .objectStore(store)
-      .put(value, key);
-    request.onsuccess = () => resolve();
-    request.onerror = () => reject(request.error);
-  });
-}
-
-async function remove(store: string, key: string): Promise<void> {
-  const db = await openDb();
-  await new Promise<void>((resolve, reject) => {
-    const request = db
-      .transaction(store, "readwrite")
-      .objectStore(store)
-      .delete(key);
-    request.onsuccess = () => resolve();
-    request.onerror = () => reject(request.error);
-  });
-}
-
 export async function queueFinishResult(result: PlayResult) {
   await write(
     "finishQueue",
@@ -88,15 +34,7 @@ export async function queueFinishResult(result: PlayResult) {
 export async function flushFinishQueue(
   fetcher: typeof fetch = fetch,
 ): Promise<void> {
-  const db = await openDb();
-  const results = await new Promise<PlayResult[]>((resolve, reject) => {
-    const request = db
-      .transaction("finishQueue")
-      .objectStore("finishQueue")
-      .getAll();
-    request.onsuccess = () => resolve(request.result as PlayResult[]);
-    request.onerror = () => reject(request.error);
-  });
+  const results = await getAll<PlayResult>("finishQueue");
   for (const result of results) {
     try {
       const response = await fetcher(`/v1/plays/${result.playId}/finish`, {

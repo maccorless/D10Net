@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   formatMetricValue,
   type Board,
@@ -6,9 +6,19 @@ import {
 } from "@daily/contracts";
 import { SearchPicker } from "./SearchPicker";
 import { useGame, type GamePersistence } from "./useGame";
-import { deriveResult, getGuessRank } from "@daily/game";
+import {
+  deriveResult,
+  getGuessRank,
+  applyDailyResult,
+  emptyStreaks,
+} from "@daily/game";
 import { Results } from "../results/Results";
 import { logGameStart, logGameEnd } from "./tracker";
+import { processResult, type AchievementUnlock } from "../achievements/store";
+import { AchievementToast } from "../achievements/AchievementToast";
+import { BottomNav } from "../nav/BottomNav";
+import { read, write } from "../db";
+import type { Streaks } from "@daily/game";
 
 type Props = { board: Board; start: PlayStart; persistence?: GamePersistence };
 
@@ -26,6 +36,9 @@ export function GameScreen({ board, start, persistence }: Props) {
   const game = useGame(board, start, persistence);
   const loggedStart = useRef(false);
   const loggedEnd = useRef(false);
+  const achievementsEvaluated = useRef(false);
+  const [newUnlocks, setNewUnlocks] = useState<AchievementUnlock[]>([]);
+  const [playedStreak, setPlayedStreak] = useState({ current: 0, best: 0 });
 
   useEffect(() => {
     if (game.restoring || loggedStart.current) return;
@@ -51,6 +64,62 @@ export function GameScreen({ board, start, persistence }: Props) {
       loggedEnd.current = true;
     }
   }, [game.state, board.id, board.title]);
+
+  useEffect(() => {
+    const done = game.state.foundIds.length === 10 || game.state.strikes === 5;
+    if (!done || achievementsEvaluated.current) return;
+    achievementsEvaluated.current = true;
+    const gr = deriveResult(game.state);
+    void (async () => {
+      const streaks: Streaks =
+        (await read<Streaks>("games", "streaks")) ?? emptyStreaks;
+      const updated =
+        start.mode === "daily" && start.gameDay
+          ? applyDailyResult(
+              streaks,
+              {
+                score: gr.score,
+                answersFound: gr.answersFound,
+                hintMode: game.state.hintMode,
+              },
+              start.gameDay,
+            )
+          : streaks;
+      await write("games", "streaks", updated);
+      setPlayedStreak({
+        current: updated.played.current,
+        best: updated.played.best,
+      });
+      const achResult = {
+        playId: start.playId,
+        mode: start.mode,
+        gameDay: start.gameDay,
+        boardId: start.boardId,
+        boardVersion: start.boardVersion,
+        score: gr.score,
+        answersFound: gr.answersFound,
+        hintMode: game.state.hintMode,
+        hintUsed: game.state.hintUsed,
+        strikesUsed: gr.strikes,
+        elapsedMs: Date.now() - game.state.startedAtMs,
+        completed: gr.answersFound === 10,
+        tags: board.tags,
+      };
+      const unlocks = await processResult(achResult, {
+        current: updated.played.current,
+        best: updated.played.best,
+      });
+      setNewUnlocks(unlocks);
+    })();
+  }, [
+    game.state.foundIds.length,
+    game.state.strikes,
+    game.state.hintMode,
+    game.state.hintUsed,
+    game.state.startedAtMs,
+    start,
+    board.tags,
+  ]);
 
   if (game.restoring)
     return (
@@ -98,17 +167,25 @@ export function GameScreen({ board, start, persistence }: Props) {
     const nextBoardAt = new Date();
     nextBoardAt.setHours(24, 0, 0, 0);
     return (
-      <main className="game-shell results-shell" aria-label="Results">
-        <Results
-          result={shareResult}
-          streak={0}
-          bestStreak={0}
-          nextBoardAt={nextBoardAt}
-          missedAnswers={missed}
-          wrongGuesses={wrongGuesses}
-          foundInOrder={foundInOrder}
-        />
-      </main>
+      <>
+        <main
+          className="game-shell results-shell"
+          aria-label="Results"
+          style={{ paddingBottom: 72 }}
+        >
+          <Results
+            result={shareResult}
+            streak={playedStreak.current}
+            bestStreak={playedStreak.best}
+            nextBoardAt={nextBoardAt}
+            missedAnswers={missed}
+            wrongGuesses={wrongGuesses}
+            foundInOrder={foundInOrder}
+          />
+        </main>
+        <AchievementToast unlocks={newUnlocks} />
+        <BottomNav current="today" />
+      </>
     );
   }
   return (

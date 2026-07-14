@@ -4,7 +4,7 @@ Created: 14-Jul-2026 10:00 EDT
 
 ## Summary
 
-A single primary streak (consecutive days played) drives daily return. All other performance milestones become achievements with Bronze/Silver/Gold tiers. Achievements are stored locally (guest-first, migration-ready) and surfaced via toast on the results screen and a browsable badge wall.
+A single primary streak (consecutive days played) drives daily return. All other performance milestones are achievements with Bronze/Silver/Gold tiers. Achievements are stored locally (guest-first, migration-ready) and surfaced via toast on the results screen and a browsable badge wall.
 
 ---
 
@@ -19,83 +19,149 @@ A single primary streak (consecutive days played) drives daily return. All other
 
 **Streak milestone achievements** (one-time unlocks, not tiered):
 
-| Milestone | Days |
-|---|---|
-| First Week | 7 |
-| Month | 30 |
-| Century | 100 |
-| Year | 365 |
+| ID | Display label | Condition |
+|---|---|---|
+| `streak-7` | First Week | Consecutive days streak reaches 7 |
+| `streak-30` | Month | Consecutive days streak reaches 30 |
+| `streak-100` | Century | Consecutive days streak reaches 100 |
+| `streak-365` | Year | Consecutive days streak reaches 365 |
+
+Streak milestones are Daily-only. Archive plays do not contribute.
 
 ---
 
 ## Achievements
 
-All tiered achievements use Bronze / Silver / Gold. Tier thresholds vary by type.
+All tiered achievements use Bronze / Silver / Gold. Tiers are permanent — earning Gold does not remove Bronze.
 
 ### Score Precision (lifetime count: 1x / 10x / 100x)
 
-| Badge | Description | Bronze | Silver | Gold |
-|---|---|---|---|---|
-| It Goes to 11 | Score 11 on a Daily board | 1st | 10th | 100th |
-| Perfect Ten | Find all 10 answers | 1st | 10th | 100th |
-| Full Deck | Finish with all 5 strikes remaining | 1st | 10th | 100th |
-| Purist | Perfect Ten with Hints Off | 1st | 10th | 100th |
+Daily or Archive boards qualify unless noted.
+
+| ID | Display label | Condition | Bronze | Silver | Gold |
+|---|---|---|---|---|---|
+| `it-goes-to-11` | It Goes to 11 | `score === 11` on a completed play | 1st | 10th | 100th |
+| `perfect-ten` | Perfect Ten | All 10 answers found | 1st | 10th | 100th |
+| `full-deck` | Full Deck | All 10 found with `strikesUsed === 0` | 1st | 10th | 100th |
+| `purist` | Purist | All 10 found with `hintMode === "off"` | 1st | 10th | 100th |
+
+Note: `it-goes-to-11` evaluates `score === 11` against the result, not internal bonus mechanics. `full-deck` uses `strikesUsed === 0`, which equals "5 strikes remaining" in player-facing copy.
 
 ### The #1 Call
 
-| Badge | Description | Bronze | Silver | Gold |
+Daily or Archive boards qualify.
+
+| ID | Display label | Condition | Bronze | Silver | Gold |
+|---|---|---|---|---|---|
+| `called-it` | Called It | Correct #1 call on a completed play | 1st | 10th | 100th |
+| `oracle` | Oracle | Consecutive boards with a correct #1 call (resets on any incorrect call or any board where the #1 call is not used) | 3 | 5 | 10 |
+
+### Cumulative Score Windows (rolling, Daily boards only)
+
+Tier upgrades when any rolling window ever clears the threshold. Archive plays do not count — a player could replay many archive boards in one day and hit 77 points without the sustained daily performance the window is designed to measure.
+
+| ID | Display label | Bronze | Silver | Gold |
 |---|---|---|---|---|
-| Called It | Correctly call #1 | 1st | 10th | 100th |
-| Oracle | Consecutive correct #1 calls (resets on any incorrect call or any board where the #1 call is not used) | 3 | 5 | 10 |
+| `week-score` | Week Score | 50 pts in any rolling 7-day window | 70 pts | 77 pts |
+| `month-score` | Month Score | 100 pts in any rolling 30-day window | 200 pts | 300 pts |
 
-### Cumulative Score Windows (rolling, any qualifying window ever)
+Note: 77 is the maximum possible weekly score (11 pts × 7 days). 300 is near-maximum monthly (11 × 30 = 330).
 
-| Badge | Bronze | Silver | Gold |
-|---|---|---|---|
-| Week Score | 50 pts in 7 days | 70 pts in 7 days | 77 pts in 7 days |
-| Month Score | 100 pts in 30 days | 200 pts in 30 days | 300 pts in 30 days |
+### Speed (lifetime count: 1x / 10x / 100x)
 
-Note: 77 is the maximum possible weekly score (11 pts/day × 7 days). 300 is near-maximum monthly.
+Daily boards only. Requires all 10 answers found (perfect completion). Archive boards and non-perfect completions do not qualify.
 
-### Speed (lifetime count: 1x / 10x / 100x, qualifying time threshold)
-
-| Badge | Bronze | Silver | Gold |
-|---|---|---|---|
-| Fast Finish | Complete a Daily board in under 2 min (archive boards excluded) | Under 1 min | Under 30 sec |
+| ID | Display label | Bronze | Silver | Gold |
+|---|---|---|---|---|
+| `fast-finish` | Fast Finish | All 10 found in under 2 min | Under 1 min | Under 30 sec |
 
 ### Comeback (one-time unlock)
 
-| Badge | Condition |
-|---|---|
-| Phoenix | Complete a Daily board after breaking a streak of 30 or more days |
+| ID | Display label | Condition |
+|---|---|---|
+| `phoenix` | Phoenix | Complete a Daily board after breaking a streak of 30 or more days |
+
+---
+
+## Evaluation Contract
+
+Achievement evaluation takes a normalized result record and the player's existing achievement state. It returns zero or more new unlock events. Evaluation is deterministic and idempotent — replaying the same `playId` produces no new unlocks.
+
+```ts
+type AchievementResult = {
+  playId: string;
+  mode: "daily" | "archive";
+  gameDay: string;
+  boardId: string;
+  boardVersion: number;
+  score: number;
+  answersFound: number;
+  hintMode: "on" | "off";
+  hintUsed: boolean;
+  strikesUsed: number;
+  elapsedMs: number;
+  completed: boolean;
+  tags: string[];        // reserved for future theme achievements
+};
+
+type AchievementUnlock = {
+  achievementId: string;
+  tier: 1 | 2 | 3;      // 1 = Bronze, 2 = Silver, 3 = Gold
+  unlockedAt: string;    // ISO timestamp
+  playId: string;        // source play for audit
+};
+```
+
+### Configuration
+
+Thresholds are configuration, not hard-coded:
+
+```ts
+const achievementConfig = {
+  fastFinishMs: [120_000, 60_000, 30_000],   // Bronze, Silver, Gold
+  weekScorePts: [50, 70, 77],
+  monthScorePts: [100, 200, 300],
+  streakMilestones: [7, 30, 100, 365],
+  oracleConsecutive: [3, 5, 10],
+  lifetimeCountTiers: [1, 10, 100],
+};
+```
 
 ---
 
 ## Data Model (Local Storage, Migration-Ready)
 
-Each achievement is stored as a record with stable string IDs. Server merge is a straight upsert by ID.
+Each achievement stored with a stable string ID. Server merge is a straight upsert by ID — server wins on tier, count, and bestValue if server values are higher.
 
 ```ts
 interface AchievementRecord {
-  achievementId: string;       // e.g. "perfect-ten", "oracle", "week-score"
-  tier: 0 | 1 | 2 | 3;        // 0 = locked, 1 = Bronze, 2 = Silver, 3 = Gold
-  count: number;               // lifetime qualifying event count
-  bestValue?: number;          // for Oracle (streak length), Fast Finish (seconds)
-  unlockedAt: string[];        // ISO timestamp per tier earned (index 0 = Bronze, etc.)
+  achievementId: string;
+  tier: 0 | 1 | 2 | 3;       // 0 = locked, 1–3 = Bronze/Silver/Gold
+  count: number;              // lifetime qualifying event count
+  bestValue?: number;         // Oracle: current consecutive count; Fast Finish: best elapsedMs
+  unlockedAt: string[];       // ISO timestamp per tier earned (index 0 = Bronze)
+  evaluatedPlayIds: string[]; // idempotency: play IDs already evaluated
 }
 ```
 
-Achievement IDs:
-- `it-goes-to-11`, `perfect-ten`, `full-deck`, `purist`
-- `called-it`, `oracle`
-- `week-score`, `month-score`
-- `fast-finish`
-- `streak-7`, `streak-30`, `streak-100`, `streak-365` (one-time, tier always = 3 when unlocked)
-- `phoenix`
+Rolling window evaluation (week-score, month-score) runs on Daily result submission. The client maintains a rolling array of `{ gameDay, score }` entries for the last 30 days and evaluates window sums on each new result.
 
-Rolling window evaluation (week-score, month-score) runs on Daily result submission. The client maintains a rolling array of Daily scores with timestamps and evaluates whether any 7-day or 30-day window clears a new tier threshold.
+When a registered account syncs, local records merge into the server profile: server wins on tier, count, bestValue; `unlockedAt` arrays merge and deduplicate; `evaluatedPlayIds` union to prevent re-evaluation on either side.
 
-When a registered account syncs, local achievement records merge into the server profile via idempotent upsert: server wins on tier, count, and bestValue if server values are higher; unlockedAt arrays merge and deduplicate.
+---
+
+## Acceptance Tests
+
+The achievement evaluator must have deterministic tests for:
+
+- `it-goes-to-11` unlocks on `score === 11` and is idempotent on replayed `playId`.
+- `full-deck` unlocks only when `strikesUsed === 0`.
+- Archive play unlocks `perfect-ten`, `it-goes-to-11`, `full-deck`, `purist`, `called-it`, `oracle` but never streak milestones, `fast-finish`, `week-score`, `month-score`, or `phoenix`.
+- `fast-finish` requires `mode === "daily"` and `answersFound === 10`.
+- `oracle` consecutive count resets when `called-it` is not used or is incorrect.
+- Rolling window correctly identifies a qualifying 7-day and 30-day span.
+- Guest-to-account merge preserves existing unlocks and does not duplicate.
+- Replayed result submission (same `playId`) produces no new unlock events.
 
 ---
 
@@ -103,16 +169,16 @@ When a registered account syncs, local achievement records merge into the server
 
 ### Toast (Results Screen)
 
-- Achievements earned during a play session surface as toasts after the results screen renders — never mid-game.
-- If multiple achievements unlock in one session, queue them sequentially.
+- Toasts surface after the results screen renders, never mid-game.
+- Multiple unlocks in one session queue sequentially.
 - Each toast shows: badge name, tier earned, one-line description.
 - Auto-dismisses after ~4 seconds; tappable to dismiss early.
 
 ### Badge Wall
 
 - Accessible via nav (placement and visual design deferred to frontend-design skill).
-- Achievements grouped by category: Streak Milestones, Score Precision, The #1 Call, Score Windows, Speed, Comeback.
-- Each badge shows current tier (Bronze/Silver/Gold) or locked state.
+- Grouped by category: Streak Milestones, Score Precision, The #1 Call, Score Windows, Speed, Comeback.
+- Each badge shows current tier or locked state.
 - Tiered badges show progress toward next tier (e.g. "7 / 10 Perfect Tens").
 - Streak milestones display as a linear timeline (7 → 30 → 100 → 365), earned entries lit up.
 
@@ -122,7 +188,7 @@ When a registered account syncs, local achievement records merge into the server
 
 ## Deferred
 
-- Theme mastery badges (Geography, Sports, Music, Science, Culture) — deferred until theme filtering ships.
+- Theme mastery badges (Geography, Sports, Music, Science, Culture) — deferred until theme filtering ships. IDs reserved as `theme-{tag}-play-{n}`.
 - Streak freeze / shield mechanic — explicitly excluded; hard break is intentional.
 - Achievement points or XP system — YAGNI.
 - Social sharing of specific achievements — evaluate after badge wall ships.

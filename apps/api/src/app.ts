@@ -7,6 +7,75 @@ import { PlayResultSchema, type StartedGame } from "@daily/contracts";
 import type { createPublisherService } from "./publisher.js";
 import { timingSafeEqual } from "node:crypto";
 
+const ADMIN_HTML = `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>D10Net Admin</title>
+<style>
+  html{font-size:18px}
+  body{font-family:sans-serif;max-width:400px;margin:4rem auto;padding:0 1rem;color:#222}
+  h1{margin-bottom:1.5rem}
+  input{display:block;margin:.5rem 0;padding:.5rem;width:100%;font-size:1rem;box-sizing:border-box}
+  button{padding:.5rem 1.25rem;font-size:1rem;cursor:pointer}
+  .err{color:red;margin:.5rem 0}
+  .links{display:flex;flex-direction:column;gap:1rem;margin-top:1.5rem}
+  .links a{display:block;padding:.75rem 1rem;background:#f0f0f0;border-radius:.4rem;text-decoration:none;color:#222;font-weight:500}
+  .links a:hover{background:#e0e0e0}
+  @media(prefers-color-scheme:dark){
+    body{background:#111;color:#eee}
+    .links a{background:#222;color:#eee}
+    .links a:hover{background:#333}
+  }
+</style>
+</head>
+<body>
+<h1>Admin</h1>
+<div id="signin">
+  <form id="keyform">
+    <label>Publisher key<input type="password" id="keyinput" required></label>
+    <button type="submit">Sign in</button>
+    <p class="err" id="keyerr" style="display:none">Invalid key.</p>
+  </form>
+</div>
+<div id="links" style="display:none">
+  <div class="links">
+    <a href="/publisher/">Upload gameboards</a>
+    <a href="/admin/stats">Show stats</a>
+  </div>
+  <p style="margin-top:2rem"><button id="signout">Sign out</button></p>
+</div>
+<script>
+(function(){
+  var key=localStorage.getItem('publisher_key')||'';
+  function verify(k,cb){
+    fetch('/admin/stats-data',{headers:{authorization:'Bearer '+k}}).then(function(r){cb(r.ok);});
+  }
+  function showLinks(){
+    document.getElementById('signin').style.display='none';
+    document.getElementById('links').style.display='';
+  }
+  document.getElementById('keyform').addEventListener('submit',function(e){
+    e.preventDefault();
+    var k=document.getElementById('keyinput').value;
+    verify(k,function(ok){
+      if(!ok){document.getElementById('keyerr').style.display='';return;}
+      localStorage.setItem('publisher_key',k);
+      showLinks();
+    });
+  });
+  document.getElementById('signout').addEventListener('click',function(){
+    localStorage.removeItem('publisher_key');
+    document.getElementById('signin').style.display='';
+    document.getElementById('links').style.display='none';
+  });
+  if(key){verify(key,function(ok){if(ok)showLinks();});}
+})();
+</script>
+</body>
+</html>`;
+
 const STATS_HTML = `<!doctype html>
 <html lang="en">
 <head>
@@ -591,6 +660,7 @@ export function createApp(
     if (!services.stats) return c.json({ error: "Not available" }, 501);
     return c.json(await services.stats());
   });
+  app.get("/admin", (c) => c.html(ADMIN_HTML));
   app.get("/admin/stats", (c) => c.html(STATS_HTML));
   app.post("/v1/auth/merge-guest", async (c) => {
     if (!services.mergeGuest) return c.json({ error: "Not found" }, 404);

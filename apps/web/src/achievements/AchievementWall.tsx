@@ -5,6 +5,7 @@ interface AchievementMeta {
   id: string;
   name: string;
   desc: string;
+  icon: string;
   tiered: boolean; // false = one-time unlock
 }
 
@@ -39,87 +40,108 @@ const META: Record<string, AchievementMeta> = {
   "streak-7": {
     id: "streak-7",
     name: "First Week",
+    icon: "🔥",
     desc: "7-day streak",
     tiered: false,
   },
   "streak-30": {
     id: "streak-30",
     name: "Month",
+    icon: "🌙",
     desc: "30-day streak",
     tiered: false,
   },
   "streak-100": {
     id: "streak-100",
     name: "Century",
+    icon: "💯",
     desc: "100-day streak",
     tiered: false,
   },
   "streak-365": {
     id: "streak-365",
     name: "Year",
+    icon: "👑",
     desc: "365-day streak",
     tiered: false,
   },
   "it-goes-to-11": {
     id: "it-goes-to-11",
     name: "It Goes to 11",
+    icon: "🤘",
     desc: "Score 11 points on a completed play",
     tiered: true,
   },
   "perfect-ten": {
     id: "perfect-ten",
     name: "Perfect Ten",
+    icon: "💎",
     desc: "Find all 10 answers",
     tiered: true,
   },
   "full-deck": {
     id: "full-deck",
     name: "Full Deck",
+    icon: "🃏",
     desc: "All 10 found, no strikes",
     tiered: true,
   },
   purist: {
     id: "purist",
     name: "Purist",
+    icon: "🧘",
     desc: "All 10 found with Hints Off",
     tiered: true,
   },
   "called-it": {
     id: "called-it",
     name: "Called It",
+    icon: "☝️",
     desc: "Correct #1 call on a completed play",
     tiered: true,
   },
   oracle: {
     id: "oracle",
     name: "Oracle",
+    icon: "🔮",
     desc: "Consecutive games with a correct #1 call",
     tiered: true,
   },
   "week-score": {
     id: "week-score",
     name: "Week Score",
+    icon: "📈",
     desc: "Points in any 7-day window (50 / 70 / 77)",
     tiered: true,
   },
   "month-score": {
     id: "month-score",
     name: "Month Score",
+    icon: "📊",
     desc: "Points in any 30-day window (100 / 200 / 300)",
     tiered: true,
   },
   "fast-finish": {
     id: "fast-finish",
     name: "Fast Finish",
-    desc: "All 10 answers found fast (2 min / 1 min / 30 sec)",
+    icon: "⚡",
+    desc: "All 10 found fast (2 min / 1 min / 30 sec)",
     tiered: true,
   },
   phoenix: {
     id: "phoenix",
     name: "Phoenix",
+    icon: "🦅",
     desc: "Returned after breaking a 30+ day streak",
     tiered: false,
   },
+};
+
+const STREAK_ICONS: Record<number, string> = {
+  7: "🔥",
+  30: "🌙",
+  100: "💯",
+  365: "👑",
 };
 
 const STREAK_NODES = [7, 30, 100, 365];
@@ -153,7 +175,9 @@ function StreakTrack({ records }: { records: AchievementRecord[] }) {
           <div className="streak-node" key={n}>
             <div
               className={`streak-dot${earned.has(`streak-${n}`) ? " earned" : ""}`}
-            />
+            >
+              <span className="streak-dot-icon">{STREAK_ICONS[n]}</span>
+            </div>
             <span className="streak-label">{n}</span>
           </div>
           {i < STREAK_NODES.length - 1 && (
@@ -181,6 +205,7 @@ function AchRow({
     if (meta.id.startsWith("streak-")) return null;
     return (
       <div className={`ach-row${locked ? " locked" : ""}`}>
+        <div className="ach-icon">{meta.icon}</div>
         <div className="ach-info">
           <div className="ach-name">{meta.name}</div>
           <div className="ach-desc">{meta.desc}</div>
@@ -207,6 +232,7 @@ function AchRow({
   }
   return (
     <div className={`ach-row${locked ? " locked" : ""}`}>
+      <div className="ach-icon">{meta.icon}</div>
       <div className="ach-info">
         <div className="ach-name">{meta.name}</div>
         <div className="ach-desc">{meta.desc}</div>

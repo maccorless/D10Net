@@ -11,7 +11,9 @@ type Props = {
 export function SearchPicker({ search, onSelect, armed }: Props) {
   const [query, setQuery] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
-  const suggestions = search(query).slice(0, 6);
+  const suggestions = search(query).sort((a, b) =>
+    a.label.localeCompare(b.label),
+  );
   return (
     <div className="picker">
       <label htmlFor="answer-search">Guess an answer</label>

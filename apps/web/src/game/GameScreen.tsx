@@ -67,7 +67,7 @@ export function GameScreen({ board, start, persistence }: Props) {
 
   useEffect(() => {
     const done = game.state.foundIds.length === 10 || game.state.strikes === 5;
-    if (!done || achievementsEvaluated.current) return;
+    if (!done || game.restoring || achievementsEvaluated.current) return;
     achievementsEvaluated.current = true;
     const gr = deriveResult(game.state);
     void (async () => {
@@ -112,6 +112,7 @@ export function GameScreen({ board, start, persistence }: Props) {
       setNewUnlocks(unlocks);
     })();
   }, [
+    game.restoring,
     game.state.foundIds.length,
     game.state.strikes,
     game.state.hintMode,

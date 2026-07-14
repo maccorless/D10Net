@@ -66,3 +66,23 @@
 /* Metric value chips */
 .metric-chip { font-size:11px; color:var(--muted); font-variant-numeric:tabular-nums; }
 .slot-metric { display:block; font-size:10px; color:var(--muted); margin-top:1px; line-height:1.2; }
+
+/* Achievement toast */
+.toast-region { position:fixed; bottom:72px; left:12px; right:12px; max-width:390px; margin:0 auto; z-index:100; pointer-events:none; }
+.toast { background:var(--surface); border-radius:var(--radius); box-shadow:0 8px 24px color-mix(in srgb,var(--ink) 18%,transparent),0 2px 6px color-mix(in srgb,var(--ink) 8%,transparent); overflow:hidden; pointer-events:all; display:flex; align-items:center; gap:10px; padding:12px 14px 16px; transform:translateY(calc(100% + 20px)); opacity:0; transition:transform 280ms cubic-bezier(.34,1.56,.64,1),opacity 200ms ease; }
+.toast.toast-entering { transform:translateY(0); opacity:1; }
+.toast.toast-exiting { transform:translateY(calc(100% + 20px)); opacity:0; transition:transform 220ms ease-in,opacity 200ms ease; }
+.toast-tier-dot { width:32px; height:32px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:13px; font-weight:800; }
+.toast-tier-dot.bronze { background:color-mix(in srgb,#b5724a 15%,transparent); color:#b5724a; }
+.toast-tier-dot.silver { background:color-mix(in srgb,#7090a8 15%,transparent); color:#7090a8; }
+.toast-tier-dot.gold { background:color-mix(in srgb,#b89828 15%,transparent); color:#b89828; }
+.toast-body { flex:1; min-width:0; }
+.toast-name { font-size:14px; font-weight:700; line-height:1.2; }
+.toast-sub { font-size:12px; color:var(--muted); margin-top:2px; }
+.toast-dismiss { border:0; background:none; color:var(--muted); font-size:18px; line-height:1; cursor:pointer; padding:2px 4px; border-radius:6px; flex-shrink:0; }
+.toast-bar-track { position:absolute; bottom:0; left:0; right:0; height:3px; background:color-mix(in srgb,var(--muted) 15%,transparent); }
+.toast-bar { height:100%; transform-origin:left; }
+.toast-bar.bronze { background:#b5724a; }
+.toast-bar.silver { background:#7090a8; }
+.toast-bar.gold { background:#b89828; }
+@keyframes toast-drain { from { transform:scaleX(1); } to { transform:scaleX(0); } }

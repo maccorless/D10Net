@@ -85,21 +85,21 @@ if (
   const webRoot = join(__dirname, "../../web/dist");
   const publisherRoot = join(__dirname, "../../publisher/dist");
 
-  // Publisher app at /publisher/*
+  // Publisher app at /admin/gameboards/*
   app.use(
-    "/publisher/*",
+    "/admin/gameboards/*",
     serveStatic({
       root: publisherRoot,
-      rewriteRequestPath: (p) => p.replace(/^\/publisher/, ""),
+      rewriteRequestPath: (p) => p.replace(/^\/admin\/gameboards/, ""),
     }),
   );
-  app.get("/publisher", (c) => c.redirect("/publisher/"));
+  app.get("/admin/gameboards", (c) => c.redirect("/admin/gameboards/"));
   app.get(
-    "/publisher/",
+    "/admin/gameboards/",
     serveStatic({ root: publisherRoot, path: "index.html" }),
   );
   app.get(
-    "/publisher/*",
+    "/admin/gameboards/*",
     serveStatic({ root: publisherRoot, path: "index.html" }),
   );
 
@@ -108,6 +108,9 @@ if (
 
   // API routes
   app.route("/", apiApp);
+
+  // Prevent /admin* from falling through to the web SPA
+  app.get("/admin/*", (c) => c.text("Not found", 404));
 
   // Web app catch-all (SPA fallback)
   app.use("*", serveStatic({ root: webRoot }));

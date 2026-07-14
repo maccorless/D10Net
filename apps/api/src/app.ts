@@ -41,7 +41,7 @@ const ADMIN_HTML = `<!doctype html>
 </div>
 <div id="links" style="display:none">
   <div class="links">
-    <a href="/publisher/">Upload gameboards</a>
+    <a href="/admin/gameboards/">Upload gameboards</a>
     <a href="/admin/stats">Show stats</a>
   </div>
   <p style="margin-top:2rem"><button id="signout">Sign out</button></p>
@@ -120,6 +120,8 @@ const STATS_HTML = `<!doctype html>
   <table id="byday"><thead><tr><th>Date</th><th>Started</th><th>Finished</th></tr></thead><tbody></tbody></table>
   <h2>Top boards</h2>
   <table id="boards"><thead><tr><th>Board</th><th>ID</th><th>Plays</th><th>Finished</th></tr></thead><tbody></tbody></table>
+  <h2>Recent plays (last 25)</h2>
+  <table id="recent"><thead><tr><th>Time</th><th>Board</th><th>Found</th><th>Score</th></tr></thead><tbody></tbody></table>
 </div>
 <script>
 (function(){
@@ -154,6 +156,13 @@ const STATS_HTML = `<!doctype html>
     var boardBody=document.querySelector('#boards tbody');
     boardBody.innerHTML=d.topBoards.map(function(r){
       return '<tr><td>'+r.title+'</td><td>'+r.boardId+'</td><td>'+r.plays+'</td><td>'+r.finished+'</td></tr>';
+    }).join('');
+    var recentBody=document.querySelector('#recent tbody');
+    recentBody.innerHTML=d.recentPlays.map(function(r){
+      var t=new Date(r.finishedAt);
+      var ts=t.toLocaleDateString()+' '+t.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'});
+      var found=r.answersFound!=null?r.answersFound+'/10':'—';
+      return '<tr><td>'+ts+'</td><td>'+r.title+'</td><td>'+found+'</td><td>'+r.score+'</td></tr>';
     }).join('');
   }
   document.getElementById('keyform').addEventListener('submit',function(e){
@@ -650,7 +659,7 @@ export function createApp(
         `d10_csrf=${options.csrfToken(consumed.sessionToken)}; Path=/; Secure; SameSite=Strict`,
         { append: true },
       );
-    return c.redirect("/publisher/");
+    return c.redirect("/admin/gameboards/");
   });
   app.get("/admin/stats-data", async (c) => {
     const bearer = (c.req.header("authorization") ?? "").trim();
@@ -661,6 +670,7 @@ export function createApp(
     return c.json(await services.stats());
   });
   app.get("/admin", (c) => c.html(ADMIN_HTML));
+  app.get("/admin/", (c) => c.redirect("/admin"));
   app.get("/admin/stats", (c) => c.html(STATS_HTML));
   app.post("/v1/auth/merge-guest", async (c) => {
     if (!services.mergeGuest) return c.json({ error: "Not found" }, 404);

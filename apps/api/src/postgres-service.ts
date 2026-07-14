@@ -247,6 +247,18 @@ export function createPostgresServices(
         group by p.board_id, b.title
         order by plays desc
         limit 15`;
+      const recentPlays = await sql`
+        select
+          p.finished_at,
+          p.game_day::text,
+          b.title,
+          p.score,
+          p.authoritative_result
+        from plays p
+        join boards b on b.id = p.board_id
+        where p.finished_at is not null
+        order by p.finished_at desc
+        limit 25`;
       return {
         totalPlays: totals!.total_plays as number,
         completedPlays: totals!.completed_plays as number,
@@ -263,6 +275,17 @@ export function createPostgresServices(
           plays: r.plays as number,
           finished: r.finished as number,
         })),
+        recentPlays: recentPlays.map((r) => {
+          const ar = r.authoritative_result as Record<string, unknown> | null;
+          return {
+            finishedAt: (r.finished_at as Date).toISOString(),
+            gameDay: r.game_day as string,
+            title: r.title as string,
+            score: r.score as number,
+            answersFound: (ar?.answersFound ?? ar?.answers_found ?? null) as
+              number | null,
+          };
+        }),
       };
     },
   };

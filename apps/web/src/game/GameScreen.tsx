@@ -73,7 +73,10 @@ export function GameScreen({ board, start, persistence }: Props) {
     };
     const missed = board.ranked
       .filter((id) => !game.state.foundIds.includes(id))
-      .map((id) => board.universe.find((u) => u.id === id)?.label ?? "");
+      .map((id, idx) => ({
+        label: board.universe.find((u) => u.id === id)?.label ?? "",
+        rank: idx + 1,
+      }));
     const wrongGuesses = game.state.guesses
       .filter((g) => !game.state.foundIds.includes(g.candidateId))
       .map((g) => {
@@ -85,9 +88,13 @@ export function GameScreen({ board, start, persistence }: Props) {
       });
     const foundInOrder = game.state.guesses
       .filter((g) => game.state.foundIds.includes(g.candidateId))
-      .map(
-        (g) => board.universe.find((u) => u.id === g.candidateId)?.label ?? "",
-      );
+      .map((g) => {
+        const candidate = board.universe.find((u) => u.id === g.candidateId);
+        return {
+          label: candidate?.label ?? g.candidateId,
+          rank: candidate?.rank ?? 0,
+        };
+      });
     const nextBoardAt = new Date();
     nextBoardAt.setHours(24, 0, 0, 0);
     return (

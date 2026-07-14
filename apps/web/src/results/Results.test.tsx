@@ -39,7 +39,7 @@ describe("result sharing", () => {
         streak={3}
         bestStreak={8}
         nextBoardAt={new Date(Date.now() + 10_000)}
-        missedAnswers={["Missed"]}
+        missedAnswers={[{ label: "Missed", rank: 3 }]}
       />,
     );
     const streak = screen.getByText(/Streak 3/),
@@ -48,7 +48,9 @@ describe("result sharing", () => {
       streak.compareDocumentPosition(countdown) &
         Node.DOCUMENT_POSITION_FOLLOWING,
     ).toBeTruthy();
-    expect(screen.getByText("Missed")).toHaveClass("revealed-immediately");
+    expect(screen.getByText("Missed").closest("li")).toHaveClass(
+      "revealed-immediately",
+    );
     vi.unstubAllGlobals();
   });
 
@@ -81,7 +83,10 @@ describe("result sharing", () => {
         streak={0}
         bestStreak={0}
         nextBoardAt={new Date(Date.now() + 10_000)}
-        foundInOrder={["Blinding Lights", "Shape of You"]}
+        foundInOrder={[
+          { label: "Blinding Lights", rank: 1 },
+          { label: "Shape of You", rank: 2 },
+        ]}
       />,
     );
     const items = screen.getAllByRole("listitem");

@@ -6,9 +6,9 @@ export type ResultsProps = {
   streak: number;
   bestStreak: number;
   nextBoardAt: Date;
-  missedAnswers?: string[];
+  missedAnswers?: { label: string; rank: number }[];
   wrongGuesses?: { label: string; rank: number | null }[];
-  foundInOrder?: string[];
+  foundInOrder?: { label: string; rank: number }[];
 };
 
 export function Results({
@@ -78,13 +78,14 @@ export function Results({
       {foundInOrder.length > 0 && (
         <>
           <p className="results-section-label">Found</p>
-          <ol className="results-found">
-            {foundInOrder.map((label) => (
+          <ul className="results-found">
+            {foundInOrder.map(({ label, rank }) => (
               <li className="results-found-item" key={label}>
-                {label}
+                <span className="results-wrong-rank">#{rank}</span>
+                <span>{label}</span>
               </li>
             ))}
-          </ol>
+          </ul>
         </>
       )}
 
@@ -107,16 +108,17 @@ export function Results({
       {missedAnswers.length > 0 && (
         <>
           <p className="results-missed-label">Not found</p>
-          <ol className="results-missed">
-            {missedAnswers.slice(0, shown).map((name) => (
+          <ul className="results-missed">
+            {missedAnswers.slice(0, shown).map(({ label, rank }) => (
               <li
                 className={reduced ? "revealed-immediately" : "revealed"}
-                key={name}
+                key={label}
               >
-                {name}
+                <span className="results-wrong-rank">#{rank}</span>
+                <span>{label}</span>
               </li>
             ))}
-          </ol>
+          </ul>
         </>
       )}
       <p className="results-next">Next board in {countdown}</p>

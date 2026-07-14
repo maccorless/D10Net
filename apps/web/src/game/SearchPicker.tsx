@@ -8,9 +8,17 @@ type Props = {
   armed: boolean;
 };
 
+const normalize = (s: string) =>
+  s
+    .normalize("NFKD")
+    .replace(/\p{Diacritic}/gu, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]/g, "");
+
 export function SearchPicker({ search, onSelect, armed }: Props) {
   const [query, setQuery] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
+  const needle = normalize(query);
   const suggestions = search(query).sort((a, b) =>
     a.label.localeCompare(b.label),
   );
@@ -27,21 +35,34 @@ export function SearchPicker({ search, onSelect, armed }: Props) {
       />
       {suggestions.length > 0 && (
         <ul className="suggestions">
-          {suggestions.map((candidate) => (
-            <li key={candidate.id}>
-              <button
-                className={armed ? "armed" : ""}
-                onClick={() => {
-                  onSelect(candidate.id);
-                  setQuery("");
-                  inputRef.current?.focus();
-                }}
-              >
-                <span>{candidate.label}</span>
-                {armed && <small>⓵ +1</small>}
-              </button>
-            </li>
-          ))}
+          {suggestions.map((candidate) => {
+            const aliasMatch =
+              needle.length > 0 && !normalize(candidate.label).includes(needle)
+                ? candidate.aliases.find((a) => normalize(a).includes(needle))
+                : undefined;
+            return (
+              <li key={candidate.id}>
+                <button
+                  className={armed ? "armed" : ""}
+                  onClick={() => {
+                    onSelect(candidate.id);
+                    setQuery("");
+                    inputRef.current?.focus();
+                  }}
+                >
+                  <span>
+                    {candidate.label}
+                    {aliasMatch && (
+                      <small style={{ color: "var(--muted)", marginLeft: 4 }}>
+                        ({aliasMatch})
+                      </small>
+                    )}
+                  </span>
+                  {armed && <small>⓵ +1</small>}
+                </button>
+              </li>
+            );
+          })}
         </ul>
       )}
     </div>

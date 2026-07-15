@@ -130,3 +130,21 @@
 .tier-pip.silver-earned { background:#7090a8; border-color:#7090a8; color:#fff; opacity:1; }
 .tier-pip.gold-earned { background:#b89828; border-color:#b89828; color:#fff; opacity:1; }
 .ach-row.locked .tier-pips { opacity:.4; }
+
+/* Archive calendar */
+.cal-month { margin-bottom:32px; }
+.cal-month-heading { font-size:15px; font-weight:700; margin:0 0 10px; }
+.cal-grid { display:grid; grid-template-columns:repeat(7,1fr); gap:4px; }
+.cal-dow { font-size:10px; font-weight:700; color:var(--muted); text-align:center; padding:2px 0; }
+.cal-cell { aspect-ratio:1; }
+.cal-empty { background:transparent; }
+.cal-day-btn { width:100%; height:100%; border:0; border-radius:8px; display:flex; flex-direction:column; align-items:center; justify-content:center; cursor:pointer; background:var(--surface); gap:2px; }
+.cal-day-btn:hover { filter:brightness(1.08); }
+.cal-day-num { font-size:13px; font-weight:600; color:var(--ink); }
+.cal-day-score { font-size:9px; color:var(--muted); }
+.cal-day-btn--played-daily { background:var(--accent); }
+.cal-day-btn--played-daily .cal-day-num,
+.cal-day-btn--played-daily .cal-day-score { color:#fff; }
+.cal-day-btn--played-archive { background:color-mix(in srgb,var(--accent) 40%,var(--surface)); }
+.cal-day-btn--playable { background:color-mix(in srgb,var(--surface) 60%,#dfe3ea); }
+.cal-empty-state { color:var(--muted); font-size:14px; }

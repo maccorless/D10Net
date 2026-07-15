@@ -8,6 +8,7 @@ import {
   type GameState,
 } from "@daily/game";
 import { read, write, remove, getAll } from "../db";
+import { recordPlay } from "../archive/history";
 
 let accessTokenProvider: () => string | undefined = () => undefined;
 
@@ -134,12 +135,13 @@ export function useGame(
             finishedAt: new Date().toISOString(),
           });
           void queueFinishResult(result).then(() => flushFinishQueue());
+          recordPlay(start.gameDay, start.mode);
         }
         return next;
       });
       setCallNumberOne(false);
     },
-    [callNumberOne],
+    [callNumberOne, start.gameDay, start.mode],
   );
 
   return {

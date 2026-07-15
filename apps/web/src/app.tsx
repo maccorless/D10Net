@@ -10,6 +10,7 @@ import { GameScreen } from "./game/GameScreen";
 import { Archive, type ArchiveEntry } from "./archive/Archive";
 import { SignIn } from "./account/SignIn";
 import { setAccessTokenProvider } from "./game/useGame";
+import { getPlayHistory } from "./archive/history";
 import { loadLatestIssuedGame, saveIssuedGame } from "./issued-context";
 import { BottomNav } from "./nav/BottomNav";
 import { AchievementWall } from "./achievements/AchievementWall";
@@ -165,17 +166,30 @@ function ArchivePage({ fetcher }: { fetcher: typeof fetch }) {
         if (!r.ok) throw Error();
         return r.json();
       })
-      .then((rows: any[]) =>
+      .then((rows: any[]) => {
+        const history = getPlayHistory();
         setEntries(
-          rows.map((row) => ({
-            gameDay: String(row.game_day),
-            status: row.status,
-            result: row.result,
-            boardId: row.board_id,
-            version: Number(row.version),
-          })),
-        ),
-      )
+          rows.map((row) => {
+            const gameDay = String(row.game_day);
+            let status: "played-daily" | "played-archive" | "playable";
+            if (row.status === "review") {
+              status =
+                history[gameDay] === "daily"
+                  ? "played-daily"
+                  : "played-archive";
+            } else {
+              status = "playable";
+            }
+            return {
+              gameDay,
+              status,
+              result: row.result,
+              boardId: row.board_id,
+              version: Number(row.version),
+            };
+          }),
+        );
+      })
       .catch(() => setError("We couldn’t load the Archive."));
   }, [fetcher]);
   async function play(day: string) {

@@ -1,7 +1,27 @@
 import { screen, waitFor } from "@testing-library/react";
-import { expect, test, vi } from "vitest";
+import { expect, test, beforeEach, vi } from "vitest";
 import { validCitiesBoard } from "@daily/test-data/boards";
 import { startTodayApp } from "./app";
+import { recordPlay, getPlayHistory } from "./archive/history";
+
+test("enriches archive entries using localStorage history", () => {
+  localStorage.clear();
+  recordPlay("2026-07-10", "daily");
+  const history = getPlayHistory();
+  const serverRow = {
+    game_day: "2026-07-10",
+    status: "review",
+    result: { score: 8 },
+  };
+  const enriched =
+    serverRow.status === "review"
+      ? history[serverRow.game_day] === "daily"
+        ? "played-daily"
+        : "played-archive"
+      : "playable";
+  expect(enriched).toBe("played-daily");
+  localStorage.clear();
+});
 
 test("boots /today through hint setup, authenticated start, and player mount", async () => {
   history.replaceState(null, "", "/today");

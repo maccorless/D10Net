@@ -1,10 +1,5 @@
 # D10Net Backlog
 
-## Archive / History
-
-### BKL-004: Playable archive with calendar widget
-2026-07-12 — A calendar view showing every past game day. Each day cell is visually distinct for three states: (1) played on the day, (2) played later in archive mode, (3) not yet played. Tapping a played day opens the same results screen as end-of-game. Tapping an unplayed day launches that board in archive mode. Requires persisting per-day play history on device/account.
-
 ## Gamification
 
 ### BKL-PLAN: Brainstorm achievements and streaks definitions

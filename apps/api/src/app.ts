@@ -97,6 +97,7 @@ const STATS_HTML = `<!doctype html>
   #signin input{display:block;margin:.5rem 0;padding:.4rem;width:100%;font-size:1rem}
   #signin button{padding:.4rem 1rem;font-size:1rem}
   .err{color:red}
+  #loading{color:#666;margin-top:2rem}
   @media(prefers-color-scheme:dark){
     body{background:#111;color:#eee}
     .card{background:#222}
@@ -114,6 +115,7 @@ const STATS_HTML = `<!doctype html>
     <p class="err" id="keyerr"></p>
   </form>
 </div>
+<div id="loading">Loading…</div>
 <div id="content" style="display:none">
   <div class="cards" id="cards"></div>
   <h2>Plays per day (last 30 days)</h2>
@@ -134,10 +136,12 @@ const STATS_HTML = `<!doctype html>
       }).catch(function(){showSignIn();});
   }
   function showSignIn(){
+    document.getElementById('loading').style.display='none';
     document.getElementById('signin').style.display='';
     document.getElementById('content').style.display='none';
   }
   function render(d){
+    document.getElementById('loading').style.display='none';
     document.getElementById('content').style.display='';
     document.getElementById('signin').style.display='none';
     var stats=[
@@ -174,7 +178,7 @@ const STATS_HTML = `<!doctype html>
       return r.json().then(render);
     });
   });
-  if(key){load(key);}else{showSignIn();}
+  if(key){load(key);}else{showSignIn();} // showSignIn hides #loading
 })();
 </script>
 </body>

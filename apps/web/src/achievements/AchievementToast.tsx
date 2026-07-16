@@ -55,7 +55,6 @@ export function AchievementToast({ unlocks, onDone }: Props) {
     setPhase("entering");
     const id = setTimeout(advance, 4000);
     return () => clearTimeout(id);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [index, unlocks.length]);
 
   if (unlocks.length === 0) return null;

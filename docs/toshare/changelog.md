@@ -2,6 +2,9 @@ Created: 12-Jul-2026 20:25 EDT
 
 | Date | ID | Description |
 |---|---|---|
+| 2026-07-15 | — | Fix: admin stats page no longer shows blank screen while loading |
+| 2026-07-15 | — | Fix: archive play now starts correctly for fresh (non-recycled) boards |
+| 2026-07-15 | — | Fix: archive listing now includes all past boards (was excluding fresh boards with null game_day) |
 | 2026-07-14 | BKL-004 | Feat: archive calendar with played-on-day / played-later / unplayed states, localStorage history |
 | 2026-07-14 | — | Fix: guess dropdown now sorted alphabetically and no longer capped at 6 results |
 | 2026-07-14 | — | Fix: achievement evaluation guard added for game restoration edge case |

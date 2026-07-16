@@ -204,14 +204,14 @@ export function createPostgresServices(
     async archive(playerId: string) {
       const day = canonicalGameDay(now(), options.zone);
       const rows =
-        await sql`select sa.game_day,case when p.finished_at is null then 'playable' else 'review' end status,case when p.finished_at is null then null else p.authoritative_result end result,bv.board_id,bv.version from schedule_assignments sa join board_versions bv on (bv.board_id,bv.version)=(sa.board_id,sa.board_version) left join plays p on p.player_id=${playerId} and p.board_id=bv.board_id and p.board_version=bv.version where sa.published=true and sa.game_day=bv.game_day and bv.published_at<=${now().toISOString()} and sa.game_day<${day} order by sa.game_day desc`;
+        await sql`select sa.game_day,case when p.finished_at is null then 'playable' else 'review' end status,case when p.finished_at is null then null else p.authoritative_result end result,bv.board_id,bv.version from schedule_assignments sa join board_versions bv on (bv.board_id,bv.version)=(sa.board_id,sa.board_version) left join plays p on p.player_id=${playerId} and p.board_id=bv.board_id and p.board_version=bv.version where sa.published=true and bv.published_at<=${now().toISOString()} and sa.game_day<${day} order by sa.game_day desc`;
       return rows.map((row) => ({ ...row, game_day: dateOnly(row.game_day) }));
     },
     async archiveDay(playerId: string, gameDay: string) {
       const day = canonicalGameDay(now(), options.zone);
       if (gameDay >= day) return undefined;
       const rows =
-        await sql`select sa.game_day,case when p.finished_at is null then 'playable' else 'review' end status,case when p.finished_at is null then null else p.authoritative_result end result,bv.board_id,bv.version from schedule_assignments sa join board_versions bv on (bv.board_id,bv.version)=(sa.board_id,sa.board_version) left join plays p on p.player_id=${playerId} and p.board_id=bv.board_id and p.board_version=bv.version where sa.game_day=${gameDay} and sa.published=true and sa.game_day=bv.game_day and bv.published_at<=${now()} and bv.game_day is not null and bv.game_day<${day} limit 1`;
+        await sql`select sa.game_day,case when p.finished_at is null then 'playable' else 'review' end status,case when p.finished_at is null then null else p.authoritative_result end result,bv.board_id,bv.version from schedule_assignments sa join board_versions bv on (bv.board_id,bv.version)=(sa.board_id,sa.board_version) left join plays p on p.player_id=${playerId} and p.board_id=bv.board_id and p.board_version=bv.version where sa.game_day=${gameDay} and sa.published=true and bv.published_at<=${now()} and sa.game_day<${day} limit 1`;
       return rows[0];
     },
     async resetTodayPlay(playerId: string) {

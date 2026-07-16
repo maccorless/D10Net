@@ -1,5 +1,5 @@
 import { screen, waitFor } from "@testing-library/react";
-import { expect, test, beforeEach, vi } from "vitest";
+import { expect, test, vi } from "vitest";
 import { validCitiesBoard } from "@daily/test-data/boards";
 import { startTodayApp } from "./app";
 import { recordPlay, getPlayHistory } from "./archive/history";

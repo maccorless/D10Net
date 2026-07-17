@@ -26,16 +26,18 @@ export function buildShareText(r: ShareResult): string {
 }
 
 type ShareNavigator = {
-  share?: (data: { text: string }) => Promise<void>;
+  share?: (data: { text: string; url?: string }) => Promise<void>;
   clipboard?: { writeText(text: string): Promise<void> };
 };
 
 export async function shareResult(
   r: ShareResult,
   target: ShareNavigator = navigator,
+  url: string = typeof window !== "undefined" ? window.location.href : "",
 ): Promise<void> {
   const text = buildShareText(r);
-  if (target.share) await target.share({ text });
-  else if (target.clipboard) await target.clipboard.writeText(text);
+  if (target.share) await target.share({ text, url });
+  else if (target.clipboard)
+    await target.clipboard.writeText(url ? `${text}\n${url}` : text);
   else throw new Error("Sharing is unavailable");
 }

@@ -26,10 +26,11 @@ describe("result sharing", () => {
     expect(text.match(/[🟩⬜]/gu)).toHaveLength(10);
   });
 
-  it("copies the identical share text when Web Share is unavailable", async () => {
+  it("copies share text with URL appended when Web Share is unavailable", async () => {
     const writeText = vi.fn().mockResolvedValue(undefined);
-    await shareResult(result, { clipboard: { writeText } });
-    expect(writeText).toHaveBeenCalledWith(buildShareText(result));
+    const url = "https://example.com/today";
+    await shareResult(result, { clipboard: { writeText } }, url);
+    expect(writeText).toHaveBeenCalledWith(`${buildShareText(result)}\n${url}`);
   });
   it("puts streaks before countdown and reveals misses distinctly under reduced motion", () => {
     vi.stubGlobal("matchMedia", () => ({ matches: true }));

@@ -143,9 +143,9 @@ export function GameScreen({ board, start, persistence }: Props) {
     };
     const missed = board.ranked
       .filter((id) => !game.state.foundIds.includes(id))
-      .map((id, idx) => ({
+      .map((id) => ({
         label: board.universe.find((u) => u.id === id)?.label ?? "",
-        rank: idx + 1,
+        rank: board.ranked.indexOf(id) + 1,
       }));
     const wrongGuesses = game.state.guesses
       .filter((g) => !game.state.foundIds.includes(g.candidateId))

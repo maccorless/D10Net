@@ -2,6 +2,9 @@ Created: 12-Jul-2026 20:25 EDT
 
 | Date | ID | Description |
 |---|---|---|
+| 2026-07-17 | — | Fix: missed answers on results screen now show their actual rank (#6, #9) not position in missed list (#1, #2) |
+| 2026-07-17 | — | Fix: share now includes page URL — passed to native share sheet and appended to clipboard fallback |
+| 2026-07-17 | — | Fix: long board titles now wrap correctly in the results share card |
 | 2026-07-15 | — | Fix: admin stats page no longer shows blank screen while loading |
 | 2026-07-15 | — | Fix: archive play now starts correctly for fresh (non-recycled) boards |
 | 2026-07-15 | — | Fix: archive listing now includes all past boards (was excluding fresh boards with null game_day) |
